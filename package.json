@@ -2,6 +2,7 @@
   "name": "chlorobo-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://chlorobo.com",
   "dependencies": {
     "@reduxjs/toolkit": "^1.5.0",
     "@testing-library/jest-dom": "^4.2.4",
