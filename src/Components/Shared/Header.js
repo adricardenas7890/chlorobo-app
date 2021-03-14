@@ -1,38 +1,39 @@
-import React, { useState } from 'react';
+import React, { Component, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 
-// This will return navigation bar links
-function NavLink(props) {
-    return (
-        <span>
-        </span>
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import Container from 'react-bootstrap/Container';
+
+
+
+// This class will create the navigation bar 
+const NavigationBar= () => 
+    (
+
+            <Navbar collapseOnSelect expand="lg" bg="light" >
+            <Navbar.Brand href="#home">Chlorobo</Navbar.Brand>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav">
+                <Nav className="mr-auto">
+                </Nav>
+                <Nav>
+                <Nav.Link href="#home">Home</Nav.Link>
+                <Nav.Link eventKey={2} href="#help">
+                    Help
+                </Nav.Link>
+                </Nav>
+            </Navbar.Collapse>
+            </Navbar>            
+
     )
-}
+    
+    
 
-// This class will create the navigation bar
-class NavBar extends React.Component {
-    constructor(props) {
-    }
-  
-    renderNavLink() {
-        return (
-            <NavLink/>
-        )
-    }
-
-    render() {
-        return (
-            <div className="navbar-container">
-                <div>
-                    {/* ADD NAVBAR LINK HERE */}
-                </div>
-            </div>
-        )
-    }
-}
 
 // Return fully created navigation bar
-export default NavBar;
+export default NavigationBar;
 
 ////////////////////////////////
 //// THIS IS POSSIBLE WORK FOR FUTURE ADD INS 

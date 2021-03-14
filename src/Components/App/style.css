@@ -14,7 +14,9 @@
   }
   
   .App-header {
-    min-height: 100vh;
+    border: 1px solid black;
+    min-height: 90vh;
+    min-width: 70vh;
     display: flex;
     flex-direction: column;
     align-items: center;
