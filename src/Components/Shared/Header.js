@@ -1,34 +1,31 @@
-import React, { Component, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-//import 'bootstrap/dist/css/bootstrap.min.css';
-
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import { mainMenuPage, helpPage } from '../Pages/Content/contentSlice';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import Container from 'react-bootstrap/Container';
 
+// This file will contain the element for the header. 
+const NavigationBar = () => {
+    const dispatch = useDispatch();
+    return (
 
-
-// This class will create the navigation bar 
-const NavigationBar= () => 
-    (
-
-            <Navbar collapseOnSelect expand="lg" bg="light" >
-            <Navbar.Brand href="#home">Chlorobo</Navbar.Brand>
+        <Navbar collapseOnSelect expand="lg" bg="light" >
+            <Navbar.Brand onClick={() => dispatch(mainMenuPage())}>Chlorobo</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
                 </Nav>
                 <Nav>
-                <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link eventKey={2} href="#help">
-                    Help
+                    <Nav.Link onClick={() => dispatch(mainMenuPage())}>Home</Nav.Link>
+                    <Nav.Link onClick={() => dispatch(helpPage())} >
+                        Help
                 </Nav.Link>
                 </Nav>
             </Navbar.Collapse>
-            </Navbar>            
+        </Navbar>
 
     )
-    
+}  
     
 
 

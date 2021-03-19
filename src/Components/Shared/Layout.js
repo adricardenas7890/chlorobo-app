@@ -1,118 +1,80 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import Container from 'react-bootstrap/Container'
+import { connect } from 'react-redux';
+import NavigationBar from './Header'
+import Content from '../Pages/Content/Content';
+import './layout.css'
 
-// This will contain the header (which may be hidden for introduction) and the body of the page
-class Layout extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-        view: [
-            {
-            
-                storySequencePage: {header: false, }, // Anything that involves writing, header hidden
-                mainMenuPage: {header: true,}, // Select puzzle view
-                startPage: {header: false},
-                puzzleProgressPage: { header: true },
-                helpPage: { header: true },
-                puzzleCompletePage: { header: true },
-                
-            }
-        ],
-        stepNumber: 0,
-        xIsNext: true
-        };
-    }
+// This file will contain the <Layout/> component, made up of the <Header/> and the <Content/>.
 
-    renderContent() {
-        return (
-        < Content />
-        )
-    }
-
-    render() {
-        return (
-            <div>
-                {this.renderContent()}
-            </div>
-        )
-    }
-
-}
-
-
-var Content = (props) => 
-{
+// Return the Layout Component
+const Layout = ({ page }) => {
 
     return (
-        <div>
-            <header className="App-header">
-                <div> This div contains the layout.</div>
-
-                {/* <img src={logo} className="App-logo" alt="logo" />
-                <Counter />
-                <NavigationBar/>
-                <p>
-                Edit <code>src/App.js</code> and save to reload.
-                </p>
-                <span>
-                <span>Learn </span>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    React
-                </a>
-                <span>, </span>
-                <a
-                    className="App-link"
-                    href="https://redux.js.org/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Redux
-                </a>
-                <span>, </span>
-                <a
-                    className="App-link"
-                    href="https://redux-toolkit.js.org/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Redux Toolkit
-                </a>
-                ,<span> and </span>
-                <a
-                    className="App-link"
-                    href="https://react-redux.js.org/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    React Redux
-                </a>
-                </span> */}
-            </header>
+        <div className="layoutComponent">
+            <LayoutContent value={viewPages[page]} />
         </div>
     )
-    // if (props.screen == "menu") {
-        
-    //     <div>
-    //         Menu Screen
-    //     </div>
-        
-    // }
-    // else if (props.screen == "puzzle") {
-    //     <div>
-    //         Puzzle Screen
-    //     </div>
-    // }
-
-    // else if (props.screen == "story") {
-    //     <div>
-    //         Story Sequence
-    //     </div>
-    // }
 }
-export default Layout;
+// Generate the logic for the Layout Component.
+// This will include the page, header if visible, and title.
+var LayoutContent = (props) => 
+{
+    let viewPage = props.value.page;
+    let headerVisible = props.value.mod.header;
+    let titleValue = props.value.mod.title;
+    let header;
+
+    if (headerVisible) {
+        header = <NavigationBar />;
+    }
+    
+    return (
+        <div>
+            {header}
+            <Content page={viewPage} title={titleValue}/>
+        </div>
+    )
+}
+
+// Abstract this, it looks ugly here
+var viewPages =
+    [
+        {
+            page: "landingPage",
+            mod: { header: false, title: "Start" }
+        }, 
+        {
+            page: "storySequencePage",
+            mod: { header: false, title: "Story Sequence Goes Here" }
+        }, 
+        {
+            page: "mainMenuPage",
+            mod: { header: true, title: "Main Menu" }
+        }, 
+        {
+            page: "helpPage",
+            mod: { header: true, title: "Help Page" }
+        }, 
+        {
+            page: "puzzleProgressPage",
+            mod: { header: true, title: "Puzzle" }
+        }, 
+        {
+            page: "puzzleCompletePage",
+            mod: { header: true, title: "Puzzle Complete" }
+        },
+        {
+            page: "endSequencePage",
+            mod: { header: false, title: "End of Game" }
+        }, 
+    ];
+
+// Connect to store and couple Layout component with currentViewPage store
+const getCurrentViewPage = (appState) => {
+    return ({
+        page: appState.currentViewPage.viewPage
+    })
+
+}
+
+export default connect(getCurrentViewPage)(Layout)
