@@ -1,14 +1,10 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
-import {helpPage} from '../Content/contentSlice';
-import { useDispatch } from 'react-redux'
+import Help from '../../Elements/Help/index';
 
-
+// This will contain the main component for the help page
 const HelpPage = () => {
     return (
-        <div>
-            This is the help page content.
-        </div>
+        <Help/>
     )
 }
 

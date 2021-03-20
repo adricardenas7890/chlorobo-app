@@ -1,8 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import viewPageReducer from '../Components/Pages/Content/contentSlice';
-import puzzlePageReducer from '../Components/Pages/PuzzlePage/puzzlePageSlice';
-
-//import viewPageReducer from '../Components/Shared/viewPageSlice';
+import puzzlePageReducer from '../Components/Elements/Puzzles/puzzlePageSlice';
 //import puzzleOne from '../Components/PuzzleOne/puzzleOneSlice';
 //import puzzleTwo from '../Components/PuzzleTwo/puzzleTwo';
 //import puzzleThree from '../Components/PuzzleThree/puzzleThree';

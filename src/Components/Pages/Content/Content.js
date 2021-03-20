@@ -1,28 +1,30 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import Container from 'react-bootstrap/Container'
 import Title from '../../Elements/Title/Title';
-import LandingPage from '../LandingPage/LandingPage';
+import StartPage from '../StartPage/StartPage';
 import HelpPage from '../HelpPage/HelpPage';
 import PuzzlePage from '../PuzzlePage/PuzzlePage';
 import MainMenuPage from '../MainMenuPage/MainMenuPage';
-
-// Use this file to redirect to different main views
+import EndGamePage from '../EndGamePage/EndGamePage';
+// This Component will redirect to the main component for each view.
+// Connected to contentSlice, will update when state.currentViewPage.viewPage updates
 
 var Content = (props) => {
     let pageView = props.page;
     let content;
-    if (pageView == "landingPage") {
-        content = <LandingPage />
+    if (pageView === "startPage") {
+        content = <StartPage />
     }
-    else if (pageView == "helpPage") {
+    else if (pageView === "helpPage") {
         content = <HelpPage/>
     }
-    else if (pageView == "puzzleProgressPage") {
+    else if (pageView === "puzzleProgressPage") {
         content = <PuzzlePage/>
     }
-    else if (pageView == "mainMenuPage") {
+    else if (pageView === "mainMenuPage") {
         content = <MainMenuPage/>
+    }
+    else if (pageView === "endSequencePage") {
+        content = <EndGamePage/>
     }
     else {
         content = (

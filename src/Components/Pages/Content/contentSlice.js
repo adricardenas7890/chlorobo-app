@@ -6,7 +6,7 @@ export const contentSlice = createSlice({
         viewPage: 0
     },
     reducers: {
-        landingPage: state => {
+        startPage: state => {
             state.viewPage =  0
         },
         storySequencePage: state => {

@@ -1,14 +1,10 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
-import {endSequencePage} from '../Content/contentSlice';
-import { useDispatch } from 'react-redux'
+import EndGame from '../../Elements/EndGame/index'
 
 
 const EndGamePage = () => {
     return (
-        <div>
-            This is the end of the game.
-        </div>
+        <EndGame/>
     )
 }
 
