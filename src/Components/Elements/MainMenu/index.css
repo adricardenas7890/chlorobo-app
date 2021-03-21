@@ -6,3 +6,104 @@
     font-size: 24px;
     line-height: 1.33;
 }
+.btn {
+    background-color:white!important;
+    border: none!important;
+}
+
+.main-button-div {
+    width: 70px;
+    height: 70px; 
+    background-color:pink;
+    border-radius:100%;
+}
+
+.menu-button-div {
+    width: 70px;
+    height: 70px;
+    border-radius:100%;
+    padding: 0px!important;
+    mask-image: url(./button-black.png);
+    -webkit-mask-size:contain;
+    opacity: .9;
+    z-index:0;
+}
+
+.menu-button {
+    width: 70px;
+    height: 70px;
+    position: relative;
+    z-index:-1;
+}
+.menu-button-icon {
+    width: 45px;
+    height: 45px;
+    position: relative;
+    z-index:2;
+    bottom:55px;
+    left:1px;
+}
+
+.menu-button-div > #button-castitas {
+    filter: brightness(.2) grayscale(.5) invert(.2);
+    mix-blend-mode: color-burn;
+}
+
+#button-castitas-div {
+    background-color: pink;  
+}
+
+.menu-button-div > #button-temperantia {
+    filter:brightness(.8) grayscale(.7) invert(.5);
+    mix-blend-mode: color-burn;
+}
+
+#button-temperantia-div {
+    background-color: orange;  
+}
+
+.menu-button-div > #button-industria {
+    filter:brightness(.3) grayscale(.7) invert(.6);
+    mix-blend-mode: color-burn;
+}
+
+#button-industria-div {
+    background-color: yellow;  
+}
+
+.menu-button-div > #button-patientia {
+    filter:brightness(.3) grayscale(.2) invert(.2);
+    mix-blend-mode: color-burn;
+}
+
+#button-patientia-div {
+    background-color: lightgreen;  
+}
+
+.menu-button-div > #button-humilitas {
+    filter:brightness(.3) grayscale(.2) invert(.2);
+    mix-blend-mode: color-burn;
+}
+
+#button-humilitas-div {
+    background-color: aqua;  
+}
+
+.menu-button-div > #button-caritas {
+    filter:brightness(.3) grayscale(.2) invert(.2);
+    mix-blend-mode: color-burn;
+}
+
+#button-caritas-div {
+    background-color: blue;  
+}
+
+.menu-button-div > #button-humanitas {
+    filter:brightness(.3) grayscale(.2) invert(.9);
+    mix-blend-mode: color-burn;
+}
+
+#button-humanitas-div {
+    background-color: purple;  
+}
+
