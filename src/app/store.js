@@ -1,6 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import viewPageReducer from '../Components/Pages/Content/contentSlice';
 import puzzlePageReducer from '../Components/Elements/Puzzles/puzzlePageSlice';
+import puzzleProgressReducer from '../Components/Elements/Puzzles/puzzleProgressSlice'
 //import puzzleOne from '../Components/PuzzleOne/puzzleOneSlice';
 //import puzzleTwo from '../Components/PuzzleTwo/puzzleTwo';
 //import puzzleThree from '../Components/PuzzleThree/puzzleThree';
@@ -12,7 +13,8 @@ import puzzlePageReducer from '../Components/Elements/Puzzles/puzzlePageSlice';
 export default configureStore({
   reducer: {
     currentViewPage: viewPageReducer,
-    currentPuzzle: puzzlePageReducer
+    currentPuzzle: puzzlePageReducer,
+    currentPuzzleProgress: puzzleProgressReducer,
     //puzzleOne: puzzleOneReducer,
     //puzzleTwo: puzzleTwoReducer,
     //puzzleThree: puzzleThreeReducer,
