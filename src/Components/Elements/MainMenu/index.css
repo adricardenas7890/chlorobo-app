@@ -18,6 +18,10 @@
     border-radius:100%;
 }
 
+.available {
+    opacity:50%;
+}
+
 .menu-button-div {
     width: 70px;
     height: 70px;

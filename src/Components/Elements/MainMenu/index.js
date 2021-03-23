@@ -3,16 +3,19 @@ import {useDispatch, useSelector } from 'react-redux';
 import { Button, } from 'react-bootstrap';
 // import { Row, Column, Container } from 'react-bootstrap';
 import { puzzleProgressPage, endSequencePage } from '../../Pages/Content/contentSlice';
-import { Castitas, Temperantia, Industria, Patientia, Humilitas, Caritas, Humanitas} from '../Puzzles/puzzlePageSlice';
+import { castitas, temperantia, industria, patientia, humilitas, caritas, humanitas} from '../Puzzles/puzzlePageSlice';
 //import flower1 from './flower1.png';
 import './index.css'
-import PuzzleButton from './PuzzleButton';
+import PuzzleButtonFinal from './PuzzleButton';
 
-const CreateMenuButton = (props) => { 
-    debugger;
-    const puzzleState = useSelector(state => state[props.order]);
+const CreateMenuButton = ( props ) => { 
+    const order = props.order + 1;   
+    const puzzleState = useSelector(state => state.currentPuzzleProgress[order]);
+
+    console.log(puzzleState);
     return (
-        <PuzzleButton puzzle={props.puzzle} />
+        // <PuzzleButton puzzle={props.puzzle} state={puzzleState} />
+            <PuzzleButtonFinal puzzle={props.puzzle} state={puzzleState} />
     )
 }
 
@@ -34,9 +37,9 @@ const MainMenu = () => {
                 <img src={flower1} className="App-logo" alt="flower1" />
             </div> */}
 
-            {puzzles.map((value, index) => {
-                
-                return (<CreateMenuButton puzzle={value} order={index}/>)
+            {puzzles.map((value, index) => {   
+                             
+                return (<CreateMenuButton key={index} puzzle={value} order={index}/>)
             })}
             {/* <Button variant="light" onClick={() => { dispatch(puzzleProgressPage()); dispatch(Castitas()); }} >
                 <PuzzleButton puzzle="castitas" />

@@ -9,25 +9,25 @@ export const puzzlePageSlice = createSlice({
         endSequencePage: state => {
             state.puzzle =  0
         },
-        Castitas: state => {
+        castitas: state => {
             state.puzzle = "castitas"
         },
-        Temperantia: state => {
+        temperantia: state => {
             state.puzzle =  "temperantia"
         },
-        Industria: state => {
+        industria: state => {
             state.puzzle =  "industria"
         },
-        Patientia: state => {
+        patientia: state => {
             state.puzzle =  "patientia"
         },
-        Humilitas: state => {
+        humilitas: state => {
             state.puzzle =  "humilitas"
         },
-        Caritas: state => {
+        caritas: state => {
             state.puzzle =  "caritas"
         },
-        Humanitas: state => {
+        humanitas: state => {
             state.puzzle = "humanitas"
         }
   }

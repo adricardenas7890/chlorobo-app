@@ -14,9 +14,6 @@ export const puzzleProgressSlice = createSlice({
         "endGame": false
     },
     reducers: {
-        endSequencePage: state => {
-            state.puzzle =  0
-        },
         SetSolved: (state, action) => {
             let puzzleNo = action.payload;
             state[puzzleNo] = "solved";
@@ -39,6 +36,6 @@ export const puzzleProgressSlice = createSlice({
   }
 })
 
-export const { Castitas, Temperantia, Industria, Patientia, Humilitas, Caritas, Humanitas, endSequencePage} = puzzleProgressSlice.actions
+export const { SetSolved } = puzzleProgressSlice.actions
 
 export default puzzleProgressSlice.reducer
