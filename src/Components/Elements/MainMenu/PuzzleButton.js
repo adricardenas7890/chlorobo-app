@@ -88,8 +88,9 @@ const WrapPuzzleDesignInButton = (props) => {
 const PuzzleDesign = ( props ) => {
     const name = String(props.puzzle);
     const buttonID = "button-" +  name ;
-    const divID = "button-" +  name  + "-div"
-    let menuButtonDivClassName = props.state == "solved"? "menu-button-div" : "menu-button-div unsolved"
+    const divID = "button-" + name + "-div";
+    const mainButtonDivClass = "main-button-div main-" + name;
+    let menuButtonDivClassName = props.state == "solved" ? "menu-button-div" : "menu-button-div unsolved";
     let iconClass = props.state == "hidden" ? "menu-button-icon hidden" : "menu-button-icon";
     let icon;
     switch (name) {
@@ -118,7 +119,7 @@ const PuzzleDesign = ( props ) => {
             icon = <div></div>
     }
     return (
-        <div className="main-button-div">
+        <div className={mainButtonDivClass}>
             <div id={divID} className={menuButtonDivClassName}>
                 <img src={buttonBlack} id={buttonID} className="menu-button" alt={name} />
                 {icon}
