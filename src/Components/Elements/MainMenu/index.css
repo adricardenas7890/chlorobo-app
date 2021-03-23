@@ -18,8 +18,12 @@
     border-radius:100%;
 }
 
-.available {
-    opacity:50%;
+.unsolved {
+    background-color:black!important;
+}
+
+.hidden {
+    opacity:0!important
 }
 
 .menu-button-div {
@@ -29,7 +33,7 @@
     padding: 0px!important;
     mask-image: url(./button-black.png);
     -webkit-mask-size:contain;
-    opacity: .9;
+    opacity: .95;
     z-index:0;
 }
 
@@ -46,7 +50,11 @@
     z-index:2;
     bottom:55px;
     left:1px;
-    opacity:1!important;
+    opacity:1;
+}
+
+button:disabled {
+    opacity: 1!important;
 }
 
 .menu-button-div > #button-castitas {
