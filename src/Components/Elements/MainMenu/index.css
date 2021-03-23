@@ -1,11 +1,33 @@
-.btn-circle.btn-xl {
-    width: 70px;
-    height: 70px;
-    padding: 10px 16px;
-    border-radius: 35px;
-    font-size: 24px;
-    line-height: 1.33;
+.puzzle-name-div {
+    position: relative;
+    width:100%;
+    height:10%;
+
 }
+
+.main-content-holder {
+    width:90vw;
+    height:80vh;
+    min-width:830px;
+    background-color:lightpink;
+}
+
+.main-menu-holder {
+    height:90%;
+}
+
+.layoutComponent {
+    min-width:900px;
+}
+
+.puzzle-name {
+    text-align:left;
+    min-width:300px;
+    width: 40%;
+    font-size:40px;
+}
+
+
 .btn {
     background-color:white!important;
     border: none!important;
@@ -64,6 +86,14 @@ button:disabled {
 
 #button-castitas-div {
     background-color: pink;  
+}
+
+#button-castitas {
+    position:relative;
+    left:340px;
+    bottom:470px;
+    padding:0px!important;
+    border-radius:100%;
 }
 
 .menu-button-div > #button-temperantia {

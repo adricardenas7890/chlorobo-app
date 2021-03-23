@@ -23,53 +23,54 @@ const PuzzleButton = (props) => {
 // Button with configured onClick events by puzzle name wrapped around <PuzzleDesign>
 const WrapPuzzleDesignInButton = (props) => {
     let puzzleDesign = <PuzzleDesign puzzle={props.puzzle} state={props.state} />;
+    let puzzleButtonID = "button-" + String(props.puzzle);
     let dispatch = useDispatch();
     if (props.state != "hidden") {
         switch (props.puzzle) {
             case "castitas":
                 return (
-                    <Button variant="light" onClick={() => { dispatch(puzzleProgressPage()); dispatch(Castitas()); }}>
+                    <Button id={puzzleButtonID} variant="light" onClick={() => { dispatch(puzzleProgressPage()); dispatch(Castitas()); }}>
                         {puzzleDesign}
                     </Button>);
             case "temperantia":
                 return (
-                    <Button variant="light" onClick={() => { dispatch(puzzleProgressPage()); dispatch(Temperantia()); }}>
+                    <Button id={puzzleButtonID} variant="light" onClick={() => { dispatch(puzzleProgressPage()); dispatch(Temperantia()); }}>
                         {puzzleDesign}
                     </Button>
                 )
             case "industria":
                 return (
-                    <Button variant="light" onClick={() => { dispatch(puzzleProgressPage()); dispatch(Industria()); }}>
+                    <Button id={puzzleButtonID} variant="light" onClick={() => { dispatch(puzzleProgressPage()); dispatch(Industria()); }}>
                         {puzzleDesign}
                     </Button>
                 );
             case "patientia":
                 return (
-                    <Button variant="light" onClick={() => { dispatch(puzzleProgressPage()); dispatch(Patientia()); }}>
+                    <Button id={puzzleButtonID} variant="light" onClick={() => { dispatch(puzzleProgressPage()); dispatch(Patientia()); }}>
                         {puzzleDesign}
                     </Button>
                 );
             case "humilitas":
                 return (
-                    <Button variant="light" onClick={() => { dispatch(puzzleProgressPage()); dispatch(Humilitas()); }}>
+                    <Button id={puzzleButtonID} variant="light" onClick={() => { dispatch(puzzleProgressPage()); dispatch(Humilitas()); }}>
                         {puzzleDesign}
                     </Button>
                 );
             case "caritas":
                 return (
-                    <Button variant="light" onClick={() => { dispatch(puzzleProgressPage()); dispatch(Caritas()); }}>
+                    <Button id={puzzleButtonID} variant="light" onClick={() => { dispatch(puzzleProgressPage()); dispatch(Caritas()); }}>
                         {puzzleDesign}
                     </Button>
                 );
             case "humanitas":
                 return (
-                    <Button variant="light" onClick={() => { dispatch(puzzleProgressPage()); dispatch(Humanitas()); }}>
+                    <Button id={puzzleButtonID} variant="light" onClick={() => { dispatch(puzzleProgressPage()); dispatch(Humanitas()); }}>
                         {puzzleDesign}
                     </Button>
                 );
             default:
                 return (
-                    <Button variant="light" onClick={() => { dispatch(puzzleProgressPage()); dispatch(Castitas()); }}>
+                    <Button id={puzzleButtonID} variant="light" onClick={() => { dispatch(puzzleProgressPage()); dispatch(Castitas()); }}>
                         {puzzleDesign}
                     </Button>
                 );
