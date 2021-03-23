@@ -1,4 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { useDispatch } from 'react-redux';
+import { puzzleCompletePage } from '../../Pages/Content/contentSlice';
 
 // Three modes, available, solved, hidden
 export const puzzleProgressSlice = createSlice({
@@ -16,21 +18,23 @@ export const puzzleProgressSlice = createSlice({
     reducers: {
         SetSolved: (state, action) => {
             let puzzleNo = action.payload;
+            let nextPuzzleNo = action.payload + 1;
             state[puzzleNo] = "solved";
+            if (puzzleNo < 7) {
+                state[nextPuzzleNo] = "available";
+            }
+            if (puzzleNo == 7) {
+                state["endGame"] = true;
+            }
 
-            if (puzzleNo < 8) {
-                // Set next puzzle as available
-                this.SetAvailable(puzzleNo + 1);
-            }
-            else {
-                this.SetAllComplete();
-            }
         },
         SetAvailable: (state, action) => {
             let puzzleNo = action.payload;
             state[puzzleNo] = "available";
         },
         SetAllComplete: (state) => {
+            let dispatch = useDispatch();
+            dispatch(puzzleCompletePage);
             state["endGame"] = true;
         }
   }

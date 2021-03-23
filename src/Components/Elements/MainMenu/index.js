@@ -1,9 +1,5 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-//import { Button, } from 'react-bootstrap';
-// import { Row, Column, Container } from 'react-bootstrap';
-//import { puzzleProgressPage, endSequencePage } from '../../Pages/Content/contentSlice';
-//import { castitas, temperantia, industria, patientia, humilitas, caritas, humanitas} from '../Puzzles/puzzlePageSlice';
+import { useSelector, connect } from 'react-redux';
 import flower1 from './flower1.png';
 import './index.css'
 import PuzzleButton from './PuzzleButton';
@@ -48,4 +44,11 @@ const MainMenu = () => {
     
 }
 
-export default MainMenu
+const getPuzzleProgress = (appState) => {
+    return ({
+        allPuzzleProgress: appState.currentPuzzleProgress
+    })
+
+}
+
+export default connect(getPuzzleProgress)(MainMenu)

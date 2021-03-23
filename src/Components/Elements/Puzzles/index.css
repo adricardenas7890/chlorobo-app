@@ -1,0 +1,30 @@
+.main-content-holder {
+    width:90vw;
+    height:80vh;
+    min-width:830px;
+    background-color:lightpink;
+}
+
+.main-puzzle-holder {
+    height:90%;
+}
+
+.layoutComponent {
+    min-width:900px;
+}
+
+.ingame-puzzle-name {
+    width:100%;
+    text-align:center;
+    font-size:40px!important;
+}
+
+.ingame-puzzle-name-div {
+    min-width:300px;
+    width: 40%;
+    
+}
+
+#solvePuzzleButton {
+    font-color:black;
+}

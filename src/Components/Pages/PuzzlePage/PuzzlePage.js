@@ -39,7 +39,7 @@ const PuzzlePage = ({ puzzle }) => {
     }
     return (
         <div>
-            You've reached the puzzle for: {puzzle}
+            {/* You've reached the puzzle for: {puzzle} */}
             {puzzleComponent}
         </div>
     )
