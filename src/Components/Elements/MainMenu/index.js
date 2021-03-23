@@ -11,6 +11,7 @@ import PuzzleButton from './PuzzleButton';
 const CreateMenuButton = ( props ) => { 
     const order = props.order + 1;   
     const puzzleState = useSelector(state => state.currentPuzzleProgress[order]);
+    //const puzzleState = "available";
     return (
             <PuzzleButton puzzle={props.puzzle} state={puzzleState} />
     )
