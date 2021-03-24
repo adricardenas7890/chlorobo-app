@@ -1,0 +1,99 @@
+
+.square {
+  height: 60px;
+  width: 60px;
+  border: 1px solid black;
+  padding:0px!important;
+}
+
+.square-col {
+    padding:0px!important;
+}
+
+.square-button-holder {
+    height:70px;
+    width:630px;
+    padding:0px;
+}
+.image-holders {
+    height:430px;
+}
+.prism-image {
+    height:170px;
+    position:relative;
+    top:20px;
+}
+
+.beams-image {
+    height:300px;
+    position:relative;
+    bottom:40px;
+}
+
+.slider-container {
+  width: 100%;
+}
+
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 70%; /* Specific width is required for Firefox. */
+  background: black; /* Otherwise white in Chrome */
+  height: 10px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 70%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background-image:url(./img/sun1-transparentYellow.png);
+  /* border-color: transparent;
+  color: transparent; */
+}
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 120px;
+  height: 120px;
+  border: 0;
+    border-radius: 50%;
+  background-image:url(./img/sun1-transparentYellow.png);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  width: 120px;
+  height: 120px;
+  border: 0;
+    border-radius: 50%;
+  background-image:url(./img/sun1-transparentYellow.png);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 120px;
+  width: 120px;
+  border-radius: 3px;
+  background-image:url(./img/sun1-transparentYellow.png);
+
+  cursor: pointer;
+}
