@@ -5,13 +5,14 @@ import { useDispatch } from 'react-redux';
 import '../index.css';
 
 const Temperantia = () => {
+    let title = "Temperantia";
     let dispatch = useDispatch();
     return (
         // <div className="castitas-container">
         //     This is the container for Temperantia.
         // </div>
         <div className="main-content-holder">
-            <div className="ingame-puzzle-name-div"> <div className="ingame-puzzle-name">Name of Puzzle</div></div>
+            <div className="ingame-puzzle-name-div"> <div className="ingame-puzzle-name">{title}</div></div>
             <div className="main-puzzle-holder">
                 <Button variant="light" id="solvePuzzleButton" onClick={() => { dispatch(SetSolved(2));}}> click to solve this puzzle</Button>
                 
