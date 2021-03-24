@@ -27,7 +27,7 @@ const Castitas = () => {
                         <img src={beams} className="beams-image" alt="beams"></img>
                     </div>
                 </div>
-                <CastitasSquaresButtons/>
+                <CastitasSquareButtons/>
                 <Button variant="light" id="solvePuzzleButton" onClick={() => { dispatch(SetSolved(1));}}> click to solve this puzzle</Button>
                 
             
@@ -35,20 +35,60 @@ const Castitas = () => {
         </div>
     )
 }
+class SquareButton extends React.Component {
+    constructor(props) {
+        super(props);
+        this.idName = props.idName
+        this.state = {
+            className: "square noColor",
+            currentColor: 1
+        }
+        this.colorClasses = {
+            1: 'noColor',
+            2: 'colorOne',
+            3: 'colorTwo',
+            4: 'colorThree',
+            5: 'colorFour',
+            6: 'colorFive',
+            7: 'colorSix',
+            8: 'colorSeven',
+        }
+        this.handleClick = this.handleClick.bind(this);
+    }
 
+    handleClick() {
+        let currentColor = this.state.currentColor;
+        let newColor = currentColor == 8 ? 1 : currentColor + 1;
+        let newClassNameColor = "square " +  String(this.colorClasses[newColor]);
+        
+        this.setState({
+            className: newClassNameColor,
+            currentColor: newColor
+        })
+    }
 
-const CastitasSquaresButtons = () => {
+    render() {
+        return (
+                <Col className="square-col">
+                <div onClick={() => { this.handleClick(); }} id={this.idName} className={this.state.className}>
+                    </div>
+                </Col>
+        )
+    }
+}
+
+const CastitasSquareButtons = () => {
+
     return (
         <Container className="square-button-holder" >
             <Row>
-                <Col className="square-col"><div className="square"></div> </Col>
-                <Col className="square-col"><div className="square"></div></Col>
-                <Col className="square-col"><div className="square"></div></Col>
-                <Col className="square-col"><div className="square"></div> </Col>
-                <Col className="square-col"><div className="square"></div> </Col>
-                <Col className="square-col"><div className="square"></div> </Col>
-                <Col className="square-col"><div className="square"></div> </Col>
-                
+                <SquareButton idName="squareOne" />
+                <SquareButton idName="squareTwo" />
+                <SquareButton idName="squareThree" />
+                <SquareButton idName="squareFour" />
+                <SquareButton idName="squareFive" />
+                <SquareButton idName="squareSix" />
+                <SquareButton idName="squareSeven" />               
             </Row>
         </Container>
  )
@@ -68,15 +108,10 @@ class CastitasSunSlider extends React.Component {
       //console.log("this value is now:" + String(event.target.value));
   }
 
-//   handleSubmit(event) {
-//     alert('A name was submitted: ' + this.state.value);
-//     event.preventDefault();
-//   }
-
   render() {
       return (
-        <div class="slider-container">
-              <input type="range" value={this.state.value} onChange={this.handleChange} class="slider" name="points" min="0" max="100"></input>     
+        <div className="slider-container">
+              <input type="range" value={this.state.value} onChange={this.handleChange} className="slider" name="points" min="0" max="100"></input>     
         </div>
     );
   }
