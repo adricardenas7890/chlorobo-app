@@ -88,11 +88,11 @@ button:disabled {
 }
 
 #button-castitas {
-    position:relative;
-    left:340px;
-    bottom:470px;
-    padding:0px!important;
-    border-radius:100%;
+    position: relative;
+    left: 316px;
+    bottom: 591px;
+    padding: 0px!important;
+    border-radius: 100%;
 }
 
 .menu-button-div > #button-temperantia {
@@ -104,6 +104,14 @@ button:disabled {
     background-color: orange;  
 }
 
+#button-temperantia {
+    position: relative;
+    left: 378px;
+    bottom: 425px;
+    padding: 0px!important;
+    border-radius: 100%;
+}
+
 .menu-button-div > #button-industria {
     filter:brightness(.3) grayscale(.7) invert(.6);
     mix-blend-mode: color-burn;
@@ -111,6 +119,14 @@ button:disabled {
 
 #button-industria-div {
     background-color: yellow;  
+}
+
+#button-industria {
+    position: relative;
+    left: 258px;
+    bottom: 221px;
+    padding: 0px!important;
+    border-radius: 100%;
 }
 
 .menu-button-div > #button-patientia {
@@ -122,6 +138,14 @@ button:disabled {
     background-color: lightgreen;  
 }
 
+#button-patientia {
+    position: relative;
+    left: 0px;
+    bottom: 130px;
+    padding: 0px!important;
+    border-radius: 100%;
+}
+
 .menu-button-div > #button-humilitas {
     filter:brightness(.3) grayscale(.2) invert(.2);
     mix-blend-mode: color-burn;
@@ -129,6 +153,14 @@ button:disabled {
 
 #button-humilitas-div {
     background-color: aqua;  
+}
+
+#button-humilitas {
+    position: relative;
+    left: -258px;
+    bottom: 221px;
+    padding: 0px!important;
+    border-radius: 100%;
 }
 
 .menu-button-div > #button-caritas {
@@ -140,6 +172,14 @@ button:disabled {
     background-color: blue;  
 }
 
+#button-caritas {
+    position: relative;
+    left: -378px;
+    bottom: 425px;
+    padding: 0px!important;
+    border-radius: 100%;
+}
+
 .menu-button-div > #button-humanitas {
     filter:brightness(.3) grayscale(.2) invert(.9);
     mix-blend-mode: color-burn;
@@ -147,5 +187,13 @@ button:disabled {
 
 #button-humanitas-div {
     background-color: purple;  
+}
+
+#button-humanitas {
+    position: relative;
+    left: -316px;
+    bottom: 591px;
+    padding: 0px!important;
+    border-radius: 100%;
 }
 

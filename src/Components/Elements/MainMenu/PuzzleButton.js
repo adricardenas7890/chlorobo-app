@@ -78,7 +78,7 @@ const WrapPuzzleDesignInButton = (props) => {
     }
     else {
         return (
-            <Button variant="light" disabled>
+            <Button id={puzzleButtonID} variant="light" disabled>
                 <PuzzleDesign puzzle={props.puzzle} state={props.state} />
             </Button>
         )
