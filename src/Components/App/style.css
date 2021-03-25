@@ -1,11 +1,13 @@
 .App {
     text-align: center;
+    overflow-y: hidden;
   }
   
   .App-logo {
     height: 72vh;
     pointer-events: none;
     position: relative;
+    min-height:620px;
   }
   
   @media (prefers-reduced-motion: no-preference) {
