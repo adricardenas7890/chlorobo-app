@@ -40,6 +40,7 @@ class SquareButton extends React.Component {
             className: "square noColor",
             currentColor: 1
         }
+        // YOU HAVE TO MIX THESE AROUND
         this.colorClasses = {
             1: 'square noColor',
             2: 'square colorOne',
@@ -127,8 +128,7 @@ class CastitasSquareButtons extends React.Component {
             this.checkSolvedStatus()
         }       
     }
-    checkSolvedStatus() {
-        
+    checkSolvedStatus() {       
         let countCorrect = 0;
         for (const square in this.state.solved) {
             if (this.state.solved[square] === true) {
