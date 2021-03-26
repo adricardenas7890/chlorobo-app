@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+@font-face {
+  font-family: "PitoSlab";
+  src: local("PitoSlab"),
+    url("./fonts/PitoSlab-Regular.otf") format("opentype");
+  font-weight: normal;
+}
