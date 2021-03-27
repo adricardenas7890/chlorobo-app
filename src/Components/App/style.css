@@ -10,12 +10,7 @@
     min-height:620px;
   }
   
-  @media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-      /* animation: App-logo-float infinite 3s ease-in-out; */
-      animation: App-logo-float ease-in-out;
-    }
-  }
+
   
   .App-header {
     border: 1px solid black;
