@@ -1,0 +1,16 @@
+.temp-grid-div {
+    height: 500px;
+    min-width:1300px;
+    background-color: pink;
+}
+
+.temp-grid-col {
+    flex: 0 0 600px;
+}
+
+.temp-grid-col {
+    background-color:yellow;
+}
+.temp-grid {
+    background-color:red;
+}
