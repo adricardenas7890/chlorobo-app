@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Row, Col, Container } from 'react-bootstrap';
 import { SetSolved } from '../puzzleProgressSlice';
+import { puzzleCompletePage } from '../../../Pages/Content/contentSlice';
 import { useDispatch } from 'react-redux';
 //import sunSlider from './img/sun1-transparentYellow.png';
 // import prism from './img/prism.png';
@@ -27,7 +28,8 @@ const Castitas = () => {
                 </div> */}
                 <CastitasSquareButtons/>
                 <Button variant="light" id="solvePuzzleButton" onClick={() => { dispatch(SetSolved(1));}}> click to solve this puzzle</Button>
-                
+                <Button variant="light" id="completePuzzlePageButton" onClick={() => { dispatch(puzzleCompletePage());}}> go to complete page</Button>
+       
             
             </div>
         </div>

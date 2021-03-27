@@ -4,6 +4,7 @@
   width: 60px;
   border: 3px solid gray;
   padding:0px!important;
+  box-shadow: 3px;
 }
 
 .noColor {
@@ -11,7 +12,7 @@
 }
 
 .colorOne {
-    background-color:pink;
+    background-color:rgb(235, 0, 39);
 }
 
 .colorTwo {
@@ -23,7 +24,7 @@
 }
 
 .colorFour {
-    background-color: green;
+    background-color: rgb(28, 221, 28);
 }
 
 .colorFive {
@@ -36,7 +37,7 @@
 }
 
 .colorSeven {
-    background-color: purple;
+    background-color: rgb(136, 62, 255);
 }
 
 .square-col {
@@ -47,7 +48,9 @@
     height:70px;
     width:630px;
     padding:0px;
+    margin-top:10px;
 }
+
 .image-holders {
     height:430px;
 }

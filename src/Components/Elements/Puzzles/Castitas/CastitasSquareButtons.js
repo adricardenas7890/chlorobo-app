@@ -1,5 +1,10 @@
 import React from 'react';
 import { Row, Col, Container } from 'react-bootstrap';
+import { configureStore } from '@reduxjs/toolkit'
+import viewPageReducer, { puzzleCompletePage } from '../../../Pages/Content/contentSlice';
+
+
+const store = configureStore({ reducer: viewPageReducer });
 
 class CastitasSquareButtons extends React.Component {
     constructor(props) {
@@ -86,13 +91,13 @@ class SquareButton extends React.Component {
         // YOU HAVE TO MIX THESE AROUND
         this.colorClasses = {
             1: 'square noColor',
-            2: 'square colorOne',
-            3: 'square colorTwo',
+            2: 'square colorFour',
+            3: 'square colorOne',
             4: 'square colorThree',
-            5: 'square colorFour',
+            5: 'square colorTwo',
             6: 'square colorFive',
-            7: 'square colorSix',
             8: 'square colorSeven',
+            7: 'square colorSix',
         }
         this.handleClick = this.handleClick.bind(this);
         this.handleColorChange = this.handleColorChange.bind(this);

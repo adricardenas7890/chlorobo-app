@@ -16,11 +16,11 @@ class CastitasSunSlider extends React.Component {
       this.state = { value: 50 };
       this.beamOpacity = { 
           1: "0%", 
-          2: "30%", 
+          2: "0%", 
           3: "50%", 
-          4: "80%", 
-          5: "80%", 
-          6: "50%", 
+          4: "100%", 
+          5: "50%", 
+          6: "0%", 
           7: "0%"
 
       }
@@ -34,23 +34,29 @@ class CastitasSunSlider extends React.Component {
         this.setState({ value: sliderValue });       
 
         var opacityValue = "";
+        var scale = [
+            0,
+            17,
+            33,
+            50,
+            67,
+            83,
+            100
+        ];
         
-        for (var beam = 0; beam < 7; beam++) {
-            let lowerBound = 16.66 * (beam - 1);
-            let upperBound = 16.66 * (beam + 1);
-            if (sliderValue <= upperBound && sliderValue >= lowerBound) {
-                debugger;
-                let sliderStep = (sliderValue * .07);
-                let difference = (beam - sliderStep) * 100;
-                let opacity = Math.abs(difference);
-                let opacityString = String(opacity + "%");
-                // opacityValue = String(Math.abs(i - (sliderValue * (7/100)))) + "%";
-                this.beamOpacity[beam+1] = opacityString;
+        for (var i = 0; i < scale.length; i++) {
+            if (sliderValue < scale[i]) {
+                opacityValue = (100 - (scale[i] - sliderValue)) - 50;
+            }
+            else if (sliderValue > scale[i]) {
+                opacityValue = (100 - (sliderValue - scale[i])) - 50;
             }
             else {
-                this.beamOpacity[beam+1] = "0%";
+                opacityValue = 100
             }
+            this.beamOpacity[8-(i + 1)] = String(opacityValue * 2.2) + "%";
         }
+
   }
 
   render() {
