@@ -30,13 +30,15 @@ class GridSquare extends React.Component {
 
         this.state = { 
             currentColor: props.color,  // Doesn't change
-            currentClass: props.color == "black" ? "temp-square black-square" : "temp-square white-square", // Doesn't change
+            currentClass: props.color === "black" ? "temp-square black-square" : "temp-square white-square", // Doesn't change
             currentNumber: String(props.number),    //  Changes
-            solvedStatus: null  // Changes
+            solvedStatus: ((props.color === "black" && props.number === "1") || (props.color === "white" && props.number === "0")) ? true: false  // Changes
         }
-
-        if ((props.color === "black" && props.number === "1") || (props.color === "white" && props.number === "0")) {
-            this.state.solvedStatus = true
+        if (props.place === "34" || props.place === "158" || props.place === "13" || props.place === "18") {
+               this.state.currentNumber = 1 
+        }
+        if (props.place === "6" || props.place === "23" || props.place === "30" ) {
+               this.state.currentNumber = 0
         }
 
         this.handleClick = this.handleClick.bind(this);
@@ -45,16 +47,15 @@ class GridSquare extends React.Component {
     }
 
     passSolvedStatus() {
-        this.props.handleSolvedStatus(true);
+        this.props.handleCorrectSquare(true);
     }
+
+
 
     handleClick() {
         let copy = this.state;
-
-
         this.state.currentNumber === "1" ? copy.currentNumber =  "0" : copy.currentNumber = "1";
         copy.solvedStatus = !this.state.solvedStatus;
-        //copy.currentNumber = "0";
 
         this.setState({ copy });
 
@@ -67,7 +68,7 @@ class GridSquare extends React.Component {
     render(){
         
         return (
-            <div  className={this.state.currentClass} onClick={this.handleClick} >   
+            <div className={this.state.currentClass} onClick={this.handleClick} >   
                 {this.state.currentNumber}
                 </div>
 
@@ -77,12 +78,20 @@ class GridSquare extends React.Component {
 }
 
 const SquareRow = (props) => { 
+    let checkRow = (flag) => { 
+        if (flag) {
+            props.handleCorrectRow(true);
+        }
+    }
+
     let squareValues = props.squareValues;
     let generateRow = () => {
         let row = [];
         for (let property in squareValues) {
-            let color = squareValues[property] === 1 ? "black" : "white";
-            const item = <GridSquare color={color} number={squareValues[property]}  />;
+            let number = squareValues[property];
+            let color = number === 1 ? "black" : "white";   
+
+            const item = <GridSquare key={property} place={property} handleCorrectSquare={checkRow()} color={color} number={number}  />;
             row.push(item);
         }
         return row;
@@ -95,9 +104,14 @@ const SquareRow = (props) => {
     )
 }
 
-const SquareRows = () => { 
+const TempGrid = () => { 
     let allValues = solutionObject;
     
+    // let handleCorrectRow = (flag) => { 
+    //     if (flag) {
+
+    //     }
+    // }
     
     let generateAllRows = () => { 
         let rows = [];
@@ -108,7 +122,7 @@ const SquareRows = () => {
             for (let j = 1; j < 21; j++) {
                 currentValues[x + j] = allValues[ x + j];
             }
-            const row = <SquareRow squareValues={currentValues} />;
+            const row = <SquareRow key={x} squareValues={currentValues} />;
             rows.push(row);
             x += 20;
         }
@@ -125,7 +139,7 @@ const SquareRows = () => {
 
 const TemperantiaGrid = () => { 
     return (
-        <SquareRows/>
+        <TempGrid/>
     )
 }
 

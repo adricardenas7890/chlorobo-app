@@ -23,7 +23,7 @@ export const puzzleProgressSlice = createSlice({
             if (puzzleNo < 7) {
                 state[nextPuzzleNo] = "available";
             }
-            if (puzzleNo == 7) {
+            if (puzzleNo === 7) {
                 state["endGame"] = true;
             }
 

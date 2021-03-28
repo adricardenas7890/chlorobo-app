@@ -1,10 +1,7 @@
 import React from 'react';
 import { Row, Col, Container } from 'react-bootstrap';
-import { configureStore } from '@reduxjs/toolkit'
-import viewPageReducer, { puzzleCompletePage } from '../../../Pages/Content/contentSlice';
 
-
-const store = configureStore({ reducer: viewPageReducer });
+//const store = configureStore({ reducer: viewPageReducer });
 
 class CastitasSquareButtons extends React.Component {
     constructor(props) {
@@ -63,7 +60,6 @@ class CastitasSquareButtons extends React.Component {
     }
 
     render() {
-        let status = this.state.allSolved;
         return (
             <Container className="square-button-holder" >
                 <Row>

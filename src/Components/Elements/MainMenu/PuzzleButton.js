@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
-import {useDispatch, useSelector } from 'react-redux';
+import {useDispatch } from 'react-redux';
 import buttonBlack from './button-black.png';
 import caritasButton from './buttonIcon-caritas.png';
 import castitasButton from './buttonIcon-castitas.png';
@@ -25,7 +25,7 @@ const WrapPuzzleDesignInButton = (props) => {
     let puzzleDesign = <PuzzleDesign puzzle={props.puzzle} state={props.state} />;
     let puzzleButtonID = "button-" + String(props.puzzle);
     let dispatch = useDispatch();
-    if (props.state != "hidden") {
+    if (props.state !== "hidden") {
         switch (props.puzzle) {
             case "castitas":
                 return (
@@ -91,8 +91,8 @@ const PuzzleDesign = ( props ) => {
     const buttonID = "button-" +  name ;
     const divID = "button-" + name + "-div";
     const mainButtonDivClass = "main-button-div main-" + name;
-    let menuButtonDivClassName = props.state == "solved" ? "menu-button-div" : "menu-button-div unsolved";
-    let iconClass = props.state == "hidden" ? "menu-button-icon hidden" : "menu-button-icon";
+    let menuButtonDivClassName = props.state === "solved" ? "menu-button-div" : "menu-button-div unsolved";
+    let iconClass = props.state === "hidden" ? "menu-button-icon hidden" : "menu-button-icon";
     let icon;
     switch (name) {
         case "castitas":
