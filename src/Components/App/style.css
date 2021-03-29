@@ -11,12 +11,12 @@
   @media (prefers-reduced-motion: no-preference) {
     .App-logo {
       /* animation: App-logo-float infinite 3s ease-in-out; */
-      animation: App-logo-float ease-in-out;
+      /*animation: App-logo-float ease-in-out;*/
     }
   }
   
   .App-header {
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     min-height: 90vh;
     min-width: 900px;
     display: flex;
@@ -30,7 +30,7 @@
     color: rgb(112, 76, 182);
   }
   
-  @keyframes App-logo-float {
+/*  @keyframes App-logo-float {
     0% {
       transform: translateY(0);
     }
@@ -41,4 +41,4 @@
       transform: translateY(0px)
     }
   }
-  
+  */
