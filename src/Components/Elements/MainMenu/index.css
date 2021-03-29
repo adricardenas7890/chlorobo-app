@@ -28,14 +28,13 @@
 
 
 .btn {
-    background-color:white!important;
+    background-color:#ffffff00!important;
     border: none!important;
 }
 
 .main-button-div {
     width: 70px;
     height: 70px; 
-    /* background-color:pink; */
     border-radius:100%;
 }
 
@@ -69,7 +68,7 @@
     height: 45px;
     position: relative;
     z-index:2;
-    bottom:55px;
+    bottom:56px;
     left:1px;
     opacity:1;
 }
@@ -89,8 +88,8 @@ button:disabled {
 
 #button-castitas {
     position: relative;
-    left: 316px;
-    bottom: 591px;
+    left: 313px;
+    bottom: 588px;
     padding: 0px!important;
     border-radius: 100%;
 }
@@ -101,12 +100,12 @@ button:disabled {
 }
 
 #button-temperantia-div {
-    background-color: orange;  
+    background-color: #ff8d00;  
 }
 
 #button-temperantia {
     position: relative;
-    left: 378px;
+    left: 374px;
     bottom: 425px;
     padding: 0px!important;
     border-radius: 100%;
@@ -123,8 +122,8 @@ button:disabled {
 
 #button-industria {
     position: relative;
-    left: 258px;
-    bottom: 221px;
+    left: 257px;
+    bottom: 222px;
     padding: 0px!important;
     border-radius: 100%;
 }
@@ -135,13 +134,13 @@ button:disabled {
 }
 
 #button-patientia-div {
-    background-color: lightgreen;  
+    background-color: lime;  
 }
 
 #button-patientia {
     position: relative;
-    left: 0px;
-    bottom: 130px;
+    left: -1px;
+    bottom: 132px;
     padding: 0px!important;
     border-radius: 100%;
 }
@@ -157,8 +156,8 @@ button:disabled {
 
 #button-humilitas {
     position: relative;
-    left: -258px;
-    bottom: 221px;
+    left: -260px;
+    bottom: 222px;
     padding: 0px!important;
     border-radius: 100%;
 }
@@ -174,7 +173,7 @@ button:disabled {
 
 #button-caritas {
     position: relative;
-    left: -378px;
+    left: -375px;
     bottom: 425px;
     padding: 0px!important;
     border-radius: 100%;
@@ -191,8 +190,8 @@ button:disabled {
 
 #button-humanitas {
     position: relative;
-    left: -316px;
-    bottom: 591px;
+    left: -313px;
+    bottom: 588px;
     padding: 0px!important;
     border-radius: 100%;
 }
