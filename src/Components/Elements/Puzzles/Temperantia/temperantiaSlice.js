@@ -1,6 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { useDispatch } from 'react-redux';
-import { SetSolved } from '../puzzleProgressSlice';
 
 // Three modes, available, solved, hidden
 export const temperantiaSlice = createSlice({

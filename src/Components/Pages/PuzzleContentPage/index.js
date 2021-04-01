@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import  Castitas  from '../../Elements/Puzzles/Castitas/index';
 import Temperantia from '../../Elements/Puzzles/Temperantia/index';
 import Patientia from '../../Elements/Puzzles/Patientia/index';

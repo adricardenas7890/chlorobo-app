@@ -6,7 +6,6 @@ import { useDispatch } from 'react-redux';
 import '../index.css';
 
 const Patientia = () => {
-    let title = "Patientia";
     let dispatch = useDispatch();
     return (
         // <div className="castitas-container">

@@ -1,19 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import  Castitas  from '../../Elements/Puzzles/Castitas/index';
-import Temperantia from '../../Elements/Puzzles/Temperantia/index';
-import Patientia from '../../Elements/Puzzles/Patientia/index';
-import Humilitas from '../../Elements/Puzzles/Humilitas/index';
-import Caritas from '../../Elements/Puzzles/Caritas/index';
-import Humanitas from '../../Elements/Puzzles/Humanitas/index';
-import Industria from '../../Elements/Puzzles/Industria/index';
-import CastitasPoemContent  from '../../Elements/Puzzles/Castitas/CastitasPoemContent';
-import TemperantiaPoemContent from '../../Elements/Puzzles/Temperantia/TemperantiaPoemContent';
-import PatientiaPoemContent from '../../Elements/Puzzles/Patientia/PatientiaPoemContent';
-import HumilitasPoemContent from '../../Elements/Puzzles/Humilitas/HumilitasPoemContent';
-import CaritasPoemContent from '../../Elements/Puzzles/Caritas/CaritasPoemContent';
-import HumanitasPoemContent from '../../Elements/Puzzles/Humanitas/HumanitasPoemContent';
-import IndustriaPoemContent from '../../Elements/Puzzles/Industria/IndustriaPoemContent';
+// import  Castitas  from '../../Elements/Puzzles/Castitas/index';
+// import Temperantia from '../../Elements/Puzzles/Temperantia/index';
+// import Patientia from '../../Elements/Puzzles/Patientia/index';
+// import Humilitas from '../../Elements/Puzzles/Humilitas/index';
+// import Caritas from '../../Elements/Puzzles/Caritas/index';
+// import Humanitas from '../../Elements/Puzzles/Humanitas/index';
+// import Industria from '../../Elements/Puzzles/Industria/index';
 
 import PuzzleContent from '../PuzzleContentPage/index';
 import PuzzlePoemContent from '../PuzzlePoemPage/index'
@@ -25,7 +18,9 @@ const PuzzlePage = ({ puzzle, poemMode }) => {
     let puzzleComponent;
     if (poemMode === true) {
         console.log("here it is");
-        //<PuzzlePoemContent puzzle={puzzle} />
+        puzzleComponent = <PuzzlePoemContent puzzle={puzzle} />
+
+
         // if (puzzle === "castitas") {
         // puzzleComponent = <CastitasPoemContent/>
         // }
@@ -52,7 +47,7 @@ const PuzzlePage = ({ puzzle, poemMode }) => {
         // }
     }
     else if (poemMode === false) {
-        <PuzzleContent puzzle={puzzle}/>
+        puzzleComponent = <PuzzleContent puzzle={puzzle}/>
         // if (puzzle === "castitas") {
         //     puzzleComponent = <Castitas />
         // }

@@ -8,7 +8,6 @@ import  CastitasSquareButtons  from './CastitasSquareButtons';
 import CastitasSunSlider from './CastitasSunSlider';
 
 const Castitas = () => {
-    let title = "Castitas"
     let dispatch = useDispatch();
     return (
         <div className="main-content-holder">
