@@ -2,6 +2,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import viewPageReducer from '../Components/Pages/Content/contentSlice';
 import puzzlePageReducer from '../Components/Elements/Puzzles/puzzlePageSlice';
 import puzzleProgressReducer from '../Components/Elements/Puzzles/puzzleProgressSlice'
+import temperantiaReducer from '../Components/Elements/Puzzles/Temperantia/temperantiaSlice';
 //import puzzleOne from '../Components/PuzzleOne/puzzleOneSlice';
 //import puzzleTwo from '../Components/PuzzleTwo/puzzleTwo';
 //import puzzleThree from '../Components/PuzzleThree/puzzleThree';
@@ -15,6 +16,7 @@ export default configureStore({
     currentViewPage: viewPageReducer,
     currentPuzzle: puzzlePageReducer,
     currentPuzzleProgress: puzzleProgressReducer,
+    currentTempProgress : temperantiaReducer,
     //puzzleOne: puzzleOneReducer,
     //puzzleTwo: puzzleTwoReducer,
     //puzzleThree: puzzleThreeReducer,
@@ -25,3 +27,6 @@ export default configureStore({
     //puzzleEight: puzzleEightReducer,
   },
 });
+
+
+  

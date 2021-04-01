@@ -25,8 +25,7 @@ const MainMenu = () => {
     ];
 
     return (
-        <div className="main-content-holder">
-            {/*<div className="puzzle-name-div"> <div className="puzzle-name">Name of Puzzle</div></div>*/}
+        <div className="main-content-holder">      
             <div className="main-menu-holder">
                 
                 <div>

@@ -1,19 +1,15 @@
 .App {
     text-align: center;
+    overflow-y: hidden;
   }
   
   .App-logo {
-    height: 72vh;
+    height: 674px;
     pointer-events: none;
     position: relative;
+    min-height:620px;
   }
   
-  @media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-      /* animation: App-logo-float infinite 3s ease-in-out; */
-      /*animation: App-logo-float ease-in-out;*/
-    }
-  }
   
   .App-header {
     /*border: 1px solid black;*/

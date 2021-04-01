@@ -5,6 +5,7 @@ import HelpPage from '../HelpPage/HelpPage';
 import PuzzlePage from '../PuzzlePage/PuzzlePage';
 import MainMenuPage from '../MainMenuPage/MainMenuPage';
 import EndGamePage from '../EndGamePage/EndGamePage';
+import PuzzleCompletePage from '../PuzzleCompletePage/PuzzleCompletePage';
 // This Component will redirect to the main component for each view.
 // Connected to contentSlice, will update when state.currentViewPage.viewPage updates
 
@@ -25,6 +26,9 @@ var Content = (props) => {
     }
     else if (pageView === "endSequencePage") {
         content = <EndGamePage/>
+    }
+    else if (pageView === "puzzleCompletePage") {
+        content = <PuzzleCompletePage/>
     }
     else {
         content = (

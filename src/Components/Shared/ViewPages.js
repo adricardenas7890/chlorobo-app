@@ -21,7 +21,7 @@ const viewPages = [
         }, 
         {
             page: "puzzleCompletePage",
-            mod: { header: true, title: "Puzzle Complete" }
+            mod: { header: false, title: "Puzzle Complete" }
         },
         {
             page: "endSequencePage",
