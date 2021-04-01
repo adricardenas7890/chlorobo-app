@@ -17,7 +17,7 @@ import PuzzlePoemContent from '../PuzzlePoemPage/index'
 const PuzzlePage = ({ puzzle, poemMode }) => {
     let puzzleComponent;
     if (poemMode === true) {
-        console.log("here it is");
+        //console.log("here it is");
         puzzleComponent = <PuzzlePoemContent puzzle={puzzle} />
 
 

@@ -13,7 +13,7 @@ const WinPuzzle = () => {
 const TemperantiaGrid = ({ incorrect, gameFinished }) => { 
     let activeGrid = incorrect !== 0 ? true : false;
 
-    console.log(incorrect);
+    //console.log(incorrect);
     if (!activeGrid && gameFinished === false) {
         alert('puzzle complete');
         WinPuzzle();
@@ -156,7 +156,7 @@ class GridSquare extends React.Component {
 
 // Connect to store and couple Layout component with currentViewPage store
 const getPuzzleStatus = (appState) => {
-    console.log(appState.currentTempProgress.incorrect);
+    //console.log(appState.currentTempProgress.incorrect);
     return ({
         incorrect: appState.currentTempProgress.incorrect,
         gameFinished: appState.currentTempProgress.endGame
