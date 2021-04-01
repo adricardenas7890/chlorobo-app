@@ -2,7 +2,9 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import {mainMenuPage} from '../../Pages/Content/contentSlice';
 import { useDispatch } from 'react-redux'
-import title from './title.png';
+import splashImage from './splash.png';
+import { isMobile, isChrome } from 'react-device-detect';
+import "./index.css"
 
 const Start = () => {
         const dispatch = useDispatch();
