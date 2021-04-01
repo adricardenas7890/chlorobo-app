@@ -1,0 +1,46 @@
+.help-hover {
+	margin: 2em;
+}
+
+.help-hover p {
+	margin: 0px;
+}
+
+.help-hover:hover p{
+	display: none;
+}
+
+#Puzzle1:hover:before {
+	white-space: pre;
+	content: "Use the slider to look at the light that shines through the prism.  Be pure.";
+}
+
+#Puzzle2:hover:before {
+	white-space: pre;
+	content: "Click on the 1's and 0's to match the squares of black and white.  Be balanced.";
+}
+
+#Puzzle3:hover:before {
+	white-space: pre;
+	content: "Count how many of each shape there are.  Be diligent.";
+}
+
+#Puzzle4:hover:before {
+	white-space: pre;
+	content: "Click on the hourglass to start the timer.  Be patient.";
+}
+
+#Puzzle5:hover:before {
+	white-space: pre;
+	content: "Click on the order of buttons that flashes.  Be humble.";
+}
+
+#Puzzle6:hover:before {
+	white-space: pre;
+	content: "Give your possessions away to those in need.  Be charitable.";
+}
+
+#Puzzle7:hover:before {
+	white-space: pre;
+	content: "Share your insight.  Be kind.";
+}

@@ -1,1 +1,7 @@
+#NavbarBrand {
+	height: 35px;
+}
 
+.navbar-light {
+	background: transparent;
+}

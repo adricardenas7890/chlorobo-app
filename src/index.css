@@ -1,8 +1,21 @@
+@font-face {
+  font-family: 'Heritage';
+  src: local('Heritage'), url(./fonts/Heritage-Display.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'PitoSlab';
+  src: local('PitoSlab'), url(./fonts/PitoSlab-Regular.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Petitemort';
+  src: local('Petitemort'), url(./fonts/Petitemort-Regular.otf) format('opentype');
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: Petitemort!important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

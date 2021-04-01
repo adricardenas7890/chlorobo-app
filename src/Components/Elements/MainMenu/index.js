@@ -25,8 +25,7 @@ const MainMenu = () => {
     ];
 
     return (
-        <div className="main-content-holder">
-        
+        <div className="main-content-holder">      
             <div className="main-menu-holder">
                 
                 <div>

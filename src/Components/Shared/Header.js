@@ -3,14 +3,16 @@ import { useDispatch } from 'react-redux';
 import { mainMenuPage, helpPage } from '../Pages/Content/contentSlice';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
+import './header.css';
+import NavbarBrand from './Navbar-Brand.png';
 
 // This file will contain the element for the header. 
 const NavigationBar = () => {
     const dispatch = useDispatch();
     return (
 
-        <Navbar collapseOnSelect expand="lg" bg="light" >
-            <Navbar.Brand onClick={() => dispatch(mainMenuPage())}>Chlorobo</Navbar.Brand>
+        <Navbar collapseOnSelect expand="lg">
+            <Navbar.Brand onClick={() => dispatch(mainMenuPage())}><img src={NavbarBrand} id="NavbarBrand" alt="NavbarBrand" /></Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
