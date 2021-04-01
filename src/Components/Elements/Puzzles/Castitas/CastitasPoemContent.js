@@ -33,7 +33,8 @@ const CastitasPoemContent = () => {
         		<p>Should I follow the current? Should I be there soon?</p>
         		<Typist.Delay ms={1000} />
         	</Typist>
-        </div>
+        
+		</div>
     )
 }
 
