@@ -15,6 +15,7 @@ import PuzzlePoemContent from '../PuzzlePoemPage/index'
 // Connected to puzzleSlice reducer, will update when state.puzzle updates
 
 const PuzzlePage = ({ puzzle, poemMode }) => {
+    debugger;
     let puzzleComponent;
     if (poemMode === true) {
         //console.log("here it is");
