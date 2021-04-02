@@ -3,7 +3,8 @@ import { Button } from 'react-bootstrap';
 import {mainMenuPage} from '../../Pages/Content/contentSlice';
 import { useDispatch } from 'react-redux'
 import splashImage from './splash.png';
-import { isMobile, isChrome } from 'react-device-detect';
+import { isMobile } from 'react-device-detect';
+// import { isChrome } from 'react-device-detect';
 import "./index.css"
 
 const Start = () => {

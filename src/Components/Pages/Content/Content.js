@@ -42,9 +42,9 @@ var Content = (props) => {
     }
 
     return (
-        <header className="App-header">
+        <div className="App-content">
             {content}
-        </header>      
+        </div>      
     )
 }
 

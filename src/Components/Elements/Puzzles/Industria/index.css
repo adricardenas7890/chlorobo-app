@@ -1,0 +1,74 @@
+.industria-content {
+    width:100%;
+    flex: 0 0 100%;
+}
+
+.industria-image-div {
+    background-color:lightyellow;
+}
+
+.counter-image{ 
+    height:40px;
+}
+
+.industria-container {
+    height: 90%;
+    min-width:90%;
+    border: 6px dotted rgb(255, 232, 236);
+}
+.counter-image {
+    -ms-transform: rotate(270deg); /* IE 9 */
+    transform: rotate(270deg);
+}
+.counter-icon {
+    border: black solid 1px;
+    width:70px;
+    height:70px;
+
+}
+
+.industria-video-col {
+    flex: 0 0 70%;
+}
+.counter-title {
+    background-color:lightblue!important;
+
+}
+
+.counter-content {
+    background-color:lightyellow!important;
+}
+
+
+
+.counter-input {
+    /* width:20%; */
+    /* height:80px; */
+    border:none;
+    font-size:30px;
+    
+}
+
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+
+input:select {
+    caret-color: transparent;
+}
+
+
+.industria-counters-col {
+    min-width:30%;
+    flex: 0 0 30%;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+   opacity: 1;
+
+}
+
+.counter-inputs-row {
+    min-width:460px;
+}
