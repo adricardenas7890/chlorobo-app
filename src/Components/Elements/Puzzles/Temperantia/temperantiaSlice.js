@@ -4,8 +4,8 @@ import { createSlice } from '@reduxjs/toolkit'
 export const temperantiaSlice = createSlice({
     name: 'currentTempProgress',
     initialState: {
-        correct: 273,
-        incorrect: 7,
+        correct: 259,
+        incorrect: 21,
         endGame: false
     },
     reducers: {
@@ -14,13 +14,10 @@ export const temperantiaSlice = createSlice({
             state["correct"] -= 1
         },
         RightAnswer: (state, action) => {
-
             state["correct"] += 1
             state["incorrect"] -= 1
-
         },
         SolvedAll: (state) => {
-
             state["endGame"] = true;
         }
   }
