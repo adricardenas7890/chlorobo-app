@@ -1,5 +1,19 @@
+.patientia-player-div {
+	position: relative;
+    padding-bottom: 41%; /* 16:9 */
+    padding-top: 0;
+    height: 0;
+}
+
+.patientia-player-div iframe{
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .patientia-player {
     margin-left:5vw;
     margin-right:5vw;
-
 }
