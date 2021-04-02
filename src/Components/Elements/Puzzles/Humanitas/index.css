@@ -1,0 +1,10 @@
+.humanitas-input-div {
+    height:30vh;
+    width:100%;
+}
+
+.humanitas-input {
+    height:50%;
+    width:30%;
+    size:inherit;
+}
