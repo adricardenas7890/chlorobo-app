@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, connect } from 'react-redux';
-import flower1 from './flower1.png';
+import flower1 from './flower2.png';
 import './index.css'
 import PuzzleButton from './PuzzleButton';
 
