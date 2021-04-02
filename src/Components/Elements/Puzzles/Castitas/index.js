@@ -4,7 +4,7 @@ import { SetSolved } from '../puzzleProgressSlice';
 import { puzzleCompletePage } from '../../../Pages/Content/contentSlice';
 import { useDispatch } from 'react-redux';
 import './index.css';
-import  CastitasSquareButtons  from './CastitasSquareButtons';
+import CastitasSquareButtons  from './CastitasSquareButtons';
 import CastitasSunSlider from './CastitasSunSlider';
 
 const Castitas = () => {
