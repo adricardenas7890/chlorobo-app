@@ -5,11 +5,12 @@ import {mainMenuPage} from '../../Pages/Content/contentSlice';
 import { useDispatch } from 'react-redux'
 import completeImage from './Complete.png';
 import completeSound from '../../Elements/Sounds/chapterComplete.mp3';
+import './index.css'
 
 const PuzzleComplete = () => {
     let dispatch = useDispatch();
     return (
-        <div>
+        <div className="complete-page">
             <ReactAudioPlayer src={completeSound} autoPlay />
         	<img src={completeImage} id="CompleteImage" alt="Complete" />
         	<div>

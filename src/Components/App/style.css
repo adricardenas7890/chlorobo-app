@@ -18,7 +18,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
+    margin-top: .5vh;
     font-size: calc(10px + 2vmin);
   }
   
