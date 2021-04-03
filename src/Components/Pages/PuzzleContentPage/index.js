@@ -1,5 +1,5 @@
 import React from 'react';
-import  Castitas  from '../../Elements/Puzzles/Castitas/index';
+import Castitas  from '../../Elements/Puzzles/Castitas/index';
 import Temperantia from '../../Elements/Puzzles/Temperantia/index';
 import Patientia from '../../Elements/Puzzles/Patientia/index';
 import Humilitas from '../../Elements/Puzzles/Humilitas/index';
@@ -7,35 +7,41 @@ import Caritas from '../../Elements/Puzzles/Caritas/index';
 import Humanitas from '../../Elements/Puzzles/Humanitas/index';
 import Industria from '../../Elements/Puzzles/Industria/index';
 
+import PuzzleSong from '../PuzzleSong/index';
+
 const PuzzleContent = (props) => {
-    let puzzleComponent;
+    let puzzleSong = <PuzzleSong puzzle={props.puzzle}/>;
+    let puzzleContent;
     if (props.puzzle === "castitas") {
-        puzzleComponent = <Castitas />
+        puzzleContent = <Castitas />
     }
     else if (props.puzzle === "temperantia") {
-        puzzleComponent = <Temperantia />
+        puzzleContent = <Temperantia />
     }
     else if (props.puzzle === "industria") {
-        puzzleComponent = <Industria />
+        puzzleContent = <Industria />
     }
     else if (props.puzzle === "patientia") {
-        puzzleComponent = <Patientia />
+        puzzleContent = <Patientia />
     }
     else if (props.puzzle === "humilitas") {
-        puzzleComponent = <Humilitas />
+        puzzleContent = <Humilitas />
     }
     else if (props.puzzle === "caritas") {
-        puzzleComponent = <Caritas />
+        puzzleContent = <Caritas />
     }
     else if (props.puzzle === "humanitas") {
-        puzzleComponent = <Humanitas />
+        puzzleContent = <Humanitas />
     }
     else {
-        puzzleComponent = <div>We didn't find a match!</div>
+        puzzleContent = <div>We didn't find a match!</div>
     }
     return (
         <div>
-            {puzzleComponent}
+            <div>
+            {puzzleSong}
+            </div>
+            {puzzleContent}
         </div>
     )
     

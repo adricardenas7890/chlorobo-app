@@ -1,12 +1,17 @@
+.help-content {
+	font-size: 1.5vw;
+}
+
 .help-hover {
-	margin: 2em;
+	margin: 1em;
 }
 
-.help-hover p {
+.help-hover img {
 	margin: 0px;
+	width: 1.5vw;
 }
 
-.help-hover:hover p{
+.help-hover:hover img{
 	display: none;
 }
 

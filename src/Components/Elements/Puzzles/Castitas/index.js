@@ -5,7 +5,7 @@ import { puzzleCompletePage } from '../../../Pages/Content/contentSlice';
 import { GoToCompletePage } from '../puzzlePageSlice';
 import { useDispatch } from 'react-redux';
 import './index.css';
-import  CastitasSquareButtons  from './CastitasSquareButtons';
+import CastitasSquareButtons  from './CastitasSquareButtons';
 import CastitasSunSlider from './CastitasSunSlider';
 
 const Castitas = () => {

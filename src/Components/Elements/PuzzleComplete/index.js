@@ -1,8 +1,11 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
-import { mainMenuPage } from '../../Pages/Content/contentSlice';
+import ReactAudioPlayer from 'react-audio-player';
+import {mainMenuPage} from '../../Pages/Content/contentSlice';
 import { useDispatch } from 'react-redux'
 import completeImage from './Complete.png';
+import completeSound from '../../Elements/Sounds/chapterComplete.mp3';
+import './index.css'
 
 const PuzzleComplete = (props) => {
     let puzzle = props.puzzle;
@@ -12,7 +15,8 @@ const PuzzleComplete = (props) => {
         // Put logic in here for little items that appear in main menu
     }
     return (
-        <div>
+        <div className="complete-page">
+            <ReactAudioPlayer src={completeSound} autoPlay />
         	<img src={completeImage} id="CompleteImage" alt="Complete" />
         	<div>
             	<p>You have completed this chapter.</p>

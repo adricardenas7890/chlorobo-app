@@ -98,10 +98,12 @@ class GridSquare extends React.Component {
             solvedStatus: ((props.color === "black" && props.number === "1") || (props.color === "white" && props.number === "0")) ? true: false  // Changes
         }
         if (this.props.active) {
-            if (props.place === "34" || props.place === "158" || props.place === "13" || props.place === "18") {
+            if (props.place === "34" || props.place === "13" || props.place === "18" || props.place === "158" || props.place === "279" || props.place === "135"
+                || props.place === "193" || props.place === "280" || props.place === "260") {
                 this.state.currentNumber = 1
             }
-            if (props.place === "6" || props.place === "23" || props.place === "30") {
+            if (props.place === "6" ||props.place === "7" || props.place === "23" || props.place === "30" || props.place === "41" || props.place === "143"
+                || props.place === "167"|| props.place === "186" || props.place === "206" || props.place === "226" || props.place === "247" || props.place === "268") {
                 this.state.currentNumber = 0
             }
         }

@@ -11,6 +11,7 @@
     "@testing-library/user-event": "^7.2.1",
     "bootstrap": "^4.6.0",
     "react": "^17.0.1",
+    "react-audio-player": "^0.16.1",
     "react-bootstrap": "^1.5.2",
     "react-device-detect": "^1.17.0",
     "react-dom": "^17.0.1",

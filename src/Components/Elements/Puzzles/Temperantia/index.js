@@ -5,6 +5,8 @@ import { puzzleCompletePage } from '../../../Pages/Content/contentSlice';
 import { useDispatch, } from 'react-redux';
 import  TemperantiaGrid  from './TemperantiaGrid';
 import './index.css';
+import img1 from './temperantia-img1.jpg'
+import img2 from './temperantia-img2.jpg'
 
 const Temperantia = () => {
     let dispatch = useDispatch();
@@ -15,9 +17,6 @@ const Temperantia = () => {
                 <TemperantiaGridMain/>
                 <Button variant="light" id="solvePuzzleButton" onClick={() => { dispatch(SetSolved(2));}}> click to solve this puzzle</Button>
                 <Button variant="light" id="completePuzzlePageButton" onClick={() => { dispatch(puzzleCompletePage());}}> go to complete page</Button>
-        
-                
-            
             </div>
         </div>
     )
@@ -28,9 +27,9 @@ const TemperantiaGridMain = () => {
         <Container className ="temp-grid-div">
             <Row className="h-100">
                 <Col id="temp-image-holder-1">
+                    <img src={img1}/>
                 </Col>
                 <Col className="temp-grid-col">
-                    
                     <div className="temp-grid">
                         <TemperantiaGrid />
                     </div>
@@ -39,6 +38,7 @@ const TemperantiaGridMain = () => {
                     </div>
                 </Col>
                 <Col id="temp-image-holder-2">
+                    <img src={img2}/>
                 </Col>
             </Row>
         </Container>

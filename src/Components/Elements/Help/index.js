@@ -1,29 +1,36 @@
 import React from 'react';
 import './index.css';
+import caritasButton from '../MainMenu/buttonIcon-caritas.png';
+import castitasButton from '../MainMenu/buttonIcon-castitas.png';
+import humanitasButton from '../MainMenu/buttonIcon-humanitas.png';
+import temperantiaButton from '../MainMenu/buttonIcon-temperantia.png';
+import industriaButton from '../MainMenu/buttonIcon-industria.png';
+import patientiaButton from '../MainMenu/buttonIcon-patientia.png';
+import humilitasbutton from '../MainMenu/buttonIcon-humilitas.png';
 
 const Help = () => {
     return (
-        <div>
+        <div className="help-content">
         	<div className="help-hover" id="Puzzle1">
-            	<p>Chapter 1</p>
+                <img src={castitasButton} className="puzzle-icon" alt="Chapter 1"/>
             </div>
             <div className="help-hover" id="Puzzle2">
-            	<p>Chapter 2</p>
+                <img src={temperantiaButton} className="puzzle-icon" alt="Chapter 2"/>
             </div>
             <div className="help-hover" id="Puzzle3">
-            	<p>Chapter 3</p>
+                <img src={industriaButton} className="puzzle-icon" alt="Chapter 3"/>
             </div>
             <div className="help-hover" id="Puzzle4">
-            	<p>Chapter 4</p>
+                <img src={patientiaButton} className="puzzle-icon" alt="Chapter 3"/>
             </div>
             <div className="help-hover" id="Puzzle5">
-            	<p>Chapter 5</p>
+                <img src={humilitasbutton} className="puzzle-icon" alt="Chapter 3"/>
             </div>
             <div className="help-hover" id="Puzzle6">
-            	<p>Chapter 6</p>
+                <img src={caritasButton} className="puzzle-icon" alt="Chapter 3"/>
             </div>
             <div className="help-hover" id="Puzzle7">
-            	<p>Chapter 7</p>
+                <img src={humanitasButton} className="puzzle-icon" alt="Chapter 3"/>
             </div>
         </div>
     )

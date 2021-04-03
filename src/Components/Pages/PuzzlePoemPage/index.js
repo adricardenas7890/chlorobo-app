@@ -1,57 +1,59 @@
 import React from 'react';
-import {  useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { Button } from 'react-bootstrap';
 import { GoToPuzzlePage } from '../../Elements/Puzzles/puzzlePageSlice';
-// import  CastitasPoemContent  from '../../Elements/Puzzles/Castitas/index';
-// import TemperantiaPoemContent from '../../Elements/Puzzles/Temperantia/index';
-// import PatientiaPoemContent from '../../Elements/Puzzles/Patientia/index';
-// import HumilitasPoemContent from '../../Elements/Puzzles/Humilitas/index';
-// import CaritasPoemContent from '../../Elements/Puzzles/Caritas/index';
-// import HumanitasPoemContent from '../../Elements/Puzzles/Humanitas/index';
-// import IndustriaPoemContent from '../../Elements/Puzzles/Industria/index';
+import  CastitasPoemContent  from '../../Elements/Puzzles/Castitas/CastitasPoemContent';
+import TemperantiaPoemContent from '../../Elements/Puzzles/Temperantia/TemperantiaPoemContent';
+import PatientiaPoemContent from '../../Elements/Puzzles/Patientia/PatientiaPoemContent';
+import HumilitasPoemContent from '../../Elements/Puzzles/Humilitas/HumilitasPoemContent';
+import CaritasPoemContent from '../../Elements/Puzzles/Caritas/CaritasPoemContent';
+import HumanitasPoemContent from '../../Elements/Puzzles/Humanitas/HumanitasPoemContent';
+import IndustriaPoemContent from '../../Elements/Puzzles/Industria/IndustriaPoemContent';
 
 // Redirects to each main puzzle component
 // Connected to puzzleSlice reducer, will update when state.puzzle updates
 
 const PuzzlePoemContent = (props) => {
     let dispatch = useDispatch();
-    //let puzzleComponent;
-    // if (props.puzzle === "castitas") {
-    //     puzzleComponent = <CastitasPoemContent/>
-    // }
-    // else if (props.puzzle === "temperantia") {
-    //     puzzleComponent = <TemperantiaPoemContent/>
-    // }
-    // else if (props.puzzle === "industria") {
-    //     puzzleComponent = <IndustriaPoemContent/>
-    // }
-    // else if (props.puzzle === "patientia") {
-    //     puzzleComponent = <PatientiaPoemContent/>
-    // }
-    // else if (props.puzzle === "humilitas") {
-    //     puzzleComponent = <HumilitasPoemContent/>
-    // }
-    // else if (props.puzzle === "caritas") {
-    //     puzzleComponent = <CaritasPoemContent/>
-    // }
-    // else if (props.puzzle === "humanitas") {
-    //     puzzleComponent = <HumanitasPoemContent/>
-    // }
-    // else {
-    //     puzzleComponent = <div>We didn't find a match!</div>
-    // }
-    // return (
-    //     <div>
-    //         {/* You've reached the puzzle for: {puzzle} */}
-    //         {puzzleComponent}
-    //     </div>
-    // )
+    let puzzlePoem;
+    if (props.puzzle === "castitas") {
+        puzzlePoem = <CastitasPoemContent/>
+    }
+    else if (props.puzzle === "temperantia") {
+        puzzlePoem = <TemperantiaPoemContent/>
+    }
+    else if (props.puzzle === "industria") {
+        puzzlePoem = <IndustriaPoemContent/>
+    }
+    else if (props.puzzle === "patientia") {
+        puzzlePoem = <PatientiaPoemContent/>
+    }
+    else if (props.puzzle === "humilitas") {
+        puzzlePoem = <HumilitasPoemContent/>
+    }
+    else if (props.puzzle === "caritas") {
+        puzzlePoem = <CaritasPoemContent/>
+    }
+    else if (props.puzzle === "humanitas") {
+        puzzlePoem = <HumanitasPoemContent/>
+    }
+    else {
+        puzzlePoem = <div>We didn't find a match!</div>
+    }
     return (
         <div>
-            <Button variant="light" onClick={() => { dispatch(GoToPuzzlePage()) }} >Press here to continue</Button>
+            {/* You've reached the puzzle for: {puzzle} */}
+            {puzzlePoem}
+            {/* <Button variant="light" onClick={() => { dispatch(GoToPuzzlePage()) }} >Press here to continue</Button> */}
 
         </div>
     )
+    // return (
+    //     <div>
+    //         <Button variant="light" onClick={() => { dispatch(GoToPuzzlePage()) }} >Press here to continue</Button>
+
+    //     </div>
+    // )
 }
 
 

@@ -1,8 +1,8 @@
 .temp-grid-div {
     height: 540px;
     min-width:1300px;
-    border: 6px dotted rgb(255, 232, 236);
-
+    /* border: 6px dotted rgb(255, 232, 236); */
+    filter: drop-shadow(0 0 0.75rem lightgrey);
 }
 
 .temp-grid-col {
@@ -10,7 +10,7 @@
 }
 
 .temp-grid-col {
-    background-color:lightyellow;
+
 }
 .complete-grid-div {
     cursor:pointer!important;
@@ -24,8 +24,6 @@
     height: 33px;
     border: 1px solid black;
     font-size: 20px;
-    
-
 }
 
 .temp-grid {
@@ -57,6 +55,22 @@
     height:20px;
     margin-top:10px;
     border: 1px solid black;
-    background-image: linear-gradient(to right, red , blue);
+    background-image: linear-gradient(to right, black , white);
     border-radius: 10px;
+}
+
+#temp-image-holder-1 {
+    margin: auto 0;
+}
+
+#temp-image-holder-1 img {
+    max-width:100%;
+}
+
+#temp-image-holder-2 {
+    margin: auto 0;
+}
+
+#temp-image-holder-2 img {
+    max-width:100%;
 }

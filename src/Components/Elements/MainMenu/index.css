@@ -55,7 +55,7 @@
     padding: 0px!important;
     mask-image: url(./button-black.png);
     -webkit-mask-size:contain;
-    opacity: .95;
+    opacity: 1;
     z-index:0;
 }
 
