@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, } from 'react-bootstrap';
 import { SetSolved } from '../puzzleProgressSlice';
 import { puzzleCompletePage } from '../../../Pages/Content/contentSlice';
+import { GoToCompletePage } from '../puzzlePageSlice';
 import { useDispatch } from 'react-redux';
 import './index.css';
 import  CastitasSquareButtons  from './CastitasSquareButtons';
@@ -16,7 +17,7 @@ const Castitas = () => {
                 <CastitasSunSlider/>
                 <CastitasSquareButtons/>
                 <Button variant="light" id="solvePuzzleButton" onClick={() => { dispatch(SetSolved(1));}}> click to solve this puzzle</Button>
-                <Button variant="light" id="completePuzzlePageButton" onClick={() => { dispatch(puzzleCompletePage());}}> go to complete page</Button>
+                <Button variant="light" id="completePuzzlePageButton" onClick={() => { dispatch(GoToCompletePage());}}> go to complete page</Button>
        
             
             </div>
