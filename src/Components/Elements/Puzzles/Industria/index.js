@@ -27,6 +27,8 @@ const Industria = () => {
                         <Col className="industria-video-col">
                             <IndustriaVideo />
                         </Col>
+</Row>
+                    <Row className="industria-row h-100" >
                         <Col className="industria-counters-col">
                             <Row className="counter-icons-row">
                                 <Col>
@@ -37,19 +39,15 @@ const Industria = () => {
                                 </Col>
                                 <Col>
                                     <IndustriaCounters counterName="not"></IndustriaCounters>
-                                </Col>
-                                    
+                                </Col>  
                             </Row>
                             <IndustriaInputFields onSolved={onSolved} disabled={solved}/>
-                            
-                            <Row className="h-75 industria-image-div">
-                                div for images
-                            </Row>
+
                         </Col>
                     </Row>
                 </Container>
                 
-                <Button variant="light" id="solvePuzzleButton" onClick={() => { dispatch(SetSolved(3));}}> click to solve this puzzle</Button>
+                {/* <Button variant="light" id="solvePuzzleButton" onClick={() => { dispatch(SetSolved(3));}}> click to solve this puzzle</Button> */}
                 
             
             </div>
