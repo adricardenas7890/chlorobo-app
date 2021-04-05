@@ -1,5 +1,8 @@
 import React from 'react';
 import { Row, Col, Container } from 'react-bootstrap';
+import { GoToCompletePage } from '../puzzlePageSlice';
+import {SetSolved} from '../puzzleProgressSlice'
+import {useDispatch} from 'react-redux';
 
 //const store = configureStore({ reducer: viewPageReducer });
 
@@ -52,11 +55,13 @@ class CastitasSquareButtons extends React.Component {
         }
     }
 
+    // Here is the event when puzzle is solved
     puzzleSolved() {
         const copy = this.state;
         copy.allSolved = true;
         this.setState(copy);
         alert("all solved, buttons are now disabled");
+
     }
 
     render() {
@@ -74,6 +79,12 @@ class CastitasSquareButtons extends React.Component {
             </Container>
         )
     }
+}
+
+const GoToCompletePageFunction = () => { 
+    let dispatch = useDispatch();
+    dispatch(GoToCompletePage());
+    dispatch(SetSolved(1));
 }
 
 class SquareButton extends React.Component {

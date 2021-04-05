@@ -1,10 +1,10 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import { SetSolved } from '../puzzleProgressSlice';
-import { useDispatch } from 'react-redux';
+import { useDispatch, connect } from 'react-redux';
 import '../index.css';
 
-const Humilitas = () => {
+const Humilitas = ({puzzle, poemMode}) => {
     let title = "Humilitas";
     let dispatch = useDispatch();
     return (
@@ -22,4 +22,13 @@ const Humilitas = () => {
     )
 }
 
-export default Humilitas
+// Connect to store and couple Puzzle component with currentPuzzle store
+const getPuzzleProgress = (appState) => {
+    return ({
+        puzzle: appState.currentPuzzle.puzzle,
+        poemMode: appState.currentPuzzle.poemMode
+    })
+
+}
+
+export default connect(getPuzzleProgress)(Humilitas)

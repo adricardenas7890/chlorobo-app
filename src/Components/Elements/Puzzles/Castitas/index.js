@@ -7,8 +7,10 @@ import { useDispatch } from 'react-redux';
 import './index.css';
 import CastitasSquareButtons  from './CastitasSquareButtons';
 import CastitasSunSlider from './CastitasSunSlider';
+import {connect} from 'react-redux';
 
-const Castitas = () => {
+const Castitas = ({puzzle, poemMode}) => {
+    // Include function here to change main-content-holder to fade to transparent if poemMode 2
     let dispatch = useDispatch();
     return (
         <div className="main-content-holder">
@@ -25,6 +27,13 @@ const Castitas = () => {
     )
 }
 
+// Connect to store and couple Puzzle component with currentPuzzle store
+const getPuzzleProgress = (appState) => {
+    return ({
+        puzzle: appState.currentPuzzle.puzzle,
+        poemMode: appState.currentPuzzle.poemMode
+    })
 
+}
 
-export default Castitas
+export default connect(getPuzzleProgress)(Castitas)

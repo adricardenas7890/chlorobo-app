@@ -2,13 +2,13 @@ import React from 'react';
 import { Button, Row, Col, Container } from 'react-bootstrap';
 import { SetSolved } from '../puzzleProgressSlice';
 import { puzzleCompletePage } from '../../../Pages/Content/contentSlice';
-import { useDispatch, } from 'react-redux';
+import { useDispatch, connect, } from 'react-redux';
 import  TemperantiaGrid  from './TemperantiaGrid';
 import './index.css';
 import img1 from './temperantia-img1.jpg'
 import img2 from './temperantia-img2.jpg'
 
-const Temperantia = () => {
+const Temperantia = ({puzzle, poemMode}) => {
     let dispatch = useDispatch();
     return (
         <div className="main-content-holder">
@@ -53,7 +53,16 @@ const GradientDiv = () => {
     )
 }
 
-export default Temperantia
+// Connect to store and couple Puzzle component with currentPuzzle store
+const getPuzzleProgress = (appState) => {
+    return ({
+        puzzle: appState.currentPuzzle.puzzle,
+        poemMode: appState.currentPuzzle.poemMode
+    })
+
+}
+
+export default connect(getPuzzleProgress)(Temperantia)
 
 
 

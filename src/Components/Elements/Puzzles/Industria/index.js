@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Button, Row, Col  } from 'react-bootstrap';
 import { SetSolved } from '../puzzleProgressSlice';
-import { useDispatch } from 'react-redux';
+import { useDispatch, connect } from 'react-redux';
 import  IndustriaCounters  from './IndustriaCounters';
 import IndustriaVideo from './IndustriaVideo';
 import IndustriaInputFields from './IndustriaInputFields';
@@ -10,7 +10,7 @@ import './index.css';
 import '../index.css';
 
 
-const Industria = () => {
+const Industria = ({puzzle, poemMode}) => {
     let solved = false;
 
     let onSolved = () => {
@@ -58,4 +58,13 @@ const Industria = () => {
 }
 
 
-export default Industria
+// Connect to store and couple Puzzle component with currentPuzzle store
+const getPuzzleProgress = (appState) => {
+    return ({
+        puzzle: appState.currentPuzzle.puzzle,
+        poemMode: appState.currentPuzzle.poemMode
+    })
+
+}
+
+export default connect(getPuzzleProgress)(Industria)
