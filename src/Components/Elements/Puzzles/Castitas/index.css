@@ -11,32 +11,32 @@
     background-color:white;
 }
 
-.colorOne {
+.colorRed {
     background-color:rgb(235, 0, 39);
 }
 
-.colorTwo {
+.colorOrange {
     background-color: orange;
 }
 
-.colorThree {
+.colorYellow {
     background-color: yellow;
 }
 
-.colorFour {
+.colorGreen {
     background-color: rgb(28, 221, 28);
 }
 
-.colorFive {
+.colorCyan {
     background-color: aqua
 
 }
 
-.colorSix {
+.colorBlue {
     background-color: blue;
 }
 
-.colorSeven {
+.colorPurple {
     background-color: rgb(136, 62, 255);
 }
 

@@ -80,13 +80,13 @@ const BeamImage = (props) => {
             </div>
             <div className="beams-holder">
                 <img src={beams} className="beams-image" alt="beams"></img>
-                <img src={beam1} className="beam-image1" style={{opacity: props.one}} alt="beam1"></img>
-                <img src={beam2} className="beam-image2" style={{opacity: props.two}} alt="beam2"></img>
-                <img src={beam3} className="beam-image3" style={{opacity: props.three}} alt="beam3"></img>
-                <img src={beam4} className="beam-image4" style={{opacity: props.four}} alt="beam4"></img>
-                <img src={beam5} className="beam-image5" style={{opacity: props.five}} alt="beam5"></img>
-                <img src={beam6} className="beam-image6" style={{opacity: props.six}} alt="beam6"></img>
-                <img src={beam7} className="beam-image7" style={{opacity: props.seven}} alt="beam7"></img>
+                <img src={beam1} className="beam-image1" style={{opacity: props.one}} alt="red beam"></img>
+                <img src={beam2} className="beam-image2" style={{opacity: props.two}} alt="orange beam"></img>
+                <img src={beam3} className="beam-image3" style={{opacity: props.three}} alt="yellow beam"></img>
+                <img src={beam4} className="beam-image4" style={{opacity: props.four}} alt="green beam"></img>
+                <img src={beam5} className="beam-image5" style={{opacity: props.five}} alt="cyan beam"></img>
+                <img src={beam6} className="beam-image6" style={{opacity: props.six}} alt="blue beam"></img>
+                <img src={beam7} className="beam-image7" style={{opacity: props.seven}} alt="purple beam"></img>
             </div>
         </div>
     )

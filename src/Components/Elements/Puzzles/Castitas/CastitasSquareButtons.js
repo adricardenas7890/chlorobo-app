@@ -17,13 +17,13 @@ class CastitasSquareButtons extends React.Component {
                 squareSeven: false
             },
             answer: { 
-                squareOne: "square colorOne",
-                squareTwo: "square colorTwo",
-                squareThree: "square colorThree",
-                squareFour: "square colorFour",
-                squareFive: "square colorFive",
-                squareSix: "square colorSix",
-                squareSeven: "square colorSeven"
+                squareOne: "square colorRed",
+                squareTwo: "square colorOrange",
+                squareThree: "square colorYellow",
+                squareFour: "square colorGreen",
+                squareFive: "square colorCyan",
+                squareSix: "square colorBlue",
+                squareSeven: "square colorPurple"
             },
             allSolved: false
         }
@@ -87,13 +87,13 @@ class SquareButton extends React.Component {
         // YOU HAVE TO MIX THESE AROUND
         this.colorClasses = {
             1: 'square noColor',
-            2: 'square colorFour',
-            3: 'square colorOne',
-            4: 'square colorThree',
-            5: 'square colorTwo',
-            6: 'square colorFive',
-            8: 'square colorSeven',
-            7: 'square colorSix',
+            2: 'square colorGreen',
+            3: 'square colorRed',
+            4: 'square colorYellow',
+            5: 'square colorOrange',
+            6: 'square colorCyan',
+            8: 'square colorPurple',
+            7: 'square colorBlue',
         }
         this.handleClick = this.handleClick.bind(this);
         this.handleColorChange = this.handleColorChange.bind(this);
