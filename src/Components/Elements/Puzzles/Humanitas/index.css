@@ -4,7 +4,9 @@
 }
 
 .humanitas-input {
-    height: 100%;
-    width: 30%;
+    height: 30vh;
+    width: 50%;
     size: inherit;
+    font-size: .7em;
+    font-family: monospace;
 }

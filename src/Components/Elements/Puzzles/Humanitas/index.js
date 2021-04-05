@@ -22,7 +22,7 @@ const Humanitas = () => {
             <div className="ingame-puzzle-name-div"> <div className="ingame-puzzle-name">&nbsp;</div></div>
             <div className="main-puzzle-holder">
                 <div className="humanitas-prompt-div">
-                    <p> Here is the prompt</p>
+                    <p>What does it mean to be human?</p>
                 </div>
                 <HumanitasInputForm sendResponse={handleSendResponse}/>
                 <Button variant="light" id="solvePuzzleButton" onClick={() => { dispatch(SetSolved(7));}}> click to solve this puzzle</Button>
@@ -65,7 +65,7 @@ class HumanitasInputForm extends React.Component {
                 <form onSubmit={this.onHandleSubmit}>
                     <input type="submit" style={{ display: "none" }} />
                     <div className="humanitas-input-div">
-                        <input className="humanitas-input" value={this.state.inputContent} onChange={this.onHandleChange} type="text"/>
+                        <textarea className="humanitas-input" value={this.state.inputContent} onChange={this.onHandleChange} type="text"/>
                     </div>
                     <div className="enter-button-div">
                         <Button type="submit" variant="light" id="submitPrompt" onClick={this.onHandleSubmit} >Submit</Button>
