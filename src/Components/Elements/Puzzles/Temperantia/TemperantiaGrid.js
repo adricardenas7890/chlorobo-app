@@ -1,7 +1,10 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {   Row,  Container } from 'react-bootstrap';
 import { WrongAnswer, RightAnswer, SolvedAll } from './temperantiaSlice';
 import { useDispatch, connect } from 'react-redux';
+import { SetSolved } from '../puzzleProgressSlice';
+import { GoToCompletePage } from '../puzzlePageSlice';
+
 import  solutionObject  from './solution';
 import './index.css';
 
@@ -10,14 +13,15 @@ const WinPuzzle = () => {
     dispatch(SolvedAll());
 }
 
-const TemperantiaGrid = (props, { incorrect, gameFinished }) => { 
+const TemperantiaGrid = ({ incorrect, gameFinished, handleSolved }) => { 
     let activeGrid = incorrect !== 0 ? true : false;
-
+    //let dispatch = useDispatch();
     //console.log(incorrect);
+
     if (!activeGrid && gameFinished === false) {
         alert('puzzle complete');
         WinPuzzle();
-        props.handleSolved();
+        handleSolved();
     }
     return (
         <TempGrid active={activeGrid} />

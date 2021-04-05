@@ -3,20 +3,19 @@ import { Button, Row, Col, Container } from 'react-bootstrap';
 import { SetSolved } from '../puzzleProgressSlice';
 import { puzzleCompletePage } from '../../../Pages/Content/contentSlice';
 import { GoToCompletePage } from '../puzzlePageSlice';
-
 import { useDispatch, connect, } from 'react-redux';
 import  TemperantiaGrid  from './TemperantiaGrid';
 import './index.css';
 import img1 from './temperantia-img1.jpg'
 import img2 from './temperantia-img2.jpg'
 
-const Temperantia = ({puzzle, poemMode}) => {
+const Temperantia = ({puzzle, poemMode, puzzleProgress}) => {
     let dispatch = useDispatch();
     let contentClass = "main-content-holder";
 
     let SolvedFunction = () => { 
         contentClass = "main-content-holder fade";
-        dispatch(SetSolved(1));
+        dispatch(SetSolved(2));
         setTimeout(() => { dispatch(GoToCompletePage()); }, 2000);
     }
     return (
@@ -39,7 +38,7 @@ const TemperantiaGridMain = (props) => {
                 </Col>
                 <Col className="temp-grid-col">
                     <div className="temp-grid">
-                        <TemperantiaGrid handleSolved={props.handleSolved} />
+                        <TemperantiaGrid handleSolved={props.handleSolved}/>
                     </div>
                     <div className="gradient-div-holder">
                         <GradientDiv/>
@@ -65,7 +64,8 @@ const GradientDiv = () => {
 const getPuzzleProgress = (appState) => {
     return ({
         puzzle: appState.currentPuzzle.puzzle,
-        poemMode: appState.currentPuzzle.poemMode
+        poemMode: appState.currentPuzzle.poemMode,
+        puzzleProgress: appState.currentPuzzleProgress[2]
     })
 
 }

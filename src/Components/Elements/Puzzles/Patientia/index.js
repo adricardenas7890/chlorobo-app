@@ -42,7 +42,7 @@ const getPuzzleProgress = (appState) => {
     return ({
         puzzle: appState.currentPuzzle.puzzle,
         poemMode: appState.currentPuzzle.poemMode,
-        puzzleProgress: appState.currentPuzzleProgress[1]
+        puzzleProgress: appState.currentPuzzleProgress[4]
 
     })
 
