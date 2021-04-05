@@ -9,6 +9,7 @@
     size: inherit;
     font-size: .7em;
     font-family: monospace;
+    padding: .5em .7em;
 }
 
 .particles {

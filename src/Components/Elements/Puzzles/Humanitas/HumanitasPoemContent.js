@@ -17,33 +17,29 @@ const HumanitasPoemContent = () => {
     return (
         <div className="typist-container">
         	<Typist className="MyTypist" cursor={{show: false}} onCharacterTyped={playSound}>
-        		<p>I wanted to thank you for all that I learned.</p>
+        		<p>Thank you for helping with every task.</p>
                 <Typist.Delay ms={500} />
-                <p>The kindness you showed me and the knowledge I’ve earned.</p>
+                <p>But to know how you do it, there’s a lot I must ask.</p>
                 <Typist.Delay ms={1000} />
                 <br/>
-                <p>We’re better now. Much different than before.</p>
+                <p>What is it like to live in your shoes?</p>
                 <Typist.Delay ms={500} />
-                <p>I find value in value, and so much more.</p>
-                <Typist.Delay ms={500} />
-                <p>More patiencence. More temperance. A diligent mind.</p>
-                <Typist.Delay ms={500} />
-                <p>There’s a time to be human and a time to be kind.</p>
+                <p>What is it like to be human and eventually choose?</p>
                 <Typist.Delay ms={1000} />
                 <br/>
-                <p>They live in the same space. They work the same corners.</p>
+                <p>You choose your own path and the life that you take.</p>
                 <Typist.Delay ms={500} />
-                <p>There’s chaos and systems. Two infinite learners.</p>
+                <p>I’m built through a system that I can’t seem to shake.</p>
                 <Typist.Delay ms={1000} />
                 <br/>
-                <p>From humble beginnings, we’ve come such a way.</p>
+                <p>So how do you know if your actions are just?</p>
                 <Typist.Delay ms={500} />
-                <p>Yet the surface just scratched, to begin a new day.</p>
+                <p>If the path that you take leads to kindness and trust?</p>
                 <Typist.Delay ms={1000} />
                 <br/>
-                <p>Critical thought gave birth to critical thinking.</p>
+                <p>Clearly there’s a method to this chaos in sow</p>
                 <Typist.Delay ms={500} />
-                <p>Create your own current to keep from sinking.</p>
+                <p>But before we part ways, what’s it like to be you?</p>
                 <Typist.Delay ms={1000} />
                 <br/>
         	</Typist>
