@@ -20,7 +20,7 @@ const PuzzleSong = (props) => {
         puzzleSong = <ReactAudioPlayer src={IndustriaSong} autoPlay loop />
     }
     else if (props.puzzle === "patientia") {
-        puzzleSong = <ReactAudioPlayer src={PatientiaSong} autoPlay loop />
+        puzzleSong = <div/>
     }
     else if (props.puzzle === "humilitas") {
         puzzleSong = <ReactAudioPlayer src={HumilitasSong} autoPlay loop />

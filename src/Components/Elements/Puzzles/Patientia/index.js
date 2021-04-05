@@ -4,6 +4,7 @@ import { Button } from 'react-bootstrap';
 import { SetSolved } from '../puzzleProgressSlice';
 import { useDispatch } from 'react-redux';
 import './index.css';
+import PatientiaSong from '../../../Elements/Sounds/Patientia-video.mp3'
 
 const Patientia = () => {
     let dispatch = useDispatch();
@@ -25,13 +26,17 @@ const Patientia = () => {
 
 const PatientiaVideo = () => {
     let dispatch = useDispatch();
+    let onPlayFunction = () => { 
+        var audio = new Audio(PatientiaSong);
+        audio.play();
+    }
     let onEndedFunction = () => { 
         alert('ended!');
         dispatch(dispatch(SetSolved(4)));
     }
     return (
         <div className="patientia-player-div">
-            <ReactPlayer className="patientia-player" url="https://player.vimeo.com/video/529079042?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" height="80vh" width="80vw" onEnded={onEndedFunction} controls={false} muted={true} playing={true} loop={false}/>      
+            <ReactPlayer className="patientia-player" url="https://player.vimeo.com/video/529079042?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" height="80vh" width="80vw" onPlay={onPlayFunction} onEnded={onEndedFunction} controls={false} muted={true} playing={true} loop={false}/>      
         </div>
     )
 }
