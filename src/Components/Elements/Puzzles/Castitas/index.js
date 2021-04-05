@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button, } from 'react-bootstrap';
 import { SetSolved } from '../puzzleProgressSlice';
-import { puzzleCompletePage } from '../../../Pages/Content/contentSlice';
 import { GoToCompletePage } from '../puzzlePageSlice';
 import { useDispatch } from 'react-redux';
 import './index.css';
@@ -9,8 +8,7 @@ import CastitasSquareButtons  from './CastitasSquareButtons';
 import CastitasSunSlider from './CastitasSunSlider';
 import { connect } from 'react-redux';
 
-const Castitas = ({puzzle, poemMode, poemProgress}) => {
-    // Include function here to change main-content-holder to fade to transparent if poemMode 2
+const Castitas = ({puzzle, poemMode, puzzleProgress}) => {
     let dispatch = useDispatch();
     let contentClass = "main-content-holder";
 
@@ -37,7 +35,7 @@ const getPuzzleProgress = (appState) => {
     return ({
         puzzle: appState.currentPuzzle.puzzle,
         poemMode: appState.currentPuzzle.poemMode,
-        poemProgress: appState.currentPuzzleProgress[1]
+        puzzleProgress: appState.currentPuzzleProgress[1]
     })
 
 }

@@ -3,31 +3,31 @@ import ReactPlayer from 'react-player';
 import { Button } from 'react-bootstrap';
 import { SetSolved } from '../puzzleProgressSlice';
 import { useDispatch, connect } from 'react-redux';
+import { GoToCompletePage } from '../puzzlePageSlice';
 import './index.css';
 
 const Patientia = ({puzzle, poemMode}) => {
     let dispatch = useDispatch();
+    let contentClass = "main-content-holder";
+
+    let SolvedFunction = () => { 
+        contentClass = "main-content-holder fade";
+        dispatch(SetSolved(4));
+        setTimeout(() => { dispatch(GoToCompletePage()); }, 2000);
+    }
     return (
-        // <div className="castitas-container">
-        //     This is the container for Patientia.
-        // </div>
         <div className="main-content-holder">
-            <div className="main-puzzle-holder">
-                
-                <PatientiaVideo/>
-                <Button variant="light" id="solvePuzzleButton" onClick={() => { dispatch(SetSolved(4));}}> click to solve this puzzle</Button>
-                
-            
+            <div className="main-puzzle-holder">          
+                <PatientiaVideo handleSolved={SolvedFunction}/>
+                <Button variant="light" id="solvePuzzleButton" onClick={() => {SolvedFunction()}}> Debug: click to solve puzzle.</Button>       
             </div>
         </div>
     )
 }
 
-const PatientiaVideo = () => {
-    let dispatch = useDispatch();
+const PatientiaVideo = (props) => {
     let onEndedFunction = () => { 
-        alert('ended!');
-        dispatch(dispatch(SetSolved(4)));
+        props.handleSolved();
     }
     return (
         <div className="patientia-player-div">
@@ -41,7 +41,9 @@ const PatientiaVideo = () => {
 const getPuzzleProgress = (appState) => {
     return ({
         puzzle: appState.currentPuzzle.puzzle,
-        poemMode: appState.currentPuzzle.poemMode
+        poemMode: appState.currentPuzzle.poemMode,
+        puzzleProgress: appState.currentPuzzleProgress[1]
+
     })
 
 }

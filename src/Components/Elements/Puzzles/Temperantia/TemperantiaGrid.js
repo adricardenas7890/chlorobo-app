@@ -10,14 +10,14 @@ const WinPuzzle = () => {
     dispatch(SolvedAll());
 }
 
-const TemperantiaGrid = ({ incorrect, gameFinished }) => { 
+const TemperantiaGrid = (props, { incorrect, gameFinished }) => { 
     let activeGrid = incorrect !== 0 ? true : false;
 
     //console.log(incorrect);
     if (!activeGrid && gameFinished === false) {
         alert('puzzle complete');
         WinPuzzle();
-
+        props.handleSolved();
     }
     return (
         <TempGrid active={activeGrid} />

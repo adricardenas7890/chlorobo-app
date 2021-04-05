@@ -5,21 +5,24 @@ import { useDispatch, connect } from 'react-redux';
 import  IndustriaCounters  from './IndustriaCounters';
 import IndustriaVideo from './IndustriaVideo';
 import IndustriaInputFields from './IndustriaInputFields';
+import { GoToCompletePage } from '../puzzlePageSlice';
 // import FadeIn from 'react-fade-in';
 import './index.css';
 import '../index.css';
 
-
-const Industria = ({puzzle, poemMode}) => {
+const Industria = ({puzzle, poemMode, puzzleProgress}) => {
     let solved = false;
-
-    let onSolved = () => {
-        alert("solved");
-        solved = true;       
-    }
     let dispatch = useDispatch();
+    let contentClass = "main-content-holder";
+
+    let SolvedFunction = () => { 
+        solved = true;
+        contentClass = "main-content-holder fade";
+        dispatch(SetSolved(3));
+        setTimeout(() => { dispatch(GoToCompletePage()); }, 2000);
+    }
     return (
-        <div className="main-content-holder">
+        <div className={contentClass}>
             <div className="ingame-puzzle-name-div"> <div className="ingame-puzzle-name">&nbsp;</div></div>
             <div className="main-puzzle-holder">
                 <Container className="industria-container">
@@ -40,7 +43,7 @@ const Industria = ({puzzle, poemMode}) => {
                                 </Col>
                                     
                             </Row>
-                            <IndustriaInputFields onSolved={onSolved} disabled={solved}/>
+                            <IndustriaInputFields onSolved={SolvedFunction} disabled={solved}/>
                             
                             <Row className="h-75 industria-image-div">
                                 div for images
@@ -49,7 +52,7 @@ const Industria = ({puzzle, poemMode}) => {
                     </Row>
                 </Container>
                 
-                <Button variant="light" id="solvePuzzleButton" onClick={() => { dispatch(SetSolved(3));}}> click to solve this puzzle</Button>
+                <Button variant="light" id="solvePuzzleButton" onClick={() => {SolvedFunction()}}> Debug: click to solve puzzle.</Button>       
                 
             
             </div>
@@ -62,7 +65,9 @@ const Industria = ({puzzle, poemMode}) => {
 const getPuzzleProgress = (appState) => {
     return ({
         puzzle: appState.currentPuzzle.puzzle,
-        poemMode: appState.currentPuzzle.poemMode
+        poemMode: appState.currentPuzzle.poemMode,
+        puzzleProgress: appState.currentPuzzleProgress[1]
+
     })
 
 }

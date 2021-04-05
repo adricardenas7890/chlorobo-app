@@ -1,23 +1,25 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import { SetSolved } from '../puzzleProgressSlice';
+import { GoToCompletePage } from '../puzzlePageSlice';
 import { useDispatch, connect } from 'react-redux';
 import '../index.css';
 
-const Humilitas = ({puzzle, poemMode, poemProgress}) => {
+const Humilitas = ({puzzle, poemMode, puzzleProgress}) => {
     let title = "Humilitas";
     let dispatch = useDispatch();
     let contentClass = "main-content-holder";
-    if (poemMode === 3 && poemProgress === "available") {
-        contentClass = "main-content-holder fade"
+
+    let SolvedFunction = () => { 
+        contentClass = "main-content-holder fade";
+        dispatch(SetSolved(5));
+        setTimeout(() => { dispatch(GoToCompletePage()); }, 2000);
     }
     return (
         <div className={contentClass}>
             <div className="ingame-puzzle-name-div"> <div className="ingame-puzzle-name">{title}</div></div>
             <div className="main-puzzle-holder">
-                <Button variant="light" id="solvePuzzleButton" onClick={() => { dispatch(SetSolved(5));}}> click to solve this puzzle</Button>
-                
-            
+                <Button variant="light" id="solvePuzzleButton" onClick={() => {SolvedFunction()}}> Debug: click to solve puzzle.</Button>              
             </div>
         </div>
     )
@@ -28,7 +30,7 @@ const getPuzzleProgress = (appState) => {
     return ({
         puzzle: appState.currentPuzzle.puzzle,
         poemMode: appState.currentPuzzle.poemMode,
-        poemProgress: appState.currentPuzzleProgress[5]
+        puzzleProgress: appState.currentPuzzleProgress[5]
     })
 
 }
