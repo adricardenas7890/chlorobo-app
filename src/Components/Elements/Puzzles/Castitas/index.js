@@ -7,17 +7,24 @@ import { useDispatch } from 'react-redux';
 import './index.css';
 import CastitasSquareButtons  from './CastitasSquareButtons';
 import CastitasSunSlider from './CastitasSunSlider';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 
-const Castitas = ({puzzle, poemMode}) => {
+const Castitas = ({puzzle, poemMode, poemProgress}) => {
     // Include function here to change main-content-holder to fade to transparent if poemMode 2
     let dispatch = useDispatch();
+    let contentClass = "main-content-holder";
+
+    let SolvedFunction = () => { 
+        contentClass = "main-content-holder fade";
+        dispatch(SetSolved(1));
+        setTimeout(() => { dispatch(GoToCompletePage()); }, 2000);
+    }
     return (
-        <div className="main-content-holder">
+        <div className={contentClass}>
             <div className="ingame-puzzle-name-div"> <div className="ingame-puzzle-name">&nbsp;</div></div>
             <div className="main-puzzle-holder">
                 <CastitasSunSlider/>
-                <CastitasSquareButtons/>
+                <CastitasSquareButtons handleSolved={SolvedFunction} />
                 <Button variant="light" id="solvePuzzleButton" onClick={() => { dispatch(SetSolved(1));}}> click to solve this puzzle</Button>
                 <Button variant="light" id="completePuzzlePageButton" onClick={() => { dispatch(GoToCompletePage());}}> go to complete page</Button>
        
@@ -31,7 +38,8 @@ const Castitas = ({puzzle, poemMode}) => {
 const getPuzzleProgress = (appState) => {
     return ({
         puzzle: appState.currentPuzzle.puzzle,
-        poemMode: appState.currentPuzzle.poemMode
+        poemMode: appState.currentPuzzle.poemMode,
+        poemProgress: appState.currentPuzzleProgress[1]
     })
 
 }

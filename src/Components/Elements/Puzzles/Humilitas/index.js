@@ -4,14 +4,15 @@ import { SetSolved } from '../puzzleProgressSlice';
 import { useDispatch, connect } from 'react-redux';
 import '../index.css';
 
-const Humilitas = ({puzzle, poemMode}) => {
+const Humilitas = ({puzzle, poemMode, poemProgress}) => {
     let title = "Humilitas";
     let dispatch = useDispatch();
+    let contentClass = "main-content-holder";
+    if (poemMode === 3 && poemProgress === "available") {
+        contentClass = "main-content-holder fade"
+    }
     return (
-        // <div className="castitas-container">
-        //     This is the container for Humilitas.
-        // </div>
-        <div className="main-content-holder">
+        <div className={contentClass}>
             <div className="ingame-puzzle-name-div"> <div className="ingame-puzzle-name">{title}</div></div>
             <div className="main-puzzle-holder">
                 <Button variant="light" id="solvePuzzleButton" onClick={() => { dispatch(SetSolved(5));}}> click to solve this puzzle</Button>
@@ -26,7 +27,8 @@ const Humilitas = ({puzzle, poemMode}) => {
 const getPuzzleProgress = (appState) => {
     return ({
         puzzle: appState.currentPuzzle.puzzle,
-        poemMode: appState.currentPuzzle.poemMode
+        poemMode: appState.currentPuzzle.poemMode,
+        poemProgress: appState.currentPuzzleProgress[5]
     })
 
 }
