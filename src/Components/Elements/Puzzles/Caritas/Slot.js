@@ -1,8 +1,9 @@
 import { memo } from 'react';
 import { useDrop } from 'react-dnd';
 const style = {
-    height: '12rem',
-    width: '12rem',
+    height: '100px',
+    width: '100px',
+    borderRadius: '100%',
     marginRight: '1.5rem',
     marginBottom: '1.5rem',
     color: 'white',

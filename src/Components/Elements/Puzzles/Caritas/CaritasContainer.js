@@ -18,12 +18,10 @@ export const Container = memo(function Container() {
     ]);
     const [boxes] = useState([
         { name: 'seed', type: ItemTypes.PARROT },
-        { name: 'milk', type: ItemTypes.CAT },
+        { name: 'fish', type: ItemTypes.CAT },
         { name: 'bone', type: ItemTypes.DOG },
         { name: 'carrot', type: ItemTypes.BUNNY },
-        { name: 'cheese', type: ItemTypes.MOUSE },
-
-
+        { name: 'cheese', type: ItemTypes.MOUSE }
     ]);
     const [droppedBoxNames, setDroppedBoxNames] = useState([]);
     function isDropped(boxName) {
