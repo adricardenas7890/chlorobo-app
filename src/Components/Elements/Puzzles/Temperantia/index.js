@@ -9,9 +9,9 @@ import './index.css';
 import img1 from './temperantia-img1.jpg'
 import img2 from './temperantia-img2.jpg'
 
-const Temperantia = ({puzzle, poemMode, puzzleProgress}) => {
+const Temperantia = ({ puzzle, poemMode, puzzleProgress }) => {
     let dispatch = useDispatch();
-    let contentClass = "main-content-holder";
+    let contentClass = "main-content-holder fade";
 
     let SolvedFunction = () => { 
         contentClass = "main-content-holder fade";
