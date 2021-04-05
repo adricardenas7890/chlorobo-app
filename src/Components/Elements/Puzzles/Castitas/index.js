@@ -25,9 +25,7 @@ const Castitas = ({puzzle, poemMode, poemProgress}) => {
             <div className="main-puzzle-holder">
                 <CastitasSunSlider/>
                 <CastitasSquareButtons handleSolved={SolvedFunction} />
-                <Button variant="light" id="solvePuzzleButton" onClick={() => { dispatch(SetSolved(1));}}> click to solve this puzzle</Button>
-                <Button variant="light" id="completePuzzlePageButton" onClick={() => { dispatch(GoToCompletePage());}}> go to complete page</Button>
-       
+                <Button variant="light" id="solvePuzzleButton" onClick={() => {SolvedFunction()}}> Debug: click to solve puzzle.</Button>       
             
             </div>
         </div>
