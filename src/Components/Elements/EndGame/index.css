@@ -1,0 +1,68 @@
+.radial-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 1;
+    animation-name: opacity;
+    animation-duration: 25s;
+    object-fit: fill;
+}
+
+@keyframes opacity {
+    from { opacity:0; }
+    to { opacity:1; }
+}
+
+.MyTypist {
+	width: 50em;
+	text-align: left;
+	word-spacing: .8vmin;
+	font-size: calc(1px + 2vmin);
+}
+
+.text-shadow {
+    text-shadow: 1px 1px 3px #ffffff;
+}
+
+.typist-small {
+	font-size: calc(.5px + 1.5vmin)!important;
+}
+
+.ContinueButton {
+	text-align: left;
+	position: absolute; 
+	bottom: 5vh;
+}
+
+.ContinueButton Button {
+	padding: 0px;
+}
+
+.typist-container {
+    margin-top:8vh;
+	width: 50vw;
+	height: 70vh;
+}
+
+.flower-image {
+    z-index: -2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flower-image img {
+    height: 674px;
+    pointer-events: none;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+}
