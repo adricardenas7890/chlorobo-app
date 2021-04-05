@@ -1,4 +1,5 @@
 import React from 'react';
+import Particles from 'react-particles-js';
 import { Button } from 'react-bootstrap';
 import { SetSolved } from '../puzzleProgressSlice';
 import { useDispatch } from 'react-redux';
@@ -19,6 +20,63 @@ const Humanitas = () => {
         //     This is the container for Humanitas.
         // </div>
         <div className="main-content-holder">
+            <div className="particles">
+            <Particles
+                params={{
+                    "particles": {
+                        "color": {
+                            "value": "#ad99ff"
+                        },
+                        "number": {
+                            "value": 160,
+                            "density": {
+                                "enable": false
+                            }
+                        },
+                        "size": {
+                            "value": 3,
+                            "random": true,
+                            "anim": {
+                                "speed": 2,
+                                "size_min": 0.3
+                            }
+                        },
+                        "line_linked": {
+                            "enable": false
+                        },
+                        "move": {
+                            "random": true,
+                            "speed": 1,
+                            "direction": "top",
+                            "out_mode": "out"
+                        }
+                    },
+                    "interactivity": {
+                        "events": {
+                            "onhover": {
+                                "enable": true,
+                                "mode": "bubble"
+                            },
+                            "onclick": {
+                                "enable": true,
+                                "mode": "repulse"
+                            }
+                        },
+                        "modes": {
+                            "bubble": {
+                                "distance": 250,
+                                "duration": 2,
+                                "size": 0,
+                                "opacity": 1
+                            },
+                            "repulse": {
+                                "distance": 400,
+                                "duration": 4
+                            }
+                        }
+                    }
+                }} />
+            </div>
             <div className="ingame-puzzle-name-div"> <div className="ingame-puzzle-name">&nbsp;</div></div>
             <div className="main-puzzle-holder">
                 <div className="humanitas-prompt-div">
