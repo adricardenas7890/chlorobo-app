@@ -1,1 +1,1 @@
-export { Container as default } from './CaritasContainer'
+export { DropContainer as default } from './CaritasContainer'

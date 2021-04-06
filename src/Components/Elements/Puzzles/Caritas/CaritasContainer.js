@@ -4,8 +4,8 @@ import { Box } from './CaritasItem';
 import  SlotComponent  from './SlotComponent';
 import { ItemTypes } from './CaritasTypes';
 import update from 'immutability-helper';
-import { Row, Col } from 'react-bootstrap';
-export const Container = memo(function Container() {
+import { Row, Col, Container as BContainer } from 'react-bootstrap';
+export const DropContainer = memo(function DropContainer(props) {
     const [dustbins, setDustbins] = useState([
         { accepts: [ItemTypes.DOG], lastDroppedItem: null },
         { accepts: [ItemTypes.CAT], lastDroppedItem: null },
@@ -27,6 +27,9 @@ export const Container = memo(function Container() {
     ]);
     const [droppedBoxNames, setDroppedBoxNames] = useState([]);
     function isDropped(boxName) {
+        if (droppedBoxNames.indexOf(boxName) > -1) {
+            props.handleDropInBox(boxName)
+        };
         return droppedBoxNames.indexOf(boxName) > -1;
     }
     const handleDrop = useCallback((index, item) => {
@@ -41,22 +44,24 @@ export const Container = memo(function Container() {
         }));
     }, [droppedBoxNames, dustbins]);
     return (<div>
-            {/* <div style={{ overflow: 'hidden', clear: 'both' }}>
-            {dustbins.map(({ accepts, lastDroppedItem}, index) => (<SlotComponent item={accepts}/>))}
-			</div> */}
-			<Row >
-            {dustbins.map(({ accepts, lastDroppedItem }, index) => (
-                <>
-                    <SlotComponent item={accepts} />
-                    <Slot accept={accepts} lastDroppedItem={lastDroppedItem} onDrop={(item) => handleDrop(index, item)} key={index} />
-                </>))}
-			</Row>
+        <BContainer >
             <Row>
-            <div style={{ overflow: 'hidden', clear: 'both' }}>
-                <Col>
-                    {boxes.map(({ name, type }, index) => (<Box name={name} type={type} isDropped={isDropped(name)} key={index} />))}
-                </Col>
-            </div>
+            
+            {dustbins.map(({ accepts, lastDroppedItem }, index) => (
+                <Col xs={2}>
+                    <SlotComponent item={accepts} lastDroppedItem={lastDroppedItem} key={{ index } + 6}/>
+                    <Slot accept={accepts} lastDroppedItem={lastDroppedItem} onDrop={(item) => handleDrop(index, item)} key={index} />
+                </Col>))}
+            
+			
+            <Row className="item-row">
+                <div style={{ overflow: 'hidden', clear: 'both' }}>
+                    <Col>
+                        {boxes.map(({ name, type }, index) => (<Box name={name} type={type} isDropped={isDropped(name)} key={index} />))}
+                    </Col>
+                </div>
             </Row>
+            </Row>
+        </BContainer>
 		</div>);
 });

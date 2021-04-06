@@ -10,17 +10,21 @@
     font-size: 1rem;
     line-height: normal;
     float: left;
-    background-color: rgb(34, 34, 34);
+    border: 1px solid black;
+}
+
+.item-row {
+    width: auto;
 }
 .dog-character {
-    height: 80px;
+    height: 100px;
     width: 100px;
     border-radius:100%;
     background-image: url(./caritas-dog-neutral.png);
     background-size: contain;
 }
 .cat-character {
-    height: 80px;
+    height: 100px;
     width: 100px;
     border-radius:100%;
     background-image: url(./caritas-cat-neutral.png);
@@ -28,7 +32,7 @@
 }
 
 .bird-character {
-    height: 80px;
+    height: 100px;
     width: 100px;
     border-radius:100%;
     background-image: url(./caritas-bird-neutral.png);
@@ -36,7 +40,7 @@
 }
 
 .mouse-character {
-    height: 80px;
+    height: 100px;
     width: 100px;
     border-radius:100%;
     background-image: url(./caritas-mouse-neutral.png);
@@ -44,7 +48,7 @@
 }
 
 .rabbit-character {
-    height: 80px;
+    height: 100px;
     width: 100px;
     border-radius:100%;
     background-image: url(./caritas-rabbit-neutral.png);
@@ -52,14 +56,14 @@
 }
 
 .dog-character-happy {
-    height: 80px;
+    height: 100px;
     width: 100px;
     border-radius:100%;
     background-image: url(./caritas-dog-happy.png);
     background-size: contain;
 }
 .cat-character-happy {
-    height: 80px;
+    height: 100px;
     width: 100px;
     border-radius:100%;
     background-image: url(./caritas-cat-happy.png);
@@ -67,7 +71,7 @@
 }
 
 .bird-character-happy {
-    height: 80px;
+    height: 100px;
     width: 100px;
     border-radius:100%;
     background-image: url(./caritas-bird-happy.png);
@@ -75,7 +79,7 @@
 }
 
 .mouse-character-happy {
-    height: 80px;
+    height: 100px;
     width: 100px;
     border-radius:100%;
     background-image: url(./caritas-mouse-happy.png);
@@ -83,9 +87,31 @@
 }
 
 .rabbit-character-happy {
-    height: 80px;
+    height: 100px;
     width: 100px;
     border-radius:100%;
     background-image: url(./caritas-rabbit-happy.png);
     background-size: contain;
+}
+
+.carrot-icon {
+    background-image: url(./item-carrot.png);
+    background-size: contain;  
+}
+.bone-icon {
+    background-image: url(./item-bone.png);
+    background-size: contain;  
+}
+.cheese-icon {
+    background-image: url(./item-cheese.png);
+    background-size: contain;  
+}
+
+.fish-icon {
+    background-image: url(./item-fish.png);
+    background-size: contain;  
+}
+.seed-icon {
+    background-image: url(./item-seed.png);
+    background-size: contain;  
 }

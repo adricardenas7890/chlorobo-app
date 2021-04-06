@@ -8,7 +8,7 @@ import completeSound from '../../Elements/Sounds/chapterComplete.mp3';
 import './index.css'
 
 const PuzzleComplete = (props) => {
-    let puzzle = props.puzzle;
+    // let puzzle = props.puzzle;
     let dispatch = useDispatch();
     let continueButton = () => { 
         dispatch(mainMenuPage());
@@ -22,7 +22,7 @@ const PuzzleComplete = (props) => {
             	<p>You have completed this chapter.</p>
             </div>
             <div>
-                <Button variant="light" onClick={() => { dispatch(mainMenuPage()) }} >Press here to continue</Button>
+                <Button variant="light" onClick={continueButton} >Press here to continue</Button>
             </div>
         </div>
     )

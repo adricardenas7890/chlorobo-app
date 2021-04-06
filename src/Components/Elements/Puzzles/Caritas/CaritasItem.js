@@ -52,7 +52,7 @@ export const Box = memo(function Box({ name, type, isDropped }) {
             opacity: monitor.isDragging() ? 0.4 : 1,
         }),
     }), [name, type]);
-    return (<div ref={drag} role="Box" style={{ ...style, opacity, backgroundImage }}>
+    return (<div ref={drag}  style={{ ...style, opacity, backgroundImage }}>
         {/* {isDropped ? <s>{name}</s> : name} */}
         {/* {isDropped ? emptyImage : image} */}
 		</div>);
