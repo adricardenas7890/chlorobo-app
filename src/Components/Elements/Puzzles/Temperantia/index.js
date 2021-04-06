@@ -12,7 +12,7 @@ const Temperantia = () => {
     let dispatch = useDispatch();
     return (
         <div className="main-content-holder">
-            <div className="ingame-puzzle-name-div"> <div className="ingame-puzzle-name">&nbsp;</div></div>
+            {/* <div className="ingame-puzzle-name-div"> <div className="ingame-puzzle-name">&nbsp;</div></div> */}
             <div className="main-puzzle-holder">
                 <TemperantiaGridMain/>
                 <Button variant="light" id="solvePuzzleButton" onClick={() => { dispatch(SetSolved(2));}}> click to solve this puzzle</Button>

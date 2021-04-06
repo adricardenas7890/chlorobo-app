@@ -77,3 +77,13 @@ input[type=number]::-webkit-outer-spin-button {
 .counter-icons-row {
     min-width:360px;
 }
+
+.player-fade {
+    animation-name: opacity;
+    animation-duration: 5s;
+}
+
+@keyframes opacity {
+    0% { opacity:0; }
+    100% { opacity:1; }
+}

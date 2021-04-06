@@ -11,7 +11,7 @@ const Castitas = () => {
     let dispatch = useDispatch();
     return (
         <div className="main-content-holder">
-            <div className="ingame-puzzle-name-div"> <div className="ingame-puzzle-name">&nbsp;</div></div>
+            {/* <div className="ingame-puzzle-name-div"> <div className="ingame-puzzle-name">&nbsp;</div></div> */}
             <div className="main-puzzle-holder">
                 <CastitasSunSlider/>
                 <CastitasSquareButtons/>

@@ -30,6 +30,6 @@ const RadialVideo = () => {
         </div>
     );
 
-  }
+}
 
 export default EndGame;

@@ -20,14 +20,14 @@ const Industria = () => {
     let dispatch = useDispatch();
     return (
         <div className="main-content-holder">
-            <div className="ingame-puzzle-name-div"> <div className="ingame-puzzle-name">&nbsp;</div></div>
+            {/* <div className="ingame-puzzle-name-div"> <div className="ingame-puzzle-name">&nbsp;</div></div> */}
             <div className="main-puzzle-holder">
                 <Container className="industria-container">
                     <Row className="industria-row h-100" >
                         <Col className="industria-video-col">
                             <IndustriaVideo />
                         </Col>
-</Row>
+                    </Row>
                     <Row className="industria-row h-100" >
                         <Col className="industria-counters-col">
                             <Row className="counter-icons-row">
