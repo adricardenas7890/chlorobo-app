@@ -5,17 +5,7 @@ import { puzzleCompletePage } from '../../Pages/Content/contentSlice';
 // Three modes, available, solved, hidden
 export const puzzleProgressSlice = createSlice({
     name: 'currentPuzzleProgress',
-    // initialState: {
-    //     1: "available",
-    //     2: "hidden",
-    //     3: "hidden",
-    //     4: "hidden",
-    //     5: "hidden",
-    //     6: "hidden",
-    //     7: "hidden",
-    //     "endGame": false
-    // },
-        initialState: {
+    initialState: {
         1: "available",
         2: "available",
         3: "available",
@@ -25,7 +15,6 @@ export const puzzleProgressSlice = createSlice({
         7: "available",
         "endGame": false
     },
-
     reducers: {
         SetSolved: (state, action) => {
             let puzzleNo = action.payload;

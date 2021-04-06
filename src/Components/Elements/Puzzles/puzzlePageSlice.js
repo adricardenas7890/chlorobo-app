@@ -4,46 +4,46 @@ export const puzzlePageSlice = createSlice({
     name: 'currentPuzzle',
     initialState: {
         puzzle: "castitas",
-        poemMode: true
+        poemMode: 1
     },
     reducers: {
-        endSequencePage: state => {
-            state.puzzle =  0
-        },
         GoToPuzzlePage: state => {
-            state.poemMode = false;
+            state.poemMode = 2;
+        },
+        GoToCompletePage: state => {
+            state.poemMode = 3;
         },
         Castitas: state => {
             state.puzzle = "castitas";
-            state.poemMode = true;
+            state.poemMode = 1;
         },
         Temperantia: state => {
             state.puzzle = "temperantia";
-            state.poemMode = true;
+            state.poemMode = 1;
         },
         Industria: state => {
             state.puzzle = "industria";
-            state.poemMode = true;
+            state.poemMode = 1;
         },
         Patientia: state => {
             state.puzzle = "patientia";
-            state.poemMode = true;
+            state.poemMode = 1;
         },
         Humilitas: state => {
             state.puzzle = "humilitas";
-            state.poemMode = true;
+            state.poemMode = 1;
         },
         Caritas: state => {
             state.puzzle = "caritas";
-            state.poemMode = true;
+            state.poemMode = 1;
         },
         Humanitas: state => {
             state.puzzle = "humanitas";
-            state.poemMode = true;
+            state.poemMode = 1;
         }
   }
 })
 
-export const { Castitas, Temperantia, Industria, Patientia, Humilitas, Caritas, Humanitas, endSequencePage, GoToPuzzlePage} = puzzlePageSlice.actions
+export const { Castitas, Temperantia, Industria, Patientia, Humilitas, Caritas, Humanitas, GoToPuzzlePage, GoToCompletePage} = puzzlePageSlice.actions
 
 export default puzzlePageSlice.reducer

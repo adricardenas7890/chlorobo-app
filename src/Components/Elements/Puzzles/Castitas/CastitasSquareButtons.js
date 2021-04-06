@@ -52,11 +52,15 @@ class CastitasSquareButtons extends React.Component {
         }
     }
 
+    // Here is the event when puzzle is solved
     puzzleSolved() {
         const copy = this.state;
         copy.allSolved = true;
         this.setState(copy);
         alert("all solved, buttons are now disabled");
+        this.props.handleSolved();
+        
+
     }
 
     render() {
@@ -75,6 +79,7 @@ class CastitasSquareButtons extends React.Component {
         )
     }
 }
+
 
 class SquareButton extends React.Component {
     constructor(props) {

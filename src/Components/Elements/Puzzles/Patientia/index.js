@@ -2,37 +2,38 @@ import React from 'react';
 import ReactPlayer from 'react-player';
 import { Button } from 'react-bootstrap';
 import { SetSolved } from '../puzzleProgressSlice';
-import { useDispatch } from 'react-redux';
+import { useDispatch, connect } from 'react-redux';
+import { GoToCompletePage } from '../puzzlePageSlice';
 import './index.css';
 import PatientiaSong from '../../../Elements/Sounds/Patientia-video.mp3'
 
-const Patientia = () => {
+const Patientia = ({puzzle, poemMode}) => {
     let dispatch = useDispatch();
+    let contentClass = "main-content-holder";
 
+    let SolvedFunction = () => { 
+        contentClass = "main-content-holder fade";
+        dispatch(SetSolved(4));
+        setTimeout(() => { dispatch(GoToCompletePage()); }, 2000);
+    }
     return (
-        // <div className="castitas-container">
-        //     This is the container for Patientia.
-        // </div>
         <div className="main-content-holder">
-            <div className="main-puzzle-holder">
-                
-                <PatientiaVideo/>
-                <Button variant="light" id="solvePuzzleButton" onClick={() => { dispatch(SetSolved(4));}}> click to solve this puzzle</Button>
-                
+            <div className="main-puzzle-holder">          
+                <PatientiaVideo handleSolved={SolvedFunction}/>
+                <Button variant="light" id="solvePuzzleButton" onClick={() => {SolvedFunction()}}> Debug: click to solve puzzle.</Button>       
             </div>
         </div>
     )
 }
 
-const PatientiaVideo = () => {
+const PatientiaVideo = (props) => {
     let dispatch = useDispatch();
     let onPlayFunction = () => { 
         var audio = new Audio(PatientiaSong);
         audio.play();
     }
     let onEndedFunction = () => { 
-        alert('ended!');
-        dispatch(dispatch(SetSolved(4)));
+        props.handleSolved();
     }
     return (
         <div className="patientia-player-div">
@@ -42,6 +43,17 @@ const PatientiaVideo = () => {
 }
 
 
-export default Patientia
+// Connect to store and couple Puzzle component with currentPuzzle store
+const getPuzzleProgress = (appState) => {
+    return ({
+        puzzle: appState.currentPuzzle.puzzle,
+        poemMode: appState.currentPuzzle.poemMode,
+        puzzleProgress: appState.currentPuzzleProgress[4]
+
+    })
+
+}
+
+export default connect(getPuzzleProgress)(Patientia)
 
 

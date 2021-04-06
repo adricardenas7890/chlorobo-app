@@ -2,24 +2,21 @@ import React from 'react';
 import Particles from 'react-particles-js';
 import { Button } from 'react-bootstrap';
 import { SetSolved } from '../puzzleProgressSlice';
-import { useDispatch } from 'react-redux';
+import { GoToCompletePage } from '../puzzlePageSlice';
+import { useDispatch, connect } from 'react-redux';
 import './index.css';
 
-const Humanitas = () => {
+const Humanitas = ({puzzle, poemMode, puzzleProgress}) => {
     let dispatch = useDispatch();
-
-    let handleSendResponse = (input) => { 
-        // send it somewhere here
+    let contentClass = "main-content-holder";
+    let SolvedFunction = (e) => { 
+        contentClass = "main-content-holder fade";
         dispatch(SetSolved(7));
-        console.log(input);
-        alert(input);
-        alert("you solved the puzzle");
+        setTimeout(() => { dispatch(GoToCompletePage()); }, 2000);
     }
     return (
-        // <div className="castitas-container">
-        //     This is the container for Humanitas.
-        // </div>
-        <div className="main-content-holder">
+
+        <div className={contentClass}>
             <div className="particles">
             <Particles
                 params={{
@@ -82,10 +79,8 @@ const Humanitas = () => {
                 <div className="humanitas-prompt-div">
                     <p>What does it mean to be human?</p>
                 </div>
-                <HumanitasInputForm sendResponse={handleSendResponse}/>
-                <Button variant="light" id="solvePuzzleButton" onClick={() => { dispatch(SetSolved(7));}}> click to solve this puzzle</Button>
-                
-            
+                <HumanitasInputForm sendResponse={SolvedFunction}/>
+                <Button variant="light" id="solvePuzzleButton" onClick={() => {SolvedFunction()}}> Debug: click to solve puzzle.</Button>                                 
             </div>
         </div>
     )
@@ -136,5 +131,14 @@ class HumanitasInputForm extends React.Component {
 
 }
 
-export default Humanitas
+// Connect to store and couple Puzzle component with currentPuzzle store
+const getPuzzleProgress = (appState) => {
+    return ({
+        puzzle: appState.currentPuzzle.puzzle,
+        poemMode: appState.currentPuzzle.poemMode,
+        puzzleProgress: appState.currentPuzzleProgress[1]
+    })
 
+}
+
+export default connect(getPuzzleProgress)(Humanitas)
