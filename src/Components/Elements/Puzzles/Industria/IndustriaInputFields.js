@@ -23,13 +23,13 @@ const IndustriaInputFields = (props) => {
     if (disabledFlag === false) {
         return (
             <Row className="counter-inputs-row">
-                <Col>
+                <Col className="counter-inputs-col">
                     <input ref={orInput} type="number" onChange={inputCheck} className="counter-input" id="orCounter" name="orCounter" step="1" min="1" max="10" />
                 </Col >
-                <Col >
+                <Col className="counter-inputs-col">
                     <input ref={andInput} type="number" onChange={inputCheck} className="counter-input" id="andCounter" name="andCounter" step="1" min="1" max="10" />
                 </Col>
-                <Col >
+                <Col className="counter-inputs-col">
                     <input ref={notInput} type="number" onChange={inputCheck} className="counter-input" id="notCounter" name="notCounter" step="1" min="1" max="10" />
                 </Col>
             </Row>
