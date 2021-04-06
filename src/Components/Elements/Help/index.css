@@ -1,4 +1,4 @@
-.help-content {
+/* .help-content {
 	font-size: 1.5vw;
 }
 
@@ -27,17 +27,17 @@
 
 #Puzzle3:hover:before {
 	white-space: pre;
-	content: "Count how many of each shape there are.  Be diligent.";
+	content: "Count the shapes.  Be diligent.";
 }
 
 #Puzzle4:hover:before {
 	white-space: pre;
-	content: "Click on the hourglass to start the timer.  Be patient.";
+	content: "Let the hourglass to start the timer.  Be patient.";
 }
 
 #Puzzle5:hover:before {
 	white-space: pre;
-	content: "Click on the order of buttons that flashes.  Be humble.";
+	content: "Memorize and recite the numbers.  Be humble.";
 }
 
 #Puzzle6:hover:before {
@@ -48,4 +48,4 @@
 #Puzzle7:hover:before {
 	white-space: pre;
 	content: "Share your insight.  Be kind.";
-}
+} */

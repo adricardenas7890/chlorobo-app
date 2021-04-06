@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Button } from 'react-bootstrap';
+import Modal from 'react-bootstrap/Modal'
 import './index.css';
 import caritasButton from '../MainMenu/buttonIcon-caritas.png';
 import castitasButton from '../MainMenu/buttonIcon-castitas.png';
@@ -10,8 +12,31 @@ import humilitasbutton from '../MainMenu/buttonIcon-humilitas.png';
 
 const Help = () => {
     return (
-        <div className="help-content">
-        	<div className="help-hover" id="Puzzle1">
+        <HelpModal />
+    )
+}
+
+function HelpModal() {
+    const [show, setShow] = useState(false);
+  
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+  
+    return (
+      <>
+        <Button variant="primary" onClick={handleShow}>
+          Launch demo modal
+        </Button>
+  
+        <Modal show={show} onHide={handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>
+                <h4>Help</h4>
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+          <div className="help-content">
+            <div className="help-hover" id="Puzzle1">
                 <img src={castitasButton} className="puzzle-icon" alt="Chapter 1"/>
             </div>
             <div className="help-hover" id="Puzzle2">
@@ -32,8 +57,11 @@ const Help = () => {
             <div className="help-hover" id="Puzzle7">
                 <img src={humanitasButton} className="puzzle-icon" alt="Chapter 3"/>
             </div>
-        </div>
-    )
-}
+            </div>
+          </Modal.Body>
+        </Modal>
+      </>
+    );
+  }
 
 export default Help;

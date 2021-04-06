@@ -5,3 +5,49 @@
 .navbar-light {
 	background: transparent;
 }
+
+.modal-dialog {
+	text-align: center;
+	max-width: 70%;
+}
+
+.hovertown p {
+	text-shadow: 0 0 20px black; 
+	color: transparent;
+	-webkit-transition: all 0.9s ease;
+	-moz-transition:    all 0.9s ease;
+	-o-transition:      all 0.9s ease;
+	transition:         all 0.9s ease;
+  }
+
+.hovertown p:hover {
+	text-shadow: 0 0 0 transparent; 
+	color: black;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition:    all 0.2s ease;
+	-o-transition:      all 0.2s ease;
+	transition:         all 0.2s ease; 
+}
+
+.help-content {
+	font-size: 1.2vw;
+	justify-content: space-between;
+}
+
+.help-hover {
+	margin: 1em;
+	white-space: pre;
+}
+
+.help-hover img {
+	margin: 0px;
+	width: 2vw;
+}
+
+.help-left-column {
+	text-align:left;
+}
+
+.help-right-column {
+	text-align:right;
+}
