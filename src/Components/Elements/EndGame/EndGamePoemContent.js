@@ -14,8 +14,8 @@ const EndGamePoemContent = () => {
         audio.play();
     }
     return (
-        <div className="typist-container">
-        	<Typist className="MyTypist text-shadow" cursor={{show: false}} onCharacterTyped={playSound}>
+        <div className="typist-container-end">
+        	<Typist className="MyTypist-end text-shadow" cursor={{show: false}} onCharacterTyped={playSound}>
                 <Typist.Delay ms={3000} />
         		<p>I wanted to thank you for all that I learned.</p>
                 <Typist.Delay ms={500} />
