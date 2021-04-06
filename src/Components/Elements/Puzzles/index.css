@@ -4,7 +4,7 @@
     height:80vh;
     min-width:830px;
 
-
+}
 .main-content-holder.fade {
     transition: opacity 3s ease-out;
     opacity: 1;
