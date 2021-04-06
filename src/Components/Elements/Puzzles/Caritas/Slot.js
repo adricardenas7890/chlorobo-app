@@ -30,11 +30,11 @@ export const Slot = memo(function Slot({ accept, lastDroppedItem, onDrop, }) {
     else if (canDrop) {
         backgroundColor = 'darkkhaki';
     }
-    return (<div ref={drop} role="Dustbin" style={{ ...style, backgroundColor }}>
-			{isActive
+    return (<div ref={drop} role="Dustbin" class="dustbin">
+			{/* {isActive
         ? 'Release to drop'
-        : `This dustbin accepts: ${accept.join(', ')}`}
+        : `This dustbin accepts: ${accept.join(', ')}`} */}
 
-			{lastDroppedItem && (<p>Last dropped: {JSON.stringify(lastDroppedItem)}</p>)}
+			{lastDroppedItem && (<p>{JSON.stringify(lastDroppedItem.name)} dropped.</p>)}
 		</div>);
 });

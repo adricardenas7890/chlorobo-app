@@ -1,7 +1,7 @@
 export const ItemTypes = {
     DOG: 'dog',
     CAT: 'cat',
-    BUNNY: 'bunny',
+    RABBIT: 'rabbit',
     MOUSE: 'mouse',
-    PARROT: 'parrot'
+    BIRD: 'bird'
 }

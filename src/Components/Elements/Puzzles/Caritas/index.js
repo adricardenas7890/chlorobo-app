@@ -4,7 +4,7 @@ import CaritasContent from './CaritasContent'
 import { Button } from 'react-bootstrap';
 import { SetSolved } from '../puzzleProgressSlice';
 import { useDispatch, connect } from 'react-redux';
-import '../index.css';
+import './index.css';
 import { DndProvider } from 'react-dnd'
 import { HTML5Backend } from 'react-dnd-html5-backend'
 
