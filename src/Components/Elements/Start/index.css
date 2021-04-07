@@ -1,6 +1,6 @@
 .mobile-splash {
   position: absolute;
-  height: 40vh;
+  width: 80vw;
   z-index: 1;
   top: 25%;
   left: 50%;
@@ -12,7 +12,7 @@
 .mobile-text-1 {
   position: absolute;
   z-index: 1;
-  top: 60vh;
+  top: 55vh;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -22,7 +22,7 @@
 .mobile-text-2 {
   position: absolute;
   z-index: 1;
-  top: 80vh;
+  top: 70vh;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
