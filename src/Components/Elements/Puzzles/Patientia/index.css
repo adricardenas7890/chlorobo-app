@@ -24,8 +24,5 @@
     height: 100%;
     z-index: -1;
     opacity: 1;
-    animation-name: opacity;
-    animation-duration: 25s;
     object-fit: fill;
-
 }
