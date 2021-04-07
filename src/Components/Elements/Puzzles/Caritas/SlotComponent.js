@@ -1,5 +1,5 @@
 import './index.css'
-import { Col, Row } from 'react-bootstrap';
+import {Row } from 'react-bootstrap';
 
 
 const IconComponent = (props) => {

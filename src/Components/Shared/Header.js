@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Col, Row } from "react-bootstrap";
 import Modal from 'react-bootstrap/Modal'
-import { mainMenuPage, helpPage } from '../Pages/Content/contentSlice';
+import { mainMenuPage } from '../Pages/Content/contentSlice';
+//import { helpPage } from '../Pages/Content/contentSlice';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import './header.css';

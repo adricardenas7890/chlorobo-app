@@ -17,7 +17,7 @@ const Patientia = ({puzzle, poemMode}) => {
         setTimeout(() => { dispatch(GoToCompletePage()); }, 2000);
     }
     return (
-        <div className="main-content-holder">
+        <div className={contentClass}>
             <div className="main-puzzle-holder">          
                 <PatientiaVideo handleSolved={SolvedFunction}/>
                 <Button variant="light" id="solvePuzzleButton" onClick={() => {SolvedFunction()}}> Debug: click to solve puzzle.</Button>       
@@ -27,7 +27,7 @@ const Patientia = ({puzzle, poemMode}) => {
 }
 
 const PatientiaVideo = (props) => {
-    let dispatch = useDispatch();
+    //let dispatch = useDispatch();
     let onPlayFunction = () => { 
         var audio = new Audio(PatientiaSong);
         audio.play();

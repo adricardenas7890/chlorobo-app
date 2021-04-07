@@ -1,0 +1,26 @@
+.humilitas-input {
+    width: 20%;
+    height: 50px;
+    size: inherit;
+    font-size: .7em;
+    font-family: monospace;
+    padding: .5em .7em;
+    resize:none;
+}
+
+.flashing-number {
+    filter: drop-shadow(0 0 1rem rgb(126, 126, 126));
+    animation-name: flashingNumberOpacity;
+    opacity: 0;
+    animation-duration: 5s;
+}
+
+.flashing-number-off {
+    opacity: 0;
+}
+
+@keyframes flashingNumberOpacity {
+    0% { opacity:1; }
+    75% {opacity:1; }
+    100% { opacity:0; }
+}

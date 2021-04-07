@@ -11,14 +11,6 @@ export const Slot = memo(function Slot({ accept, lastDroppedItem, onDrop, }) {
             canDrop: monitor.canDrop(),
         }),
     });
-    const isActive = isOver && canDrop;
-    let backgroundColor = '#222';
-    if (isActive) {
-        backgroundColor = 'darkgreen';
-    }
-    else if (canDrop) {
-        backgroundColor = 'darkkhaki';
-    }
 
     let className = "dustbin";
     if (lastDroppedItem) {

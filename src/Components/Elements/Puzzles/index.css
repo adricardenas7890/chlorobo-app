@@ -5,11 +5,13 @@
     min-width:830px;
 
 }
+
 .main-content-holder.fade {
     transition: opacity 3s ease-out;
     opacity: 1;
     height: 0;
     overflow: hidden;
+
 }
 
 .main-puzzle-holder {
@@ -17,18 +19,15 @@
     width:100%;
 }
 
-
-
-
-
 .layoutComponent {
     min-width:900px;
+
 }
 
 .ingame-puzzle-name {
     width:100%;
     text-align:left;
-    /* font-size:40px!important; */
+
 }
 
 .ingame-puzzle-name-div {
@@ -38,5 +37,6 @@
 }
 
 #solvePuzzleButton {
-    font-color:black;
+    color:black;
 }
+

@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'react-dom'
+// import { render } from 'react-dom'
 import CaritasContent from './CaritasContent'
 import { Button } from 'react-bootstrap';
 import { GoToCompletePage } from '../puzzlePageSlice';
@@ -14,7 +14,7 @@ const Caritas = ({puzzle, poemMode, puzzleProgress}) => {
     let title = "Caritas";
     let dispatch = useDispatch();
     let contentClass = "main-content-holder";
-    let count = 0;
+    // let count = 0;
     let items = [];
     let addAnotherToCount = (item) => {
         if (!items.includes(item)) {

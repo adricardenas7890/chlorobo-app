@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Row, Col, Container } from 'react-bootstrap';
 import { SetSolved } from '../puzzleProgressSlice';
-import { puzzleCompletePage } from '../../../Pages/Content/contentSlice';
+//import { puzzleCompletePage } from '../../../Pages/Content/contentSlice';
 import { GoToCompletePage } from '../puzzlePageSlice';
 import { useDispatch, connect, } from 'react-redux';
 import  TemperantiaGrid  from './TemperantiaGrid';
