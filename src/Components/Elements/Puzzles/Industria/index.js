@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Button, Row, Col  } from 'react-bootstrap';
+import { Container, Row, Col  } from 'react-bootstrap';
 import { SetSolved } from '../puzzleProgressSlice';
 import { useDispatch, connect } from 'react-redux';
 import  IndustriaCounters  from './IndustriaCounters';

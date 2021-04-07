@@ -15,8 +15,8 @@ const Intro = () => {
 
 const RadialVideo = () => {
 
-    let onPlayFunction = () => { 
-    }
+    // let onPlayFunction = () => { 
+    // }
 
     return (
         <div id="intro-page">
