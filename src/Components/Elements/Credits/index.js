@@ -4,11 +4,10 @@ import './index.css';
 
 const Credits = () => {
     return (
-        <div id="main-credits-container">
+        <div id="main-credits-container cursor-fun">
             <Container className="credits-text-temp">
                 <p class="credits-title font-heritage">Chlorobo</p>
                 <p>Thank you for playing Chlorobo.</p>
-                <p>This is a credits page that is under construction.</p>
                 <p>If you are beta testing this game, please remember to send your feedback!</p>
             </Container>
             <Container className="credits-text-rows">

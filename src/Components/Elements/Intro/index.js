@@ -20,7 +20,7 @@ const RadialVideo = () => {
 
     return (
         <div id="intro-page">
-            <div className="particles-intro">
+            <div className="particles-intro particles-fade">
                 <Particles
                     params={{
                         "particles": {

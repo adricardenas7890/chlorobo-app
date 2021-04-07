@@ -43,3 +43,13 @@
     z-index: -1;
     background-color: black;
 }
+
+.particles-fade {
+    animation-name: particles-opacity;
+    animation-duration: 10s;
+}
+
+@keyframes particles-opacity {
+    0% { opacity:0; }
+    100% { opacity:1; }
+}

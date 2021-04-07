@@ -21,10 +21,12 @@
 }
 
 .credits-name {
-    
+    font-family: Heritage;
+    font-size: 6vmin;
+    margin-top: -35px;
 }
 
 .font-heritage {
     font-family: Heritage;
-    margin-bottom: -15px;
+    margin-bottom: -5px;
 }
