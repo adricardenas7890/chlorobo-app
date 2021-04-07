@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'react-dom'
+// import { render } from 'react-dom'
 import CaritasContent from './CaritasContent'
 import { Button } from 'react-bootstrap';
 import { GoToCompletePage } from '../puzzlePageSlice';
@@ -14,7 +14,7 @@ const Caritas = ({puzzle, poemMode, puzzleProgress}) => {
     let title = "Caritas";
     let dispatch = useDispatch();
     let contentClass = "main-content-holder";
-    let count = 0;
+    // let count = 0;
     let items = [];
     let addAnotherToCount = (item) => {
         if (!items.includes(item)) {
@@ -33,14 +33,13 @@ const Caritas = ({puzzle, poemMode, puzzleProgress}) => {
     }
     return (
         <div className={contentClass}>
-            <div className="ingame-puzzle-name-div"> <div className="ingame-puzzle-name">{title}</div></div>
+            <div className="polka-bg"></div>
+            {/* <div className="ingame-puzzle-name-div"> <div className="ingame-puzzle-name">{title}</div></div> */}
             <div className="main-puzzle-holder">
                 <DndProvider backend={HTML5Backend}>
                     <CaritasContent handleDropInBox={addAnotherToCount}/>
                 </DndProvider>
-                <Button variant="light" id="solvePuzzleButton" onClick={() => {SolvedFunction()}}> Debug: click to solve puzzle.</Button>       
-                
-            
+                <Button variant="light" id="solvePuzzleButton" onClick={() => {SolvedFunction()}}> Debug: click to solve puzzle.</Button>
             </div>
         </div>
     )

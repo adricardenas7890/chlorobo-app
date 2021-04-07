@@ -45,17 +45,16 @@ export const DropContainer = memo(function DropContainer(props) {
     }, [droppedBoxNames, dustbins]);
     return (<div>
         <BContainer >
-            <Row>
+            <Row className="animal-row row-justify">
             
             {dustbins.map(({ accepts, lastDroppedItem }, index) => (
                 <Col xs={2}>
-                    <SlotComponent item={accepts} lastDroppedItem={lastDroppedItem} key={{ index } + 6}/>
-                    <Slot accept={accepts} lastDroppedItem={lastDroppedItem} onDrop={(item) => handleDrop(index, item)} key={index} />
+                    <SlotComponent className="row-justify" item={accepts} lastDroppedItem={lastDroppedItem} key={{ index } + 6}/>
+                    <Slot className="row-justify" accept={accepts} lastDroppedItem={lastDroppedItem} onDrop={(item) => handleDrop(index, item)} key={index} />
                 </Col>))}
             
-			
-            <Row className="item-row">
-                <div style={{ overflow: 'hidden', clear: 'both' }}>
+            <Row className="item-row row-justify">
+                <div style={{ overflow: 'hidden', clear: 'both', }}>
                     <Col>
                         {boxes.map(({ name, type }, index) => (<Box name={name} type={type} isDropped={isDropped(name)} key={index} />))}
                     </Col>
