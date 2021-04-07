@@ -9,10 +9,10 @@ import PatientiaSong from '../../../Elements/Sounds/Patientia-video.mp3'
 
 const Patientia = ({puzzle, poemMode}) => {
     let dispatch = useDispatch();
-    let contentClass = "main-content-holder";
+    // let contentClass = "main-content-holder";
 
     let SolvedFunction = () => { 
-        contentClass = "main-content-holder fade";
+        // contentClass = "main-content-holder fade";
         dispatch(SetSolved(4));
         setTimeout(() => { dispatch(GoToCompletePage()); }, 2000);
     }
@@ -27,7 +27,7 @@ const Patientia = ({puzzle, poemMode}) => {
 }
 
 const PatientiaVideo = (props) => {
-    let dispatch = useDispatch();
+    // let dispatch = useDispatch();
     let onPlayFunction = () => { 
         var audio = new Audio(PatientiaSong);
         audio.play();

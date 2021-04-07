@@ -1,9 +1,9 @@
-import React, {useEffect} from 'react';
-import {   Row,  Container } from 'react-bootstrap';
+import React from 'react';
+import { Row,  Container } from 'react-bootstrap';
 import { WrongAnswer, RightAnswer, SolvedAll } from './temperantiaSlice';
 import { useDispatch, connect } from 'react-redux';
-import { SetSolved } from '../puzzleProgressSlice';
-import { GoToCompletePage } from '../puzzlePageSlice';
+// import { SetSolved } from '../puzzleProgressSlice';
+// import { GoToCompletePage } from '../puzzlePageSlice';
 
 import  solutionObject  from './solution';
 import './index.css';
