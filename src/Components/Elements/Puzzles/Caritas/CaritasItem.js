@@ -9,7 +9,7 @@ import carrot from './item-carrot.png';
 
 const style = {
     borderRadius:'50%',
-    border: '1px dashed gray',
+    // border: '1px dashed gray',
     height: '100px',
     width: '100px',
     padding: '0.5rem 1rem',

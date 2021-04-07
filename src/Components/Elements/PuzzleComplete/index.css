@@ -10,3 +10,13 @@
 .complete-page {
 	margin: auto;
 }
+
+.complete-fade {
+    animation-name: complete-opacity;
+    animation-duration: 1s;
+}
+
+@keyframes complete-opacity {
+    0% { opacity:0; }
+    100% { opacity:1; }
+}

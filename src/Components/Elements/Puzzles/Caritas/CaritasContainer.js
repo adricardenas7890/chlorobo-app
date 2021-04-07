@@ -48,7 +48,7 @@ export const DropContainer = memo(function DropContainer(props) {
             <Row className="animal-row row-justify">
             
             {dustbins.map(({ accepts, lastDroppedItem }, index) => (
-                <Col xs={2}>
+                <Col className="row-justify" xs={2}>
                     <SlotComponent className="row-justify" item={accepts} lastDroppedItem={lastDroppedItem} key={{ index } + 6}/>
                     <Slot className="row-justify" accept={accepts} lastDroppedItem={lastDroppedItem} onDrop={(item) => handleDrop(index, item)} key={index} />
                 </Col>))}
