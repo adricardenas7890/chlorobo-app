@@ -137,7 +137,6 @@ class NumInputComponent extends React.Component {
         else {
             this.setState(copy);
         }
-        console.log(copy.incorrect);
     }
 
     render() {
