@@ -2,7 +2,7 @@ const viewPages = [
         {
             page: "startPage",
             mod: { header: false, title: "Start" }
-        }, 
+        },
         {
             page: "storySequencePage",
             mod: { header: false, title: "Story Sequence Goes Here" }
@@ -26,6 +26,10 @@ const viewPages = [
         {
             page: "endSequencePage",
             mod: { header: false, title: "End of Game" }
+        },
+        {
+            page: "introPage",
+            mod: { header: false, title: "Intro" }
         }, 
 ];
     

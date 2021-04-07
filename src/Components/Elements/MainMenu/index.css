@@ -199,3 +199,9 @@ button:disabled {
     border-radius: 100%;
 }
 
+.main-flower-img {
+    height: 674px;
+    pointer-events: none;
+    position: relative;
+    min-height:620px;
+}

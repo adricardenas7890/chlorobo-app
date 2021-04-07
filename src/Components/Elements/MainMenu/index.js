@@ -29,7 +29,7 @@ const MainMenu = () => {
             <div className="main-menu-holder">
                 
                 <div>
-                    <img src={flower1} className="App-logo" alt="flower1" />
+                    <img src={flower1} className="main-flower-img" alt="flower" />
                 </div>
 
                 {puzzles.map((value, index) => {   

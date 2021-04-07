@@ -27,10 +27,13 @@ export const contentSlice = createSlice({
         },
         endSequencePage: state => {
             state.viewPage =  6
-    },
-  }
+        },
+        introPage: state => {
+            state.viewPage =  7
+        },
+    }
 })
 
-export const { mainMenuPage, storySequencePage, helpPage, puzzleProgressPage, puzzleCompletePage, endSequencePage} = contentSlice.actions
+export const { mainMenuPage, storySequencePage, helpPage, puzzleProgressPage, puzzleCompletePage, endSequencePage, introPage} = contentSlice.actions
 
 export default contentSlice.reducer
