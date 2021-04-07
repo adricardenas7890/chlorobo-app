@@ -1,0 +1,45 @@
+#intro-page {
+    
+}
+
+.MyTypist-intro {
+	width: 50em;
+	text-align: left;
+	word-spacing: .8vmin;
+	font-size: calc(1px + 2vmin);
+    color: white;
+}
+
+.text-shadow {
+    text-shadow: 1px 1px 4px white;
+}
+
+.typist-small {
+	font-size: calc(.5px + 1.5vmin)!important;
+}
+
+.ContinueButton {
+	text-align: left;
+	position: absolute; 
+	bottom: 5vh;
+}
+
+.ContinueButton Button {
+	padding: 0px;
+}
+
+.typist-container-intro {
+    margin-top:3vh;
+	width: 50vw;
+	height: 70vh;
+}
+
+.particles-intro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    z-index: -1;
+    background-color: black;
+}

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import {mainMenuPage} from '../../Pages/Content/contentSlice';
+import {introPage} from '../../Pages/Content/contentSlice';
+import {creditsPage} from '../../Pages/Content/contentSlice';
 import { useDispatch } from 'react-redux'
 import splashImage from './splash.png';
 import { isMobile } from 'react-device-detect';
@@ -29,7 +31,8 @@ const Start = () => {
                     </div>
                     <br/>
                     <div>
-                        <Button variant="light" onClick={() => dispatch(mainMenuPage())} >ENTER</Button>
+                        <Button variant="light" onClick={() => dispatch(introPage())} >ENTER</Button>
+                        <Button variant="light" onClick={() => dispatch(creditsPage())} >CREDITS</Button>
                     </div>
                 </div>
             ) 

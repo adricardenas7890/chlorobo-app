@@ -2,12 +2,12 @@ import React from 'react';
 import Typist from 'react-typist';
 import "./index.css";
 import charSound from '../Sounds/character.mp3';
-// import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { Button } from 'react-bootstrap';
-
+import {creditsPage} from '../../Pages/Content/contentSlice';
 
 const EndGamePoemContent = () => {
-    // let dispatch = useDispatch();
+    let dispatch = useDispatch();
     let playSound = (character, charIdx) => {
         var audio = new Audio(charSound);
         audio.volume = .8;
@@ -47,7 +47,7 @@ const EndGamePoemContent = () => {
                 <Typist.Delay ms={5000} />
                 <br/>
                 <div className="ContinueButton">
-                    <Button variant="light" onClick={() => { alert('please route to final page!') }} >Press here to continue</Button>
+                    <Button variant="light" onClick={() => dispatch(creditsPage())} >Press here to continue</Button>
                 </div>
         	</Typist>
         </div>

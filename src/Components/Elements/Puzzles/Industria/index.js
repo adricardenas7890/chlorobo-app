@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Button, Row, Col  } from 'react-bootstrap';
+import { Container, Row, Col  } from 'react-bootstrap';
 import { SetSolved } from '../puzzleProgressSlice';
 import { useDispatch, connect } from 'react-redux';
 import  IndustriaCounters  from './IndustriaCounters';
@@ -46,18 +46,10 @@ const Industria = ({puzzle, poemMode, puzzleProgress}) => {
                             </Row>
 
                             <IndustriaInputFields onSolved={SolvedFunction} disabled={solved}/>
-                            
-                            <Row className="h-75 industria-image-div">
-                                div for images
-                            </Row>
+                        
                         </Col>
                     </Row>
                 </Container>
-                
-
-                <Button variant="light" id="solvePuzzleButton" onClick={() => {SolvedFunction()}}> Debug: click to solve puzzle.</Button>       
-
-                
             
             </div>
         </div>
