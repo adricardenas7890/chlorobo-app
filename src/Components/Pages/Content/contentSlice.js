@@ -1,6 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-
 export const contentSlice = createSlice({
     name: 'currentViewPage',
     initialState: {
@@ -31,9 +30,12 @@ export const contentSlice = createSlice({
         introPage: state => {
             state.viewPage =  7
         },
+        creditsPage: state => {
+            state.viewPage =  8
+        },
     }
 })
 
-export const { mainMenuPage, storySequencePage, helpPage, puzzleProgressPage, puzzleCompletePage, endSequencePage, introPage} = contentSlice.actions
+export const { mainMenuPage, storySequencePage, helpPage, puzzleProgressPage, puzzleCompletePage, endSequencePage, introPage, creditsPage} = contentSlice.actions
 
 export default contentSlice.reducer

@@ -31,6 +31,10 @@ const viewPages = [
             page: "introPage",
             mod: { header: false, title: "Intro" }
         }, 
+        {
+            page: "creditsPage",
+            mod: { header: false, title: "Credits" }
+        }, 
 ];
     
 export default  viewPages 
