@@ -23,7 +23,7 @@ const Temperantia = ({ puzzle, poemMode, puzzleProgress }) => {
             {/* <div className="ingame-puzzle-name-div"> <div className="ingame-puzzle-name">&nbsp;</div></div> */}
             <div className="main-puzzle-holder">
                 <TemperantiaGridMain handleSolved={SolvedFunction}/>
-                <Button variant="light" id="solvePuzzleButton" onClick={() => {SolvedFunction()}}> Debug: click to solve puzzle.</Button>       
+                {/* <Button variant="light" id="solvePuzzleButton" onClick={() => {SolvedFunction()}}> Debug: click to solve puzzle.</Button>        */}
             </div>
         </div>
     )

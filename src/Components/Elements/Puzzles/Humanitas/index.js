@@ -80,7 +80,7 @@ const Humanitas = ({puzzle, poemMode, puzzleProgress}) => {
                     <p>What does it mean to be human?</p>
                 </div>
                 <HumanitasInputForm sendResponse={SolvedFunction}/>
-                <Button variant="light" id="solvePuzzleButton" onClick={() => {SolvedFunction()}}> Debug: click to solve puzzle.</Button>                                 
+                {/* <Button variant="light" id="solvePuzzleButton" onClick={() => {SolvedFunction()}}> Debug: click to solve puzzle.</Button>                                  */}
             </div>
         </div>
     )

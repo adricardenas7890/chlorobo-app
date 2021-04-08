@@ -39,7 +39,7 @@ const Caritas = ({puzzle, poemMode, puzzleProgress}) => {
                 <DndProvider backend={HTML5Backend}>
                     <CaritasContent handleDropInBox={addAnotherToCount}/>
                 </DndProvider>
-                <Button variant="light" id="solvePuzzleButton" onClick={() => {SolvedFunction()}}> Debug: click to solve puzzle.</Button>
+                {/* <Button variant="light" id="solvePuzzleButton" onClick={() => {SolvedFunction()}}> Debug: click to solve puzzle.</Button> */}
             </div>
         </div>
     )

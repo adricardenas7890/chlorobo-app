@@ -20,7 +20,7 @@ const Patientia = ({puzzle, poemMode}) => {
         <div className={contentClass}>
             <div className="main-puzzle-holder">          
                 <PatientiaVideo handleSolved={SolvedFunction}/>
-                <Button variant="light" id="solvePuzzleButton" onClick={() => {SolvedFunction()}}> Debug: click to solve puzzle.</Button>       
+                {/* <Button variant="light" id="solvePuzzleButton" onClick={() => {SolvedFunction()}}> Debug: click to solve puzzle.</Button>        */}
             </div>
         </div>
     )
