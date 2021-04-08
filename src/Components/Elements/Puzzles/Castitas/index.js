@@ -20,7 +20,7 @@ const Castitas = ({puzzle, poemMode, puzzleProgress}) => {
     }
     return (
         <div className={contentClass}>
-            <div className="particles-puzzle particles-fade-fast"><Particles
+            {/* <div className="particles-puzzle particles-fade-fast"><Particles
                     params={{
                         "particles": {
                             "color": {
@@ -74,7 +74,7 @@ const Castitas = ({puzzle, poemMode, puzzleProgress}) => {
                                 }
                             }
                         }
-                    }} /></div>
+                    }} /></div> */}
             {/* <div className="ingame-puzzle-name-div"> <div className="ingame-puzzle-name">&nbsp;</div></div> */}
             <div className="main-puzzle-holder">
                 <CastitasSunSlider/>

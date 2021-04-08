@@ -18,7 +18,7 @@ const CastitasPoemContent = () => {
     }
     return (
         <div className="typist-container">
-            <div className="particles-puzzle particles-fade-fast"><Particles
+            {/* <div className="particles-puzzle particles-fade-fast"><Particles
                     params={{
                         "particles": {
                             "color": {
@@ -72,7 +72,7 @@ const CastitasPoemContent = () => {
                                 }
                             }
                         }
-                    }} /></div>
+                    }} /></div> */}
         	<Typist className="MyTypist" cursor={{show: false}} onCharacterTyped={playSound}>
                 <Typist.Delay ms={1000} />
                 <p>A humming shimmer, the beaming lights.</p>

@@ -21,7 +21,7 @@ const Temperantia = ({ puzzle, poemMode, puzzleProgress }) => {
     return (
 
         <div className={contentClass}>
-            <div className="particles-puzzle"><Particles
+            {/* <div className="particles-puzzle"><Particles
                     params={{
                         "particles": {
                             "color": {
@@ -75,7 +75,7 @@ const Temperantia = ({ puzzle, poemMode, puzzleProgress }) => {
                                 }
                             }
                         }
-                    }} /></div>
+                    }} /></div> */}
             {/* <div className="ingame-puzzle-name-div"> <div className="ingame-puzzle-name">&nbsp;</div></div> */}
             <div className="main-puzzle-holder">
                 <TemperantiaGridMain handleSolved={SolvedFunction}/>

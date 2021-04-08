@@ -28,7 +28,7 @@ const IntroSequence = () => {
                                 "value": "#ffffff"
                             },
                             "number": {
-                                "value": 80,
+                                "value": 40,
                                 "density": {
                                     "enable": false
                                 }
