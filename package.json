@@ -24,7 +24,8 @@
     "react-player": "^2.9.0",
     "react-redux": "^7.2.2",
     "react-scripts": "4.0.3",
-    "react-typist": "^2.0.5"
+    "react-typist": "^2.0.5",
+    "redux-persist": "^6.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
