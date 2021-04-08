@@ -3,30 +3,37 @@ import viewPageReducer from '../Components/Pages/Content/contentSlice';
 import puzzlePageReducer from '../Components/Elements/Puzzles/puzzlePageSlice';
 import puzzleProgressReducer from '../Components/Elements/Puzzles/puzzleProgressSlice'
 import temperantiaReducer from '../Components/Elements/Puzzles/Temperantia/temperantiaSlice';
-//import puzzleOne from '../Components/PuzzleOne/puzzleOneSlice';
-//import puzzleTwo from '../Components/PuzzleTwo/puzzleTwo';
-//import puzzleThree from '../Components/PuzzleThree/puzzleThree';
-//import puzzleFour from '../Components/PuzzleFour/puzzleFour';
-//import puzzleFive from '../Components/PuzzleFive/puzzleFive';
-//import puzzleSix from '../Components/PuzzleSix/puzzleSix';
-//imprt puzzleSeven from '../Components/PuzzleSeven/puzzleSeven';
+import { createStore, applyMiddleware } from 'redux'
+import { persistStore, persistReducer } from 'redux-persist' // imports from redux-persist
+import storage from 'redux-persist/lib/storage' // defaults to localStorage for web
 
-export default configureStore({
+import rootReducer from './reducers' // Root reducer
+
+
+const persistConfig = { // configuration object for redux-persist
+    key: 'root',
+    storage, // define which storage to use
+}
+
+const persistedReducer = persistReducer(persistConfig, rootReducer) // create a persisted reducer
+
+const store = createStore(
+    persistReducer, // pass the persisted reducer instead of rootReducer to createStore
+    applyMiddleware() // add any middlewares here
+)
+
+const  persistor = persistStore(store); // used to create the persisted store, persistor will be used in the next step
+
+configureStore({
   reducer: {
     currentViewPage: viewPageReducer,
     currentPuzzle: puzzlePageReducer,
     currentPuzzleProgress: puzzleProgressReducer,
     currentTempProgress : temperantiaReducer,
-    //puzzleOne: puzzleOneReducer,
-    //puzzleTwo: puzzleTwoReducer,
-    //puzzleThree: puzzleThreeReducer,
-    //puzzleFour: puzzleFourReducer,
-    //puzzleFive: puzzleFiveReducer,
-    //puzzleSix: puzzleSixReducer,
-    //puzzleSeven: puzzleSevenReducer,
-    //puzzleEight: puzzleEightReducer,
   },
 });
+
+export {store, persistor }
 
 
   

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
 import App from './Components/App';
-import store from './app/store';
+import { store, persistor } from './app/store';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 import './fonts/Heritage-Display.otf';
@@ -13,6 +13,7 @@ import './fonts/Petitemort-Regular.otf';
 
 ReactDOM.render(
   <React.StrictMode>
+    
     <Provider store={store}>
       <App />
     </Provider>
