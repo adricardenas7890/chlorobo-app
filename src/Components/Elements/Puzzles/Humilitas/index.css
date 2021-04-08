@@ -9,10 +9,12 @@
 }
 
 .flashing-number {
-    filter: drop-shadow(0 0 1rem rgb(126, 126, 126));
+    font-family: monospace;
+    font-size: 2em;
+    filter: drop-shadow(0 0 .1rem rgb(126, 126, 126));
     animation-name: flashingNumberOpacity;
     opacity: 0;
-    animation-duration: 5s;
+    animation-duration: 4s;
 }
 
 .flashing-number-off {
@@ -23,4 +25,10 @@
     0% { opacity:1; }
     75% {opacity:1; }
     100% { opacity:0; }
+}
+
+.numberWrong {
+    color: red;
+    font-family: Heritage;
+    font-size: 4em;
 }
