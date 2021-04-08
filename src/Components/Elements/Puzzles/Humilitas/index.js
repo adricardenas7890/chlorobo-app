@@ -1,7 +1,8 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import { SetSolved } from '../puzzleProgressSlice';
-import { GoToCompletePage } from '../puzzlePageSlice';
+import { GoToCompletePage, GoToFinalCompletePage } from '../puzzlePageSlice';
+import { lastPuzzleCompletePage } from '../../../Pages/Content/contentSlice';
 import { useDispatch, connect } from 'react-redux';
 import './index.css';
 

@@ -16,16 +16,16 @@ const Credits = () => {
                     <p className="credits-name">Benjamin Randall</p>
                 </Row>
                 <Row className="credits-row-justify">
+                    <p>Software Developer</p>
+                    <p className="credits-name">Adriana Cardenas</p>
+                </Row>
+                <Row className="credits-row-justify">
                     <p>Writer</p>
                     <p className="credits-name">Celine M. Ndibwami</p>
                 </Row>
                 <Row className="credits-row-justify">
                     <p>Composer</p>
                     <p className="credits-name">Jonathan Randall</p>
-                </Row>
-                <Row className="credits-row-justify">
-                    <p>Software Developer</p>
-                    <p className="credits-name">Adriana Cardenas</p>
                 </Row>
             </Container>
         </div>

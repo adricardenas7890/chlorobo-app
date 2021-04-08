@@ -2,7 +2,7 @@ import React from 'react';
 import Particles from 'react-particles-js';
 import { Button } from 'react-bootstrap';
 import { SetSolved } from '../puzzleProgressSlice';
-import { GoToCompletePage } from '../puzzlePageSlice';
+import { GoToCompletePage, GoToFinalCompletePage} from '../puzzlePageSlice';
 import { useDispatch, connect } from 'react-redux';
 import './index.css';
 
@@ -12,7 +12,7 @@ const Humanitas = ({puzzle, poemMode, puzzleProgress}) => {
     let SolvedFunction = (e) => { 
         contentClass = "main-content-holder fade";
         dispatch(SetSolved(7));
-        setTimeout(() => { dispatch(GoToCompletePage()); }, 2000);
+        setTimeout(() => { dispatch(GoToFinalCompletePage()); }, 2000);
     }
     return (
 

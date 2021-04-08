@@ -30,13 +30,16 @@ var Content = (props) => {
         content = <EndGamePage/>
     }
     else if (pageView === "puzzleCompletePage") {
-        content = <PuzzleCompletePage/>
+        content = <PuzzleCompletePage end={false}/>
     }
     else if (pageView === "introPage") {
         content = <IntroPage/>
     }
     else if (pageView === "creditsPage") {
         content = <CreditsPage/>
+    }
+    else if (pageView === "lastPuzzleCompletePage") {
+        content = <PuzzleCompletePage end={true}/>
     }
     else {
         content = (

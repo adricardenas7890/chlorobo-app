@@ -10,6 +10,9 @@ export const puzzlePageSlice = createSlice({
         GoToPuzzlePage: state => {
             state.poemMode = 2;
         },
+        GoToFinalCompletePage: state => {
+            state.poemMode = 4;
+        },
         GoToCompletePage: state => {
             state.poemMode = 3;
         },
@@ -44,6 +47,6 @@ export const puzzlePageSlice = createSlice({
   }
 })
 
-export const { Castitas, Temperantia, Industria, Patientia, Humilitas, Caritas, Humanitas, GoToPuzzlePage, GoToCompletePage} = puzzlePageSlice.actions
+export const { Castitas, Temperantia, Industria, Patientia, Humilitas, Caritas, Humanitas, GoToPuzzlePage, GoToCompletePage, GoToFinalCompletePage} = puzzlePageSlice.actions
 
 export default puzzlePageSlice.reducer

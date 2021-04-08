@@ -16,7 +16,10 @@ const PuzzlePage = ({ puzzle, poemMode }) => {
         puzzleComponent = <PuzzleContent puzzle={puzzle}/>
     }
     else if (poemMode === 3) {
-        puzzleComponent = <PuzzleCompletePage puzzle={puzzle}/>
+        puzzleComponent = <PuzzleCompletePage puzzle={puzzle} end={false}/>
+    }
+    else if (poemMode === 4) {
+        puzzleComponent = <PuzzleCompletePage puzzle={puzzle} end={true}/>
     }
     return (
         <div>

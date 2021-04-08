@@ -33,9 +33,12 @@ export const contentSlice = createSlice({
         creditsPage: state => {
             state.viewPage =  8
         },
+        lastPuzzleCompletePage: state => {
+            state.viewPage =  9
+        },
     }
 })
 
-export const { mainMenuPage, storySequencePage, helpPage, puzzleProgressPage, puzzleCompletePage, endSequencePage, introPage, creditsPage} = contentSlice.actions
+export const { mainMenuPage, storySequencePage, helpPage, puzzleProgressPage, puzzleCompletePage, endSequencePage, introPage, creditsPage, lastPuzzleCompletePage} = contentSlice.actions
 
 export default contentSlice.reducer
