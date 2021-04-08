@@ -2,8 +2,8 @@
     height: 100px;
     width: 100px;
     border-radius: 100%;
-    margin-right: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin: auto;
+    margin-top: .5rem;
     color: white;
     padding: 1rem;
     text-align: center;
@@ -13,82 +13,128 @@
     border: 1px solid black;
 }
 
+.row-justify {
+    justify-content: center;
+}
+
+.polka-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    opacity: 0.6;
+    background-image:  radial-gradient(#c7caff 2px, transparent 1px), radial-gradient(#c7caff 2px, #ffffff 1px);
+    background-size: 50px 50px;
+    background-position: 0 0,50px 50px;
+    z-index: -1;
+    -webkit-animation: bg-scrolling-reverse 6s infinite; /* Safari 4+ */
+    -moz-animation:    bg-scrolling-reverse 6s infinite; /* Fx 5+ */
+    -o-animation:      bg-scrolling-reverse 6s infinite; /* Opera 12+ */
+    animation:         bg-scrolling-reverse 6s infinite; /* IE 10+ */
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function:    linear;
+    -o-animation-timing-function:      linear;
+    animation-timing-function:         linear;
+}
+
+.animal-row {
+    margin-top: 2em;
+    background-color: rgb(255, 255, 255);
+    filter: drop-shadow(0px 0px 7px #a1a1a1);
+    padding-top: 3em;
+    padding-bottom: 3em;
+    justify-content: center;
+}
+
 .item-row {
     width: auto;
+    margin-top: 2em;
 }
 .dog-character {
-    height: 100px;
-    width: 100px;
+    margin: auto;
+    height: 150px;
+    width: 150px;
     border-radius:100%;
     background-image: url(./caritas-dog-neutral.png);
     background-size: contain;
 }
 .cat-character {
-    height: 100px;
-    width: 100px;
+    margin: auto;
+    height: 150px;
+    width: 150px;
     border-radius:100%;
     background-image: url(./caritas-cat-neutral.png);
     background-size: contain;
 }
 
 .bird-character {
-    height: 100px;
-    width: 100px;
+    margin: auto;
+    height: 150px;
+    width: 150px;
     border-radius:100%;
     background-image: url(./caritas-bird-neutral.png);
     background-size: contain;
 }
 
 .mouse-character {
-    height: 100px;
-    width: 100px;
+    margin: auto;
+    height: 150px;
+    width: 150px;
     border-radius:100%;
     background-image: url(./caritas-mouse-neutral.png);
     background-size: contain;
 }
 
 .rabbit-character {
-    height: 100px;
-    width: 100px;
+    margin: auto;
+    height: 150px;
+    width: 150px;
     border-radius:100%;
     background-image: url(./caritas-rabbit-neutral.png);
     background-size: contain;
 }
 
 .dog-character-happy {
-    height: 100px;
-    width: 100px;
+    margin: auto;
+    height: 150px;
+    width: 150px;
     border-radius:100%;
     background-image: url(./caritas-dog-happy.png);
     background-size: contain;
 }
 .cat-character-happy {
-    height: 100px;
-    width: 100px;
+    margin: auto;
+    height: 150px;
+    width: 150px;
     border-radius:100%;
     background-image: url(./caritas-cat-happy.png);
     background-size: contain;
 }
 
 .bird-character-happy {
-    height: 100px;
-    width: 100px;
+    margin: auto;
+    height: 150px;
+    width: 150px;
     border-radius:100%;
     background-image: url(./caritas-bird-happy.png);
     background-size: contain;
 }
 
 .mouse-character-happy {
-    height: 100px;
-    width: 100px;
+    margin: auto;
+    height: 150px;
+    width: 150px;
     border-radius:100%;
     background-image: url(./caritas-mouse-happy.png);
     background-size: contain;
 }
 
 .rabbit-character-happy {
-    height: 100px;
-    width: 100px;
+    margin: auto;
+    height: 150px;
+    width: 150px;
     border-radius:100%;
     background-image: url(./caritas-rabbit-happy.png);
     background-size: contain;
@@ -114,4 +160,32 @@
 .seed-icon {
     background-image: url(./item-seed.png);
     background-size: contain;  
+}
+
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+    100% { background-position: 0 50px; }
+}
+
+@-moz-keyframes bg-scrolling-reverse {
+    100% { background-position: 0 50px; }
+}
+@-o-keyframes      bg-scrolling-reverse {
+    100% { background-position: 0 50px; }
+}
+@keyframes         bg-scrolling-reverse {
+    100% { background-position: 0 50px; }
+}
+
+@-webkit-keyframes bg-scrolling {
+  0% { background-position: 0 50px; }
+}
+@-moz-keyframes    bg-scrolling {
+  0% { background-position: 0 50px; }
+}
+@-o-keyframes      bg-scrolling {
+  0% { background-position: 0 50px; }
+}
+@keyframes         bg-scrolling {
+  0% { background-position: 0 50px; }
 }

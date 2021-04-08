@@ -15,7 +15,7 @@ const PuzzleComplete = (props) => {
         // Put logic in here for little items that appear in main menu
     }
     return (
-        <div className="complete-page">
+        <div className="complete-page complete-fade">
             <ReactAudioPlayer src={completeSound} autoPlay />
         	<img src={completeImage} id="CompleteImage" alt="Complete" />
         	<div>

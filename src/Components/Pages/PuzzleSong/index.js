@@ -2,7 +2,6 @@ import React from 'react';
 import ReactAudioPlayer from 'react-audio-player';
 import CastitasSong  from '../../Elements/Sounds/Castitas.mp3';
 import TemperantiaSong from '../../Elements/Sounds/Temperantia.mp3';
-//import PatientiaSong from '../../Elements/Sounds/Patientia-video.mp3';
 import HumilitasSong from '../../Elements/Sounds/Humilitas.mp3';
 import CaritasSong from '../../Elements/Sounds/Caritas.mp3';
 import HumanitasSong from '../../Elements/Sounds/Outro.mp3';
@@ -20,7 +19,7 @@ const PuzzleSong = (props) => {
         puzzleSong = <ReactAudioPlayer src={IndustriaSong} autoPlay loop />
     }
     else if (props.puzzle === "patientia") {
-        puzzleSong = <div/>
+        puzzleSong = <div id="empty-patientia-song-div"/>
     }
     else if (props.puzzle === "humilitas") {
         puzzleSong = <ReactAudioPlayer src={HumilitasSong} autoPlay loop />

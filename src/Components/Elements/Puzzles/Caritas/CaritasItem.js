@@ -9,12 +9,11 @@ import carrot from './item-carrot.png';
 
 const style = {
     borderRadius:'50%',
-    border: '1px dashed gray',
+    // border: '1px dashed gray',
     height: '100px',
     width: '100px',
     padding: '0.5rem 1rem',
-    marginRight: '1.5rem',
-    marginBottom: '1.5rem',
+    margin: '1.5rem',
     cursor: 'move',
     float: 'left',
     // backgroundImage: `url(${bone})`,

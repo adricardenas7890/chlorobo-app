@@ -1,0 +1,32 @@
+#main-credits-container {
+    padding: 10px;
+}
+
+.credits-title {
+    font-size: calc(50px + 5vmin);
+}
+
+.credits-text-temp {
+    margin-top: 2vh;
+    font-size: calc(10px + 1vmin);
+    margin-bottom: 10vh;
+}
+
+.credits-text-rows {
+    font-size: calc(15px + 1vmin);
+}
+
+.credits-row-justify {
+    justify-content: space-between;
+}
+
+.credits-name {
+    font-family: Heritage;
+    font-size: 6vmin;
+    margin-top: -35px;
+}
+
+.font-heritage {
+    font-family: Heritage;
+    margin-bottom: -5px;
+}

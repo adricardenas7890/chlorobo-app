@@ -205,3 +205,13 @@ button:disabled {
     position: relative;
     min-height:620px;
 }
+
+.mainmenu-fade {
+    animation-name: mainmenu-opacity;
+    animation-duration: 2s;
+}
+
+@keyframes mainmenu-opacity {
+    0% { opacity:0; }
+    100% { opacity:1; }
+}
