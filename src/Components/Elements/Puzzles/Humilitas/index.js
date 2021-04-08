@@ -4,8 +4,8 @@ import { SetSolved } from '../puzzleProgressSlice';
 import { GoToCompletePage } from '../puzzlePageSlice';
 import { useDispatch, connect } from 'react-redux';
 import './index.css';
-import correctSound from '../../Sounds/itemReceived.mp3';
-import incorrectSound from '../../Sounds/itemReceived.mp3';
+import correctSound from '../../Sounds/correctSound.mp3';
+import incorrectSound from '../../Sounds/incorrectSound.mp3';
 import confetti from 'canvas-confetti';
 
 const Humilitas = ({puzzle, poemMode, puzzleProgress}) => {
@@ -20,12 +20,12 @@ const Humilitas = ({puzzle, poemMode, puzzleProgress}) => {
     }
     return (
         <div className={contentClass}>
+            <div className="diagonal-bg"/>
             {/* <div className="ingame-puzzle-name-div"> <div className="ingame-puzzle-name">{title}</div></div> */}
-            <div className="main-puzzle-holder">
-                <div className="humanitas-prompt-div">
-                </div>
+            <div className="main-puzzle-holder humilitas-holder">
+                <div className="humanitas-prompt-div"></div>
                 <NumInputComponent solvePuzzle={SolvedFunction} />
-                <Button variant="light" id="solvePuzzleButton" onClick={() => {SolvedFunction()}}> Debug: click to solve puzzle.</Button>            
+                {/* <Button variant="light" id="solvePuzzleButton" onClick={() => {SolvedFunction()}}> Debug: click to solve puzzle.</Button>             */}
             </div>
         </div>
     )
@@ -164,17 +164,17 @@ class NumInputComponent extends React.Component {
 
     render() {
         return (
-            <>
+            <div className="humilitas-innerbox">
                 <HumilitasFlashingNumber index={this.state.index} classType={this.state.classType}/>
                 <HumilitasInputForm handleSubmit={this.advanceNumber} />
                 <NumberWrong incorrect={this.state.incorrect}/>
-            </>
+            </div>
         )
     }
 }
 
 const NumberWrong = (props) => { 
-    let stringsX = ""
+    let stringsX = "."
     if (props.incorrect == 1) {
         stringsX = "X"
     }
@@ -184,10 +184,10 @@ const NumberWrong = (props) => {
     else if (props.incorrect == 3) {
         stringsX = "XXX"
     }
-    else if (props.incorrect == 3) {
+    else if (props.incorrect == 4) {
         stringsX = "XXXX"
     }
-    else if (props.incorrect == 3) {
+    else if (props.incorrect == 5) {
         stringsX = "XXXXX"
     }
     return (
