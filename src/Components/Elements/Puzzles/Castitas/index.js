@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, } from 'react-bootstrap';
+// import { Button, } from 'react-bootstrap';
 import { SetSolved } from '../puzzleProgressSlice';
 import { GoToCompletePage } from '../puzzlePageSlice';
 import { useDispatch } from 'react-redux';

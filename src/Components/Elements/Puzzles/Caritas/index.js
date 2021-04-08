@@ -1,7 +1,7 @@
 import React from 'react';
 // import { render } from 'react-dom'
 import CaritasContent from './CaritasContent'
-import { Button } from 'react-bootstrap';
+// import { Button } from 'react-bootstrap';
 import { GoToCompletePage } from '../puzzlePageSlice';
 import { SetSolved } from '../puzzleProgressSlice';
 import { useDispatch, connect } from 'react-redux';
@@ -11,7 +11,7 @@ import { HTML5Backend } from 'react-dnd-html5-backend'
 
 
 const Caritas = ({puzzle, poemMode, puzzleProgress}) => {
-    let title = "Caritas";
+    // let title = "Caritas";
     let dispatch = useDispatch();
     let contentClass = "main-content-holder";
     // let count = 0;

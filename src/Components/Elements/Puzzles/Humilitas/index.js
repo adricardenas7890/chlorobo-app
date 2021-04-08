@@ -1,8 +1,8 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import { SetSolved } from '../puzzleProgressSlice';
-import { GoToCompletePage, GoToFinalCompletePage } from '../puzzlePageSlice';
-import { lastPuzzleCompletePage } from '../../../Pages/Content/contentSlice';
+import { GoToCompletePage } from '../puzzlePageSlice';
+// import { lastPuzzleCompletePage } from '../../../Pages/Content/contentSlice';
 import { useDispatch, connect } from 'react-redux';
 import './index.css';
 import correctSound from '../../Sounds/correctSound.mp3';
@@ -147,12 +147,12 @@ class NumInputComponent extends React.Component {
         copy.classType = this.state.classType === "flashing-number" ? "flashing-number" : "flashing-number";
         if (Number(response) !== numberArray[this.state.index - 1]) {
             copy.incorrect = this.state.incorrect + 1;
-            var audio = new Audio(incorrectSound);
-            audio.play();
+            var audioIncorrect = new Audio(incorrectSound);
+            audioIncorrect.play();
         }
         else {
-            var audio = new Audio(correctSound);
-            audio.play();
+            var audioCorrect = new Audio(correctSound);
+            audioCorrect.play();
             confetti();
         }
         if (copy.incorrect === 5) {

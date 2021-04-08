@@ -2,7 +2,7 @@ import React from 'react';
 import Particles from 'react-particles-js';
 import { Button } from 'react-bootstrap';
 import { SetSolved } from '../puzzleProgressSlice';
-import { GoToCompletePage, GoToFinalCompletePage} from '../puzzlePageSlice';
+import { GoToFinalCompletePage} from '../puzzlePageSlice';
 import { useDispatch, connect } from 'react-redux';
 import './index.css';
 

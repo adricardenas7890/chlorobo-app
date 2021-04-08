@@ -17,7 +17,7 @@ const IntroPoemContent = () => {
     return (
         <div className="typist-container-intro">
         	<Typist className="MyTypist-intro text-shadow" cursor={{show: false}} onCharacterTyped={playSound}>
-                <Typist.Delay ms={5000} />
+                <Typist.Delay ms={4000} />
         		<p>Where we begin and where we are going.</p>
                 <Typist.Delay ms={500} />
                 <p>The answers are there but are never quite showing.</p>
@@ -48,10 +48,13 @@ const IntroPoemContent = () => {
                 <p>Let's work together and discover why<Typist.Delay ms={200} />.<Typist.Delay ms={500} />.<Typist.Delay ms={500} />.</p>
                 <Typist.Delay ms={3000} />
                 <br/>
-                
-        	</Typist><div className="ContinueButton intro-button">
+        	</Typist>
+            <Typist cursor={{show: false}} >
+                <Typist.Delay ms={16000} />
+                <div className="ContinueButton intro-button">
                     <Button variant="dark" onClick={() => dispatch(mainMenuPage())} >Press here to continue</Button>
                 </div>
+            </Typist>
         </div>
     )
 }
