@@ -21,9 +21,10 @@
 
 .counter-icon {
     border: black solid 1px;
+    border-bottom: none;
     /* width:70px; */
     height:70px;
-
+    background-color: white;
 }
 
 .industria-video-col {
@@ -96,4 +97,54 @@ input[type=number]::-webkit-outer-spin-button {
 @keyframes opacity {
     0% { opacity:0; }
     100% { opacity:1; }
+}
+
+.diagonal-bg-2 {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    background-color: #ffffff;
+    opacity: 0.1;
+    background-size: 40px 40px;
+    background-image: repeating-linear-gradient(-45deg, #909191 0, #909191 4px, #ffffff 0, #ffffff 50%);
+    z-index:-1;
+    -webkit-animation: bg-lines-reverse 4s infinite; /* Safari 4+ */
+    -moz-animation:    bg-lines-reverse 4s infinite; /* Fx 5+ */
+    -o-animation:      bg-lines-reverse 4s infinite; /* Opera 12+ */
+    animation:         bg-lines-reverse 4s infinite; /* IE 10+ */
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function:    linear;
+    -o-animation-timing-function:      linear;
+    animation-timing-function:         linear;
+}
+
+
+/* Animations */
+@-webkit-keyframes bg-lines-reverse {
+    100% { background-position: 0 40px; }
+}
+
+@-moz-keyframes bg-lines-reverse {
+    100% { background-position: 0 40px; }
+}
+@-o-keyframes      bg-lines-reverse {
+    100% { background-position: 0 40px; }
+}
+@keyframes         bg-lines-reverse {
+    100% { background-position: 0 40px; }
+}
+
+@-webkit-keyframes bg-lines {
+  0% { background-position: 0 40px; }
+}
+@-moz-keyframes    bg-lines {
+  0% { background-position: 0 40px; }
+}
+@-o-keyframes      bg-lines {
+  0% { background-position: 0 40px; }
+}
+@keyframes         bg-lines {
+  0% { background-position: 0 40px; }
 }
