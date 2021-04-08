@@ -12,11 +12,14 @@ const CaritasPoemContent = () => {
 	let dispatch = useDispatch();
 	let playSound = (character, charIdx) => {
 		var audio = new Audio(charSound);
+        audio.volume = .7;
 		audio.play();
 	}
     return (
         <div className="typist-container">
+            <div className="polka-bg"></div>
         	<Typist className="MyTypist typist-small" cursor={{show: false}} onCharacterTyped={playSound}>
+                <Typist.Delay ms={1000} />
         		<p>This journey has led us in such a tedious way.</p>
         		<Typist.Delay ms={500} />
         		<p>Long and gruelling, with a high price to pay.</p>

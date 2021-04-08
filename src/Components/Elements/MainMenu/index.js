@@ -26,6 +26,7 @@ const MainMenu = () => {
 
     return (
         <div className="main-content-holder mainmenu-fade">
+            <div className="mainmenu-gradient"/>
             <div className="main-menu-holder">
                 
                 <div>

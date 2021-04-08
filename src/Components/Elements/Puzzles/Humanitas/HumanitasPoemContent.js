@@ -12,11 +12,13 @@ const HumanitasPoemContent = () => {
     let dispatch = useDispatch();
     let playSound = (character, charIdx) => {
         var audio = new Audio(charSound);
+        audio.volume = .7;
         audio.play();
     }
     return (
         <div className="typist-container">
         	<Typist className="MyTypist" cursor={{show: false}} onCharacterTyped={playSound}>
+                <Typist.Delay ms={1000} />
         		<p>Thank you for helping with every task.</p>
                 <Typist.Delay ms={500} />
                 <p>But to know how you do it, there’s a lot I must ask.</p>
@@ -39,7 +41,7 @@ const HumanitasPoemContent = () => {
                 <br/>
                 <p>Clearly there’s a method to this chaos in sow</p>
                 <Typist.Delay ms={500} />
-                <p>But before we part ways, what’s it like to be you?</p>
+                <p>But before we part ways, <Typist.Delay ms={500} />what’s it like to be you?</p>
                 <Typist.Delay ms={1000} />
                 <br/>
         	</Typist>

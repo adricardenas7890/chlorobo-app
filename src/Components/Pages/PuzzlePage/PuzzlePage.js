@@ -4,11 +4,15 @@ import PuzzleContent from '../PuzzleContentPage/index';
 import PuzzlePoemContent from '../PuzzlePoemPage/index';
 import PuzzleCompletePage from '../PuzzleCompletePage/PuzzleCompletePage';
 
+import PuzzleSong from '../PuzzleSong/index';
+
 // Redirects to each main puzzle component
 // Connected to puzzleSlice reducer, will update when state.puzzle updates
 
 const PuzzlePage = ({ puzzle, poemMode }) => {
     let puzzleComponent;
+    let puzzleSong = <PuzzleSong puzzle={puzzle}/>;
+
     if (poemMode === 1) {
         puzzleComponent = <PuzzlePoemContent puzzle={puzzle} />
     }
@@ -17,12 +21,15 @@ const PuzzlePage = ({ puzzle, poemMode }) => {
     }
     else if (poemMode === 3) {
         puzzleComponent = <PuzzleCompletePage puzzle={puzzle} end={false}/>
+        puzzleSong = <div/>
     }
     else if (poemMode === 4) {
         puzzleComponent = <PuzzleCompletePage puzzle={puzzle} end={true}/>
+        puzzleSong = <div/>
     }
     return (
         <div>
+            {puzzleSong}
             {puzzleComponent}
         </div>
     )   

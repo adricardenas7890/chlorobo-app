@@ -8,12 +8,12 @@ import IntroSong from '../Sounds/Intro.mp3';
 const Intro = () => {
     return (
         <div>
-            <RadialVideo/>
+            <IntroSequence/>
         </div>
     )
 }
 
-const RadialVideo = () => {
+const IntroSequence = () => {
 
     // let onPlayFunction = () => { 
     // }

@@ -11,7 +11,7 @@ const IntroPoemContent = () => {
     let dispatch = useDispatch();
     let playSound = (character, charIdx) => {
         var audio = new Audio(charSound);
-        audio.volume = .8;
+        audio.volume = .7;
         audio.play();
     }
     return (

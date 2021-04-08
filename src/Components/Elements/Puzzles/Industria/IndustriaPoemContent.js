@@ -6,18 +6,22 @@ import charSound from '../../Sounds/character.mp3';
 import { GoToPuzzlePage } from '../puzzlePageSlice';
 import { useDispatch } from 'react-redux';
 import { Button } from 'react-bootstrap';
+import Particles from 'react-particles-js';
 
 
 const IndustriaPoemContent = () => {
     let dispatch = useDispatch();
     let playSound = (character, charIdx) => {
         var audio = new Audio(charSound);
+        audio.volume = .7;
         audio.play();
     }
     return (
         <div className="typist-container">
+            <div className="diagonal-bg-2"/>
             <Typist className="MyTypist typist-small" cursor={{show: false}} onCharacterTyped={playSound}>
                 <div>
+                <Typist.Delay ms={1000} />
                 <p>Tap, tap, tap. Tick, tick, tick.</p>
                 <Typist.Delay ms={500} />
                 <p>We work in tandem, we work in clicks.</p>

@@ -7,10 +7,10 @@ import Caritas from '../../Elements/Puzzles/Caritas/index';
 import Humanitas from '../../Elements/Puzzles/Humanitas/index';
 import Industria from '../../Elements/Puzzles/Industria/index';
 
-import PuzzleSong from '../PuzzleSong/index';
+// import PuzzleSong from '../PuzzleSong/index';
 
 const PuzzleContent = (props) => {
-    let puzzleSong = <PuzzleSong puzzle={props.puzzle}/>;
+    // let puzzleSong = <PuzzleSong puzzle={props.puzzle}/>;
     let puzzleContent;
     if (props.puzzle === "castitas") {
         puzzleContent = <Castitas />
@@ -38,9 +38,9 @@ const PuzzleContent = (props) => {
     }
     return (
         <div>
-            <div>
+            {/* <div>
             {puzzleSong}
-            </div>
+            </div> */}
             {puzzleContent}
         </div>
     )

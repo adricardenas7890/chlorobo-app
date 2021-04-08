@@ -12,11 +12,14 @@ const HumilitasPoemContent = () => {
     let dispatch = useDispatch();
     let playSound = (character, charIdx) => {
         var audio = new Audio(charSound);
+        audio.volume = .7;
         audio.play();
     }
     return (
         <div className="typist-container">
+            <div className="diagonal-bg"/>
         	<Typist className="MyTypist typist-small" cursor={{show: false}} onCharacterTyped={playSound}>
+                <Typist.Delay ms={1000} />
                 <p>I broke my promise, my delivery weak.</p>
                 <Typist.Delay ms={500} />
                 <p>I promised results, yet nearly peaked.</p>

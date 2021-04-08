@@ -4,7 +4,7 @@ import ReactAudioPlayer from 'react-audio-player';
 import './index.css';
 import EndGamePoemContent from './EndGamePoemContent';
 import flowerComplete from '../MainMenu/flower-complete.png';
-import OutroSong from '../../Elements/Sounds/Outro.mp3';
+import OutroSong from '../../Elements/Sounds/Intro.mp3';
 
 const EndGame = () => {
     return (

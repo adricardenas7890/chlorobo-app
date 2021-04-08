@@ -23,3 +23,24 @@
 	width: 50vw;
 	height: 70vh;
 }
+
+
+.particles-puzzle {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width:100%;
+	height: 100vh;
+	z-index: -1;
+	overflow-y: hidden;
+  }
+  
+  .particles-fade-fast {
+	animation-name: particles-opacity-fast;
+	animation-duration: 1s;
+  }
+  
+  @keyframes particles-opacity-fast {
+	0% { opacity:0; }
+	100% { opacity:1; }
+  }
