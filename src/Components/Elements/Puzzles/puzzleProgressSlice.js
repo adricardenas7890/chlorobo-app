@@ -7,12 +7,12 @@ export const puzzleProgressSlice = createSlice({
     name: 'currentPuzzleProgress',
     initialState: {
         1: "available",
-        2: "available",
-        3: "available",
-        4: "available",
-        5: "available",
-        6: "available",
-        7: "available",
+        2: "hidden",
+        3: "hidden",
+        4: "hidden",
+        5: "hidden",
+        6: "hidden",
+        7: "hidden",
         "endGame": false
     },
     reducers: {
@@ -20,7 +20,7 @@ export const puzzleProgressSlice = createSlice({
             let puzzleNo = action.payload;
             let nextPuzzleNo = action.payload + 1;
             state[puzzleNo] = "solved";
-            if (puzzleNo < 7) {
+            if (puzzleNo < 7 && state[nextPuzzleNo] !== "solved") {
                 state[nextPuzzleNo] = "available";
             }
             if (puzzleNo === 7) {

@@ -57,7 +57,6 @@ class CastitasSquareButtons extends React.Component {
         const copy = this.state;
         copy.allSolved = true;
         this.setState(copy);
-        alert("all solved, buttons are now disabled");
         this.props.handleSolved();
         
 

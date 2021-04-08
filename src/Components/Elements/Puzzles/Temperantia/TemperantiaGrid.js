@@ -19,7 +19,6 @@ const TemperantiaGrid = ({ incorrect, gameFinished, handleSolved }) => {
     //console.log(incorrect);
 
     if (!activeGrid && gameFinished === false) {
-        alert('puzzle complete');
         WinPuzzle();
         handleSolved();
     }
@@ -59,7 +58,6 @@ const TempGrid = (props) => {
 const SquareRow = (props) => { 
     let dispatch = useDispatch();
     let sendStatus = (status) => { 
-        //debugger;
         if (status) {
             dispatch(RightAnswer());            
         }

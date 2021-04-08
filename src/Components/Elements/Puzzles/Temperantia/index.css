@@ -74,3 +74,7 @@
 #temp-image-holder-2 img {
     max-width:100%;
 }
+
+.complete-grid-div {
+    min-width:700px;
+}

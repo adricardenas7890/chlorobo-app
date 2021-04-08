@@ -20,7 +20,6 @@ const Caritas = ({puzzle, poemMode, puzzleProgress}) => {
         if (!items.includes(item)) {
             items.push(item);
         }
-        console.log(items.length);
         if (items.length === 5) {
             SolvedFunction();
         }

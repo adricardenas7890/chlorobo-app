@@ -12,7 +12,9 @@
     float: left;
     border: 1px solid black;
 }
-
+.bin-container {
+    min-width: 920px;
+}
 .row-justify {
     justify-content: center;
 }

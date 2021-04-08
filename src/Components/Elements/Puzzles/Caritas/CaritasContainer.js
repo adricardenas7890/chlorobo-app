@@ -44,7 +44,7 @@ export const DropContainer = memo(function DropContainer(props) {
         }));
     }, [droppedBoxNames, dustbins]);
     return (<div>
-        <BContainer >
+        <BContainer className="bin-container" >
             <Row className="animal-row row-justify">
             
             {dustbins.map(({ accepts, lastDroppedItem }, index) => (
