@@ -31,8 +31,20 @@
 
 .splash-logo {
   height: 70vh;
-  margin-top: 10vh;
+  margin-top: 5vh;
   pointer-events: none;
   position: relative;
   /* min-height:620px; */
+}
+
+#enter-button-start {
+	margin: 5%;
+	font-size: 1em;
+    color: white!important;
+    background-color: black!important;
+}
+
+#acc-button-start {
+	color: rgb(0, 0, 0)!important;
+    background-color: rgb(255, 255, 255)!important;
 }

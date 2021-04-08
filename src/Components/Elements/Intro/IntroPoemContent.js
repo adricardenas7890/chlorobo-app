@@ -4,7 +4,7 @@ import "./index.css";
 import charSound from '../Sounds/character.mp3';
 import { useDispatch } from 'react-redux';
 import { Button } from 'react-bootstrap';
-import {mainMenuPage} from '../../Pages/Content/contentSlice';
+import { mainMenuPage, helpPage } from '../../Pages/Content/contentSlice';
 
 
 const IntroPoemContent = () => {

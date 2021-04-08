@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 // import {mainMenuPage} from '../../Pages/Content/contentSlice';
 import {introPage} from '../../Pages/Content/contentSlice';
-// import {creditsPage} from '../../Pages/Content/contentSlice';
+import {helpPage} from '../../Pages/Content/contentSlice';
 // import {endSequencePage} from '../../Pages/Content/contentSlice';
 import { useDispatch } from 'react-redux'
 import splashImage from './splash.png';
@@ -31,11 +31,10 @@ const Start = () => {
                     <div>
                         <img src={splashImage} className="splash-logo" alt="Chlorobo-title" />
                     </div>
-                    <br/>
                     <div>
-                        <Button variant="light" onClick={() => dispatch(introPage())} >ENTER</Button>
-                        {/* <Button variant="light" onClick={() => dispatch(creditsPage())} >CREDITS</Button> */}
+                        <Button id="enter-button-start" variant="light" onClick={() => dispatch(introPage())} >ENTER</Button>
                     </div>
+                    <Button id="acc-button-start" variant="light" onClick={() => dispatch(helpPage())} >ACCESSIBLE VERSION</Button>
                 </div>
             ) 
         }

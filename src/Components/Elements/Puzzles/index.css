@@ -3,7 +3,7 @@
     width:90vw;
     height:80vh;
     min-width:830px;
-
+    overflow: hidden;
 }
 
 .main-content-holder.fade {
@@ -15,6 +15,7 @@
 }
 
 .main-puzzle-holder {
+    margin-top: 2vh;
     height:90%;
     width:100%;
 }
