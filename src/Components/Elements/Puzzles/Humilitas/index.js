@@ -5,9 +5,12 @@ import { GoToCompletePage, GoToFinalCompletePage } from '../puzzlePageSlice';
 import { lastPuzzleCompletePage } from '../../../Pages/Content/contentSlice';
 import { useDispatch, connect } from 'react-redux';
 import './index.css';
+import correctSound from '../../Sounds/correctSound.mp3';
+import incorrectSound from '../../Sounds/incorrectSound.mp3';
+import confetti from 'canvas-confetti';
 
 const Humilitas = ({puzzle, poemMode, puzzleProgress}) => {
-    let title = "Humilitas";
+    // let title = "Humilitas";
     let dispatch = useDispatch();
     let contentClass = "main-content-holder";
 
@@ -18,12 +21,12 @@ const Humilitas = ({puzzle, poemMode, puzzleProgress}) => {
     }
     return (
         <div className={contentClass}>
-            <div className="ingame-puzzle-name-div"> <div className="ingame-puzzle-name">{title}</div></div>
-            <div className="main-puzzle-holder">
-                <div className="humanitas-prompt-div">
-                </div>
+            <div className="diagonal-bg"/>
+            {/* <div className="ingame-puzzle-name-div"> <div className="ingame-puzzle-name">{title}</div></div> */}
+            <div className="main-puzzle-holder humilitas-holder">
+                <div className="humanitas-prompt-div"></div>
                 <NumInputComponent solvePuzzle={SolvedFunction} />
-                <Button variant="light" id="solvePuzzleButton" onClick={() => {SolvedFunction()}}> Debug: click to solve puzzle.</Button>            
+                {/* <Button variant="light" id="solvePuzzleButton" onClick={() => {SolvedFunction()}}> Debug: click to solve puzzle.</Button>             */}
             </div>
         </div>
     )
@@ -33,15 +36,28 @@ const numberArray = [
     34,
     59,
     302,
-    98976,
+    9896,
+    84374,
     555555555,
-    87546354357,
-    8888888,
-    898065463526,
-    23456789876545678,
-    3456789999999999,
-    986433333457,
-    798798798743333333
+    8754357,
+    10111011,
+    11011101,
+    898065526,
+    3141592657,
+    9999999999,
+    1234567890,
+    12586269025,
+    2145075583,
+    117669030460994,
+    100101001010010100101,
+    43566776258854844738105,
+    100100101010710100111,
+    1066340417491710595814572169,
+    19134702400093278081449423917,
+    23050405304050304053040,
+    123420493530485034830458340,
+    23402340203402034023040294,
+    692400204129480135923502,
 ]
 
 const HumilitasFlashingNumber = (props) => {
@@ -128,11 +144,18 @@ class NumInputComponent extends React.Component {
         let copy = this.state;
         let nextIndex = this.state.index + 1
         copy.index = nextIndex;
-        copy.classType = this.state.classType === "flashing-number" ? "flashing-number-2" : "flashing-number";
+        copy.classType = this.state.classType === "flashing-number" ? "flashing-number" : "flashing-number";
         if (Number(response) !== numberArray[this.state.index - 1]) {
-            copy.incorrect = this.state.incorrect + 1
+            copy.incorrect = this.state.incorrect + 1;
+            var audio = new Audio(incorrectSound);
+            audio.play();
         }
-        if (copy.incorrect === 3) {
+        else {
+            var audio = new Audio(correctSound);
+            audio.play();
+            confetti();
+        }
+        if (copy.incorrect === 5) {
             this.sendResponseToParents();
         }
         else {
@@ -142,17 +165,17 @@ class NumInputComponent extends React.Component {
 
     render() {
         return (
-            <>
+            <div className="humilitas-innerbox">
                 <HumilitasFlashingNumber index={this.state.index} classType={this.state.classType}/>
                 <HumilitasInputForm handleSubmit={this.advanceNumber} />
                 <NumberWrong incorrect={this.state.incorrect}/>
-            </>
+            </div>
         )
     }
 }
 
 const NumberWrong = (props) => { 
-    let stringsX = ""
+    let stringsX = "."
     if (props.incorrect == 1) {
         stringsX = "X"
     }
@@ -161,6 +184,12 @@ const NumberWrong = (props) => {
     }
     else if (props.incorrect == 3) {
         stringsX = "XXX"
+    }
+    else if (props.incorrect == 4) {
+        stringsX = "XXXX"
+    }
+    else if (props.incorrect == 5) {
+        stringsX = "XXXXX"
     }
     return (
         <div className="numberWrong">
