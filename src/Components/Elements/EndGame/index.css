@@ -22,6 +22,7 @@
 	text-align: left;
 	word-spacing: .8vmin;
 	font-size: calc(1px + 2vmin);
+    margin-top:5vh;
 }
 
 .text-shadow {

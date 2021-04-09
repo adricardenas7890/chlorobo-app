@@ -73,11 +73,11 @@ const TemperantiaPoemContent = () => {
                             }
                         }
                     }} /></div> */}
-        	<Typist className="MyTypist" cursor={{show: false}} onCharacterTyped={playSound}>
+        	<Typist className="MyTypist" cursor={{show: false}} stdTypingDelay={0} avgTypingDelay={50} onCharacterTyped={playSound}>
                 <Typist.Delay ms={1000} />
-        		<p>Let’s weigh our options, weigh our skills.</p>
+        		<p>Let’s weigh our options, <Typist.Delay ms={300} />weigh our skills.</p>
         		<Typist.Delay ms={500} />
-        		<p>We move with fairness, and justice still.</p>
+        		<p>We move with fairness, <Typist.Delay ms={300} />and justice still.</p>
                 <Typist.Delay ms={1000} />
                 <br/>
                 <p>I followed the current and it led me here.</p>
@@ -85,14 +85,14 @@ const TemperantiaPoemContent = () => {
                 <p>I trusted the system led with no fear.</p>
                 <Typist.Delay ms={1000} />
                 <br/>
-                <p>The time is ticking, the numbers count.</p>
+                <p>The time is ticking, <Typist.Delay ms={300} />the numbers count.</p>
                 <Typist.Delay ms={500} />
-                <p>It moves with rhythm, left with no doubt.</p>
+                <p>It moves with rhythm, <Typist.Delay ms={300} />left with no doubt.</p>
                 <Typist.Delay ms={500} />
-                <p>A balanced scale, a balanced life.</p>
+                <p>A balanced scale, <Typist.Delay ms={150} />a balanced life.</p>
                 <Typist.Delay ms={500} />
                 <p>Yet I still wonder if there’s more to strive.</p>
-                <Typist.Delay ms={1000} />
+                <Typist.Delay ms={1500} />
                 <br/>
                 <p>Do I stay and count the minutes?</p>
                 <Typist.Delay ms={500} />
@@ -103,6 +103,7 @@ const TemperantiaPoemContent = () => {
                 <p>I trusted the system that brought me to you.</p>
                 <Typist.Delay ms={2000} />
                 <br/>
+                <p>✿</p>
             </Typist>
             <div className="ContinueButton">
                 <Button variant="light" onClick={() => { dispatch(GoToPuzzlePage()) }} >Press here to continue</Button>

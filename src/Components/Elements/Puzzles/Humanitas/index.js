@@ -77,7 +77,7 @@ const Humanitas = ({puzzle, poemMode, puzzleProgress}) => {
             <div className="ingame-puzzle-name-div"> <div className="ingame-puzzle-name">&nbsp;</div></div>
             <div className="main-puzzle-holder">
                 <div className="humanitas-prompt-div">
-                    <p>What does it mean to be human?</p>
+                    <p>What's it like to be you?</p>
                 </div>
                 <HumanitasInputForm sendResponse={SolvedFunction}/>
                 {/* <Button variant="light" id="solvePuzzleButton" onClick={() => {SolvedFunction()}}> Debug: click to solve puzzle.</Button>                                  */}

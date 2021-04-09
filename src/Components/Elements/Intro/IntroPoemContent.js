@@ -16,21 +16,21 @@ const IntroPoemContent = () => {
     }
     return (
         <div className="typist-container-intro">
-        	<Typist className="MyTypist-intro text-shadow" cursor={{show: false}} avgTypingDelay={40} onCharacterTyped={playSound}>
+        	<Typist className="MyTypist-intro text-shadow" cursor={{show: false}} stdTypingDelay={0} avgTypingDelay={50} onCharacterTyped={playSound}>
                 <Typist.Delay ms={4000} />
-        		<p>Where we begin and where we are going.</p>
+        		<p>Where we begin <Typist.Delay ms={150} />and where we are going.</p>
                 <Typist.Delay ms={500} />
                 <p>The answers are there but are never quite showing.</p>
                 <Typist.Delay ms={1500} />
                 <br/>
                 <p>Would you like to come along with me?</p>
                 <Typist.Delay ms={500} />
-                <p>Would you like to explore? <Typist.Delay ms={500} /> Open our eyes and see?</p>
+                <p>Would you like to explore? <Typist.Delay ms={700} /> Open our eyes and see?</p>
                 <Typist.Delay ms={1500} />
                 <br/>
                 <p>It might be asking a lot.</p>
                 <Typist.Delay ms={500} />
-                <p>But I’m sure there’s a lot more to be taught.</p>
+                <p>But I’m sure there is much to be taught.</p>
                 <Typist.Delay ms={1000} />
                 <br/>
                 <p>I know nothing and neither do you.</p>
@@ -46,11 +46,12 @@ const IntroPoemContent = () => {
                 <p>I can tell that you’re different and so am I.</p>
                 <Typist.Delay ms={1000} />
                 <p>Let's work together and discover why<Typist.Delay ms={200} />.<Typist.Delay ms={500} />.<Typist.Delay ms={500} />.</p>
-                <Typist.Delay ms={3000} />
+                <Typist.Delay ms={2000} />
                 <br/>
+                <p>✿</p>
         	</Typist>
             <Typist cursor={{show: false}} >
-                <Typist.Delay ms={16000} />
+                <Typist.Delay ms={20000} />
                 <div className="ContinueButton intro-button">
                     <Button variant="dark" onClick={() => dispatch(mainMenuPage())} >Press here to continue</Button>
                 </div>

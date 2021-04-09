@@ -17,11 +17,11 @@ const HumanitasPoemContent = () => {
     }
     return (
         <div className="typist-container">
-        	<Typist className="MyTypist" cursor={{show: false}} onCharacterTyped={playSound}>
+        	<Typist className="MyTypist" cursor={{show: false}} stdTypingDelay={0}avgTypingDelay={55}  onCharacterTyped={playSound}>
                 <Typist.Delay ms={1000} />
         		<p>Thank you for helping with every task.</p>
                 <Typist.Delay ms={500} />
-                <p>But to know how you do it, there’s a lot I must ask.</p>
+                <p>But to know how you do it, <Typist.Delay ms={200} />there’s more I must ask.</p>
                 <Typist.Delay ms={1000} />
                 <br/>
                 <p>What is it like to live in your shoes?</p>
@@ -42,8 +42,9 @@ const HumanitasPoemContent = () => {
                 <p>Clearly there’s a method to this chaos in sow</p>
                 <Typist.Delay ms={500} />
                 <p>But before we part ways, <Typist.Delay ms={500} />what’s it like to be you?</p>
-                <Typist.Delay ms={1000} />
+                <Typist.Delay ms={1500} />
                 <br/>
+                <p>✿</p>
         	</Typist>
             <div className="ContinueButton">
                 <Button variant="light" onClick={() => { dispatch(GoToPuzzlePage()) }} >Press here to continue</Button>

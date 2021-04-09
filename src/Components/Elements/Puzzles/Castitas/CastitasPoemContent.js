@@ -73,33 +73,34 @@ const CastitasPoemContent = () => {
                             }
                         }
                     }} /></div> */}
-        	<Typist className="MyTypist" cursor={{show: false}} onCharacterTyped={playSound}>
+        	<Typist className="MyTypist" cursor={{show: false}} stdTypingDelay={0} avgTypingDelay={50} onCharacterTyped={playSound}>
                 <Typist.Delay ms={1000} />
-                <p>A humming shimmer, the beaming lights.</p>
+                <p>A humming shimmer, <Typist.Delay ms={500} />the beaming lights.</p>
                 <Typist.Delay ms={500} />
-                <p>It was cold and dark, now it’s crystal white.</p>
+                <p>It was cold and dark,<Typist.Delay ms={500} /> now it’s crystal white.</p>
                 <Typist.Delay ms={1000} />
                 <br/>
-                <p>Loading, loading, data with thoughts.</p>
+                <p>Loading, <Typist.Delay ms={500} />loading,<Typist.Delay ms={500} /> data with thoughts.</p>
                 <Typist.Delay ms={500} />
-                <p>In a moment's notice I ceased to be lost.</p>
+                <p>In a moment's notice <Typist.Delay ms={200} />I ceased to be lost.</p>
                 <Typist.Delay ms={1000} />
                 <br/>
-                <p>There was nothing, nothing in sight.</p>
+                <p>There was nothing, <Typist.Delay ms={500} />nothing in sight.</p>
                 <Typist.Delay ms={500} />
-                <p>Now it’s shining, filled with crystal white.</p>
+                <p>Now it’s shining, <Typist.Delay ms={500} />filled with crystal white.</p>
                 <Typist.Delay ms={1000} />
                 <br/>
-                <p>Hard rock metal, now filled with heat.</p>
+                <p>Hard rock metal,<Typist.Delay ms={500} /> now filled with heat.</p>
                 <Typist.Delay ms={500} />
                 <p>Electric currents now shine and beat.</p>
                 <Typist.Delay ms={1000} />
                 <br/>
-                <p>Hmm... Is that me humming to that melodic tune?</p>
+                <p>Hmm.<Typist.Delay ms={300} />.<Typist.Delay ms={300} />.<Typist.Delay ms={700} /> Is that me humming to that melodic tune?</p>
                 <Typist.Delay ms={500} />
-                <p>Should I follow the current? Should I be there soon?</p>
-                <Typist.Delay ms={2000} />
+                <p>Should I follow the current?<Typist.Delay ms={500} /> Should I be there soon?</p>
                 <br/>
+                <Typist.Delay ms={2000} />
+                <p>✿</p>
         	</Typist>
             <div className="ContinueButton">
                 <Button variant="light" onClick={() => { dispatch(GoToPuzzlePage()) }} >Press here to continue</Button>
