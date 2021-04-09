@@ -33,18 +33,21 @@ class CastitasSquareButtons extends React.Component {
     }
 
     handleColorChange(idName, currentClass) {
-        if (idName !== undefined && this.state.answer[idName] === currentClass) {
+        // if (idName !== undefined && this.state.answer[idName] === currentClass) {
+        if (idName !== undefined) {
             let copy = this.state;
-            copy.solved[idName] = true;
+            // copy.solved[idName] = true;
+            copy.solved[idName] = (this.state.answer[idName] === currentClass); // We need to set state back to false if button changes back to incorrect color
             this.setState(copy);
             this.checkSolvedStatus()
-        }       
+        }
     }
     checkSolvedStatus() {       
         let countCorrect = 0;
         for (const square in this.state.solved) {
             if (this.state.solved[square] === true) {
                 countCorrect++;
+                console.log(this.state.solved);
             }
         }
         if (countCorrect === 7) {
