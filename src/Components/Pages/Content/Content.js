@@ -43,12 +43,12 @@ var Content = (props) => {
     }
     else {
         content = (
-                <div>
-                <Title title={props.title} />
-                <div> You have not figured this route out yet.</div>
-                <div> This div contains the content.</div>
-                The page passed in is {props.page}
-                </div>
+                <>
+                    <Title title={props.title} />
+                    <div> You have not figured this route out yet.</div>
+                    <div> This div contains the content.</div>
+                    <div>The page passed in is {props.page}</div>
+                </>
             )        
     }
 

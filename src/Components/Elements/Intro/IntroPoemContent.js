@@ -16,7 +16,7 @@ const IntroPoemContent = () => {
     }
     return (
         <div className="typist-container-intro">
-        	<Typist className="MyTypist-intro text-shadow" cursor={{show: false}} onCharacterTyped={playSound}>
+        	<Typist className="MyTypist-intro text-shadow" cursor={{show: false}} avgTypingDelay={40} onCharacterTyped={playSound}>
                 <Typist.Delay ms={4000} />
         		<p>Where we begin and where we are going.</p>
                 <Typist.Delay ms={500} />

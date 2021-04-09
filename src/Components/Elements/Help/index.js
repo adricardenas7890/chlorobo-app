@@ -29,7 +29,7 @@ const Help = () => {
 				<HumanitasAcc/>
 				<EndAcc/>
 				<div className="acc-button">
-					<Button variant="light" size="lg"onClick={() => dispatch(creditsPage())} >CREDITS</Button>
+					<Button variant="light" size="lg" onClick={() => dispatch(creditsPage())} >CREDITS</Button>
 				</div>
 			</div>
 			<div className="acc-bg"/>

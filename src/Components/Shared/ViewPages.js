@@ -13,7 +13,7 @@ const viewPages = [
         }, 
         {
             page: "helpPage",
-            mod: { header: true, title: "Help Page" }
+            mod: { header: false, title: "Help Page" }
         }, 
         {
             page: "puzzleProgressPage",

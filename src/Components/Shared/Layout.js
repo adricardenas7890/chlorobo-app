@@ -31,10 +31,10 @@ var LayoutContent = (props) =>
     }
     
     return (
-        <div>
+        <>
             {header}
             <Content page={viewPage} title={titleValue}/>
-        </div>
+        </>
     )
 }
 
