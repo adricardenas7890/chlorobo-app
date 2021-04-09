@@ -44,8 +44,10 @@ const EndGamePoemContent = () => {
                 <p>Critical thought gave birth to critical thinking.</p>
                 <Typist.Delay ms={500} />
                 <p>Create your own current to keep from sinking.</p>
-                <Typist.Delay ms={5000} />
+                <Typist.Delay ms={2000} />
                 <br/>
+                <p>✿</p>
+                <Typist.Delay ms={5000} />
                 <div className="ContinueButton">
                     <Button variant="light" onClick={() => dispatch(creditsPage())} >Press here to continue</Button>
                 </div>
