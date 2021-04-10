@@ -18,7 +18,8 @@ const CastitasPoemContent = () => {
     }
     return (
         <div className="typist-container">
-            {/* <div className="particles-puzzle particles-fade-fast"><Particles
+            {/* <div className="particles-puzzle particles-fade-fast">
+                <Particles
                     params={{
                         "particles": {
                             "color": {
@@ -35,7 +36,7 @@ const CastitasPoemContent = () => {
                                 "random": true,
                                 "anim": {
                                     "speed": .5,
-                                    "size_min": 0.1
+                                    "size_min": 0.2
                                 }
                             },
                             "line_linked": {

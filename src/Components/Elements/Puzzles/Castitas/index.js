@@ -20,7 +20,8 @@ const Castitas = ({puzzle, poemMode, puzzleProgress}) => {
     }
     return (
         <div className={contentClass}>
-            {/* <div className="particles-puzzle particles-fade-fast"><Particles
+            {/* <div className="particles-puzzle particles-fade-fast">
+                <Particles
                     params={{
                         "particles": {
                             "color": {
@@ -37,7 +38,7 @@ const Castitas = ({puzzle, poemMode, puzzleProgress}) => {
                                 "random": true,
                                 "anim": {
                                     "speed": .5,
-                                    "size_min": 0.1
+                                    "size_min": 0.2
                                 }
                             },
                             "line_linked": {
@@ -74,13 +75,15 @@ const Castitas = ({puzzle, poemMode, puzzleProgress}) => {
                                 }
                             }
                         }
-                    }} /></div> */}
+                    }} />
+                </div> */}
             {/* <div className="ingame-puzzle-name-div"> <div className="ingame-puzzle-name">&nbsp;</div></div> */}
             <div className="main-puzzle-holder">
-                <CastitasSunSlider/>
-                <CastitasSquareButtons handleSolved={SolvedFunction} />
-                {/* <Button variant="light" id="solvePuzzleButton" onClick={() => {SolvedFunction()}}> Debug: click to solve puzzle.</Button>        */}
-            
+                <div className="castitas-puzzle-shadow">
+                    <CastitasSunSlider/>
+                    <CastitasSquareButtons handleSolved={SolvedFunction} />
+                    {/* <Button variant="light" id="solvePuzzleButton" onClick={() => {SolvedFunction()}}> Debug: click to solve puzzle.</Button>        */}
+                </div>
             </div>
         </div>
     )
