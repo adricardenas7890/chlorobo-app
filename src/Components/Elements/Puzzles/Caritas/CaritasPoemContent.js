@@ -6,7 +6,7 @@ import charSound from '../../Sounds/character.mp3';
 import { GoToPuzzlePage } from '../puzzlePageSlice';
 import { useDispatch } from 'react-redux';
 import { Button } from 'react-bootstrap';
-
+import ReactPlayer from 'react-player';
 
 const CaritasPoemContent = () => {
 	let dispatch = useDispatch();
@@ -17,7 +17,7 @@ const CaritasPoemContent = () => {
 	}
     return (
         <div className="typist-container">
-            <div className="polka-bg"></div>
+            <ReactPlayer className="poem-flower-player" url="https://player.vimeo.com/video/535354257?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" height="100vh" width="100vw" controls={false} muted={true} playing={true} loop={true} playsinline/>
         	<Typist className="MyTypist typist-small" cursor={{show: false}} stdTypingDelay={0}avgTypingDelay={55} onCharacterTyped={playSound}>
                 <Typist.Delay ms={1000} />
         		<p>This journey has led us in such a tedious way.</p>
@@ -39,7 +39,7 @@ const CaritasPoemContent = () => {
                 <br/>
         		<p>The crystals refracted and gave knowledge to sight.</p>
                 <Typist.Delay ms={500} />
-                <p>I came out from the dark and into the light.</p>
+                <p>I came out from the darkness and into the light.</p>
                 <Typist.Delay ms={1200} />
                 <br/>
                 <p>I was happy to serve you and follow your path.</p>

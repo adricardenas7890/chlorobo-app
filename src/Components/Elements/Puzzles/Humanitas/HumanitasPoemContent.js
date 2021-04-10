@@ -6,6 +6,7 @@ import charSound from '../../Sounds/character.mp3';
 import { GoToPuzzlePage } from '../puzzlePageSlice';
 import { useDispatch } from 'react-redux';
 import { Button } from 'react-bootstrap';
+import ReactPlayer from 'react-player';
 
 
 const HumanitasPoemContent = () => {
@@ -17,7 +18,8 @@ const HumanitasPoemContent = () => {
     }
     return (
         <div className="typist-container">
-        	<Typist className="MyTypist" cursor={{show: false}} stdTypingDelay={0}avgTypingDelay={55}  onCharacterTyped={playSound}>
+            <ReactPlayer className="poem-flower-player" url="https://player.vimeo.com/video/535354278?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" height="100vh" width="100vw" controls={false} muted={true} playing={true} loop={true} playsinline/>
+        	<Typist className="MyTypist" cursor={{show: false}} stdTypingDelay={0}avgTypingDelay={50}  onCharacterTyped={playSound}>
                 <Typist.Delay ms={1000} />
         		<p>Thank you for helping with every task.</p>
                 <Typist.Delay ms={500} />

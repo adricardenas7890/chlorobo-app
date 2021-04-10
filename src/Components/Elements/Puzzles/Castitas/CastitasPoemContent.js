@@ -6,7 +6,7 @@ import charSound from '../../Sounds/character.mp3';
 import { GoToPuzzlePage } from '../puzzlePageSlice';
 import { useDispatch } from 'react-redux';
 import { Button } from 'react-bootstrap';
-import Particles from 'react-particles-js';
+import ReactPlayer from 'react-player';
 
 
 const CastitasPoemContent = () => {
@@ -18,62 +18,7 @@ const CastitasPoemContent = () => {
     }
     return (
         <div className="typist-container">
-            {/* <div className="particles-puzzle particles-fade-fast">
-                <Particles
-                    params={{
-                        "particles": {
-                            "color": {
-                                "value": "#000000"
-                            },
-                            "number": {
-                                "value": 80,
-                                "density": {
-                                    "enable": false
-                                }
-                            },
-                            "size": {
-                                "value": 1,
-                                "random": true,
-                                "anim": {
-                                    "speed": .5,
-                                    "size_min": 0.2
-                                }
-                            },
-                            "line_linked": {
-                                "enable": false
-                            },
-                            "move": {
-                                "random": true,
-                                "speed": .5,
-                                "direction": "top",
-                                "out_mode": "out"
-                            }
-                        },
-                        "interactivity": {
-                            "events": {
-                                "onhover": {
-                                    "enable": true,
-                                    "mode": "bubble"
-                                },
-                                "onclick": {
-                                    "enable": true,
-                                    "mode": "repulse"
-                                }
-                            },
-                            "modes": {
-                                "bubble": {
-                                    "distance": 250,
-                                    "duration": 2,
-                                    "size": 0,
-                                    "opacity": 1
-                                },
-                                "repulse": {
-                                    "distance": 400,
-                                    "duration": 4
-                                }
-                            }
-                        }
-                    }} /></div> */}
+            <ReactPlayer className="poem-flower-player" url="https://player.vimeo.com/video/535354267?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" height="100vh" width="100vw" controls={false} muted={true} playing={true} loop={true} playsinline/>
         	<Typist className="MyTypist" cursor={{show: false}} stdTypingDelay={0} avgTypingDelay={50} onCharacterTyped={playSound}>
                 <Typist.Delay ms={1000} />
                 <p>A humming shimmer, <Typist.Delay ms={500} />the beaming lights.</p>

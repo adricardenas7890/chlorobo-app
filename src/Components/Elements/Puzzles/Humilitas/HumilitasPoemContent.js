@@ -6,7 +6,7 @@ import charSound from '../../Sounds/character.mp3';
 import { GoToPuzzlePage } from '../puzzlePageSlice';
 import { useDispatch } from 'react-redux';
 import { Button } from 'react-bootstrap';
-
+import ReactPlayer from 'react-player';
 
 const HumilitasPoemContent = () => {
     let dispatch = useDispatch();
@@ -17,7 +17,7 @@ const HumilitasPoemContent = () => {
     }
     return (
         <div className="typist-container">
-            <div className="diagonal-bg"/>
+            <ReactPlayer className="poem-flower-player" url="https://player.vimeo.com/video/535354282?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" height="100vh" width="100vw" controls={false} muted={true} playing={true} loop={true} playsinline/>
         	<Typist className="MyTypist typist-small" cursor={{show: false}} stdTypingDelay={0} avgTypingDelay={55} onCharacterTyped={playSound}>
                 <Typist.Delay ms={1000} />
                 <p>I broke my promise,<Typist.Delay ms={300} /> my delivery weak.</p>
