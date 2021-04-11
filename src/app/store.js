@@ -11,7 +11,7 @@ import storage from 'redux-persist/lib/storage';
 const persistConfig = { 
   key: 'root',
   storage,
-  whitelist: ['currentPuzzleProgress', 'currentTempProgress', 'currentViewPage', 'currentPuzzle' ]
+  whitelist: ['currentPuzzleProgress', 'currentTempProgress' ]
 }
 
 // abstract from configureStore
