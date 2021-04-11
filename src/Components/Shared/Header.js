@@ -28,17 +28,14 @@ const NavigationBar = () => {
 
         <>
 
-        <Navbar collapseOnSelect expand="lg">
+        <Navbar expand="lg">
             <Navbar.Brand onClick={() => dispatch(mainMenuPage())}><img src={NavbarBrand} id="NavbarBrand" alt="NavbarBrand" /></Navbar.Brand>
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-            <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
                 </Nav>
                 <Nav>
                     <Nav.Link onClick={() => dispatch(mainMenuPage())}>Home</Nav.Link>
                     <Nav.Link onClick={handleShow} >Help</Nav.Link>
                 </Nav>
-            </Navbar.Collapse>
         </Navbar>
 
         <Modal show={show} onHide={handleClose}>
