@@ -16,7 +16,8 @@ const Start = () => {
         if (isMobile) {
             return (
                 <LazyLoad>
-                <div className="mobile-splash-container">                    
+                    <div className="mobile-splash-container"> 
+                        
                         <img src={splashImage} className="mobile-splash" alt="Chlorobo-title" />
                     
                     <h1 className="mobile-text-1">The full site is not accessible on mobile.</h1>
@@ -36,7 +37,9 @@ const Start = () => {
                     <div className="enter-button-div">
                         <Button id="enter-button-start" variant="light" onClick={() => dispatch(introPage())} >ENTER</Button>
                     </div>
-                    <Button id="acc-button-start" variant="light" onClick={() => dispatch(helpPage())} >SINGLE-PAGE VERSION</Button>
+                    <div className="enter-button-div">
+                        <Button id="acc-button-start" variant="light" onClick={() => dispatch(helpPage())} >SINGLE-PAGE VERSION</Button>
+                    </div>
                 </div>
             ) 
         }
