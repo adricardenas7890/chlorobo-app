@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import ReactConfirmAlert, { confirmAlert } from 'react-confirm-alert'; // Import
+import ReactConfirmAlert from 'react-confirm-alert'; // Import
 import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
 import { useDispatch, connect} from 'react-redux';
 import { GiveConsent, DenyConsent } from './cookieSlice';
@@ -48,7 +48,7 @@ const PersistConsent = ({consent, asked}) => {
             return (
                 <>
                     <div className='enter-bg'>
-                        <img src={EnterBg}/>
+                        <img src={EnterBg} alt="Chlorobo Enter Screen"/>
                     </div>
                     <ReactConfirmAlert
                         title="Cookie Policy"
