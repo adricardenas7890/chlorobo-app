@@ -9,9 +9,10 @@ import {creditsPage} from '../../Pages/Content/contentSlice';
 const EndGamePoemContent = () => {
     let dispatch = useDispatch();
     let playSound = (character, charIdx) => {
-        var audio = new Audio(charSound);
-        audio.volume = .7;
-        audio.play();
+        if (character != ' ') {
+            var audio = new Audio(charSound);
+            audio.play();
+        }
     }
     return (
         <div className="typist-container-end">

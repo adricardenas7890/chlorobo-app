@@ -11,9 +11,10 @@ import ReactPlayer from 'react-player';
 const IndustriaPoemContent = () => {
     let dispatch = useDispatch();
     let playSound = (character, charIdx) => {
-        var audio = new Audio(charSound);
-        audio.volume = .7;
-        audio.play();
+        if (character != ' ') {
+            var audio = new Audio(charSound);
+            audio.play();
+        }
     }
     return (
         <div className="typist-container">
@@ -58,7 +59,7 @@ const IndustriaPoemContent = () => {
                 <br/>
                 <p>✿</p>
             </Typist>
-            <div className="ContinueButton">
+            <div className="ContinueButton continue-button-fade">
                 <Button variant="light" onClick={() => { dispatch(GoToPuzzlePage()) }} >Press here to continue</Button>
             </div>
         </div>

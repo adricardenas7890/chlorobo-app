@@ -11,9 +11,10 @@ import ReactPlayer from 'react-player';
 const HumilitasPoemContent = () => {
     let dispatch = useDispatch();
     let playSound = (character, charIdx) => {
-        var audio = new Audio(charSound);
-        audio.volume = .7;
-        audio.play();
+        if (character != ' ') {
+            var audio = new Audio(charSound);
+            audio.play();
+        }
     }
     return (
         <div className="typist-container">
@@ -42,7 +43,7 @@ const HumilitasPoemContent = () => {
                 <p>Needs and wants.<Typist.Delay ms={500} /> Desires and hopes.</p>
                 <Typist.Delay ms={500} />
                 <p>Take a moment and review what we spoke.</p>
-                <Typist.Delay ms={3000} />
+                <Typist.Delay ms={1000} />
                 <br/>
                 <p>I do not know all, and I’m limited too.</p>
                 <Typist.Delay ms={500} />
@@ -58,7 +59,7 @@ const HumilitasPoemContent = () => {
                 <br/>
                 <p>✿</p>
             </Typist>
-            <div className="ContinueButton">
+            <div className="ContinueButton continue-button-fade">
                 <Button variant="light" onClick={() => { dispatch(GoToPuzzlePage()) }} >Press here to continue</Button>
             </div>
         </div>

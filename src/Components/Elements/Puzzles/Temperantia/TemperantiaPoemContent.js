@@ -12,9 +12,10 @@ import ReactPlayer from 'react-player';
 const TemperantiaPoemContent = () => {
     let dispatch = useDispatch();
     let playSound = (character, charIdx) => {
-        var audio = new Audio(charSound);
-        audio.volume = .7;
-        audio.play();
+        if (character != ' ') {
+            var audio = new Audio(charSound);
+            audio.play();
+        }
     }
     return (
         <div className="typist-container">
@@ -22,7 +23,7 @@ const TemperantiaPoemContent = () => {
         	<Typist className="MyTypist" cursor={{show: false}} stdTypingDelay={0} avgTypingDelay={50} onCharacterTyped={playSound}>
                 <Typist.Delay ms={1000} />
         		<p>Let’s weigh our options, <Typist.Delay ms={300} />weigh our skills.</p>
-        		<Typist.Delay ms={500} />
+        		<Typist.Delay ms={700} />
         		<p>We move with fairness, <Typist.Delay ms={300} />and justice still.</p>
                 <Typist.Delay ms={1000} />
                 <br/>
@@ -51,7 +52,7 @@ const TemperantiaPoemContent = () => {
                 <br/>
                 <p>✿</p>
             </Typist>
-            <div className="ContinueButton">
+            <div className="ContinueButton continue-button-fade">
                 <Button variant="light" onClick={() => { dispatch(GoToPuzzlePage()) }} >Press here to continue</Button>
             </div>
         </div>
