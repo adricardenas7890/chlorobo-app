@@ -1,7 +1,4 @@
 import React from 'react';
-// import { useDispatch } from 'react-redux';
-// import { Button } from 'react-bootstrap';
-// import { GoToPuzzlePage } from '../../Elements/Puzzles/puzzlePageSlice';
 import  CastitasPoemContent  from '../../Elements/Puzzles/Castitas/CastitasPoemContent';
 import TemperantiaPoemContent from '../../Elements/Puzzles/Temperantia/TemperantiaPoemContent';
 import PatientiaPoemContent from '../../Elements/Puzzles/Patientia/PatientiaPoemContent';
@@ -9,7 +6,6 @@ import HumilitasPoemContent from '../../Elements/Puzzles/Humilitas/HumilitasPoem
 import CaritasPoemContent from '../../Elements/Puzzles/Caritas/CaritasPoemContent';
 import HumanitasPoemContent from '../../Elements/Puzzles/Humanitas/HumanitasPoemContent';
 import IndustriaPoemContent from '../../Elements/Puzzles/Industria/IndustriaPoemContent';
-
 // Redirects to each main puzzle component
 // Connected to puzzleSlice reducer, will update when state.puzzle updates
 

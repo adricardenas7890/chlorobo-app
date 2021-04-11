@@ -216,6 +216,6 @@ input[type=range]::-ms-thumb {
   background-color: rgb(255, 255, 255);
   filter: drop-shadow(0px 1px 5px #a1a1a1);
   padding-top: 3em;
-  padding-bottom: 3em;
+  padding-bottom: 1em;
   justify-content: center;
 }
