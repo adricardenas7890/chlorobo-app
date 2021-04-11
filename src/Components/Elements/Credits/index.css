@@ -9,11 +9,12 @@
 .credits-text-temp {
     margin-top: 2vh;
     font-size: calc(10px + 1vmin);
-    margin-bottom: 10vh;
+    margin-bottom: 7.5vh;
 }
 
 .credits-text-rows {
     font-size: calc(15px + 1vmin);
+    min-width: 40vw;
 }
 
 .credits-row-justify {
@@ -23,10 +24,17 @@
 .credits-name {
     font-family: Heritage;
     font-size: 6vmin;
-    margin-top: -35px;
+    margin-top: -30px;
 }
 
 .font-heritage {
     font-family: Heritage;
-    margin-bottom: -5px;
+    /* margin-bottom: -5px; */
+}
+
+#resetCookies {
+	color: white!important;
+    background-color: black!important;
+    font-size: small;
+    margin: 5px;
 }
