@@ -6,6 +6,7 @@ import HumilitasPoemContent from '../../Elements/Puzzles/Humilitas/HumilitasPoem
 import CaritasPoemContent from '../../Elements/Puzzles/Caritas/CaritasPoemContent';
 import HumanitasPoemContent from '../../Elements/Puzzles/Humanitas/HumanitasPoemContent';
 import IndustriaPoemContent from '../../Elements/Puzzles/Industria/IndustriaPoemContent';
+
 // Redirects to each main puzzle component
 // Connected to puzzleSlice reducer, will update when state.puzzle updates
 
