@@ -45,7 +45,7 @@ class CastitasSquareButtons extends React.Component {
         for (const square in this.state.solved) {
             if (this.state.solved[square] === true) {
                 countCorrect++;
-                console.log(this.state.solved);
+                // console.log(this.state.solved);
             }
         }
         if (countCorrect === 7) {

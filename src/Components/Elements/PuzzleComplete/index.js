@@ -28,11 +28,9 @@ const PuzzleComplete = (props) => {
     return (
         <div className="complete-page complete-fade">
             <ReactAudioPlayer src={completeSound} autoPlay />
-        	<img src={completeImage} id="CompleteImage" alt="Complete" />
-        	<div>
-            	<p>You have completed this chapter.</p>
-            </div>
-            <div>
+            <div className="complete-page-inner">
+                <img src={completeImage} id="CompleteImage" alt="Complete" />
+                <p>You have completed this chapter.</p>
                 {continueBtn}
             </div>
         </div>
