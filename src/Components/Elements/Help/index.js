@@ -51,7 +51,7 @@ const IntroAcc = () => {
 			<p>Would you like to explore? Open our eyes and see?</p>
 			<br/>
 			<p>It might be asking a lot.</p>
-			<p>But I’m sure there’s a lot more to be taught.</p>
+			<p>But I’m sure there is much to be taught.</p>
 			<br/>
 			<p>I know nothing and neither do you.</p>
 			<p>But come along and we’ll test if it’s true.</p>
@@ -61,6 +61,8 @@ const IntroAcc = () => {
 			<br/>
 			<p>I can tell that you’re different and so am I.</p>
 			<p>Let's work together and discover why...</p>
+			<br/>
+			<p>✿</p>
 		</div>
 	)
 }
@@ -87,6 +89,7 @@ const CastitasAcc = () => {
 			<p>Hmm... Is that me humming to that melodic tune?</p>
 			<p>Should I follow the current? Should I be there soon?</p>
 			<br/>
+			<p>✿</p>
 		</div>
 	)
 }
@@ -104,15 +107,17 @@ const TemperantiaAcc = () => {
 			<p>I followed the current and it led me here.</p>
 			<p>I trusted the system led with no fear.</p>
 			<br/>
-			<p>The time is ticking, the numbers count.</p>
-			<p>It moves with rhythm, left with no doubt.</p>
+			<p>The ones and zeros are all I once knew.</p>
+			<p>Zero meant false and one always true.</p>
 			<p>A balanced scale, a balanced life.</p>
 			<p>Yet I still wonder if there’s more to strive.</p>
 			<br/>
 			<p>Do I stay and count the minutes?</p>
 			<p>Or move along and risk my limits?</p>
-			<p>But there’s more to this I know it’s true.</p>
+			<p>But there’s more to this, I know it’s true.</p>
 			<p>I trusted the system that brought me to you.</p>
+			<br/>
+			<p>✿</p>
 		</div>
 	)
 }
@@ -134,8 +139,8 @@ const IndustriaAcc = () => {
 			<p>I’ve strayed from my system, began a new journey.</p>
 			<p>But your world is chaotic, and I’m only just learning.</p>
 			<br/>
-			<p>It’s different here from the things I knew.</p>
-			<p>I worked in numbers. One, zero, but never two.</p>
+			<p>Your logic is different from the world I once knew.</p>
+			<p>And, Or, Not... the gates forever true.</p>
 			<p>Me and you. You and I.</p>
 			<p>We’re working together, yet I struggle to find.</p>
 			<br/>
@@ -143,6 +148,8 @@ const IndustriaAcc = () => {
 			<p>But you’re too random, far outside of my pocket.</p>
 			<p>Tap, tap, tap. Click, click, click.</p>
 			<p>I wonder if our two worlds will stick.</p>
+			<br/>
+			<p>✿</p>
 		</div>
 	)
 }
@@ -168,6 +175,8 @@ const PatientiaAcc = () => {
 			<br/>
 			<p>Mind to body. Body to mind.</p>
 			<p>Our worlds are different, yet one of a kind.</p>
+			<br/>
+			<p>✿</p>
 		</div>
 	)
 }
@@ -199,6 +208,8 @@ const HumilitasAcc = () => {
 			<p>Finding peace in the chaos, I finally understand.</p>
 			<p>You and I are quite different.</p>
 			<p>But perfectly planned.</p>
+			<br/>
+			<p>✿</p>
 		</div>
 	)
 }
@@ -225,12 +236,13 @@ const CaritasAcc = () => {
 			<br/>
 			<p>I was happy to serve you and follow your path.</p>
 			<p>There’s joy in the chaos, and comfy through math.</p>
-			<p>What we created in the glorious clicks.</p>
+			<p>The more we learn as we've taught each other,</p>
+        	<p>What's there to life but to serve one another?</p>
 			<br/>
-			<p>The zeros and ones are sure to be missed.</p>
 			<p>You and I. Me and you.</p>
 			<p>Something quite different and beautiful too.</p>
 			<br/>
+			<p>✿</p>
 		</div>
 	)
 }
@@ -243,7 +255,7 @@ const HumanitasAcc = () => {
 				<ReactAudioPlayer className="audio-player-acc" src={HumanitasSong} controls/>
 			</h1>
 			<p>Thank you for helping with every task.</p>
-			<p>But to know how you do it, there’s a lot I must ask.</p>
+			<p>But to know how you do it, there’s more I must ask.</p>
 			<br/>
 			<p>What is it like to live in your shoes?</p>
 			<p>What is it like to be human and eventually choose?</p>
@@ -256,6 +268,8 @@ const HumanitasAcc = () => {
 			<br/>
 			<p>Clearly there’s a method to this chaos in sow</p>
 			<p>But before we part ways, what’s it like to be you?</p>
+			<br/>
+            <p>✿</p>
 		</div>
 	)
 }
