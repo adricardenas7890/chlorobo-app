@@ -4,6 +4,7 @@ import puzzlePageReducer from '../Components/Elements/Puzzles/puzzlePageSlice';
 import puzzleProgressReducer from '../Components/Elements/Puzzles/puzzleProgressSlice'
 import temperantiaReducer from '../Components/Elements/Puzzles/Temperantia/temperantiaSlice';
 import cookieReducer from '../LocalStorage/cookieSlice';
+import audioReducer from '../Components/Elements/Puzzles/puzzleSongSlice';
 import { persistStore } from 'redux-persist';
 import { persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
@@ -31,7 +32,8 @@ const rootReducer = combineReducers({
   currentPuzzle: puzzlePageReducer,
   currentPuzzleProgress: puzzleProgressReducer,
   currentTempProgress: temperantiaReducer,
-  cookieConsent: cookieReducer
+  cookieConsent: cookieReducer,
+  currentAudioSettings: audioReducer,
 });
 
 // Persists selected reducers within localStorage
