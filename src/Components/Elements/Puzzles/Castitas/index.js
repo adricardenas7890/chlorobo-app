@@ -8,7 +8,9 @@ import CastitasSquareButtons  from './CastitasSquareButtons';
 import CastitasSunSlider from './CastitasSunSlider';
 import { connect } from 'react-redux';
 import Particles from 'react-particles-js';
+import LazyLoad from 'react-lazyload';
 
+    
 const Castitas = ({puzzle, poemMode, puzzleProgress}) => {
     let dispatch = useDispatch();
     let contentClass = "main-content-holder";
@@ -19,68 +21,13 @@ const Castitas = ({puzzle, poemMode, puzzleProgress}) => {
         setTimeout(() => { dispatch(GoToCompletePage()); }, 2000);
     }
     return (
-        <div className={contentClass}>
-            {/* <div className="particles-puzzle particles-fade-fast"><Particles
-                    params={{
-                        "particles": {
-                            "color": {
-                                "value": "#000000"
-                            },
-                            "number": {
-                                "value": 80,
-                                "density": {
-                                    "enable": false
-                                }
-                            },
-                            "size": {
-                                "value": 1,
-                                "random": true,
-                                "anim": {
-                                    "speed": .5,
-                                    "size_min": 0.1
-                                }
-                            },
-                            "line_linked": {
-                                "enable": false
-                            },
-                            "move": {
-                                "random": true,
-                                "speed": .5,
-                                "direction": "top",
-                                "out_mode": "out"
-                            }
-                        },
-                        "interactivity": {
-                            "events": {
-                                "onhover": {
-                                    "enable": true,
-                                    "mode": "bubble"
-                                },
-                                "onclick": {
-                                    "enable": true,
-                                    "mode": "repulse"
-                                }
-                            },
-                            "modes": {
-                                "bubble": {
-                                    "distance": 250,
-                                    "duration": 2,
-                                    "size": 0,
-                                    "opacity": 1
-                                },
-                                "repulse": {
-                                    "distance": 400,
-                                    "duration": 4
-                                }
-                            }
-                        }
-                    }} /></div> */}
-            {/* <div className="ingame-puzzle-name-div"> <div className="ingame-puzzle-name">&nbsp;</div></div> */}
-            <div className="main-puzzle-holder">
+        <div className={contentClass}>           
+            <div id="castitas-holder" className="main-puzzle-holder">
+                <LazyLoad>
                 <CastitasSunSlider/>
                 <CastitasSquareButtons handleSolved={SolvedFunction} />
-                {/* <Button variant="light" id="solvePuzzleButton" onClick={() => {SolvedFunction()}}> Debug: click to solve puzzle.</Button>        */}
-            
+                </LazyLoad>
+                {/* <Button variant="light" id="solvePuzzleButton" onClick={() => {SolvedFunction()}}> Debug: click to solve puzzle.</Button>        */}          
             </div>
         </div>
     )

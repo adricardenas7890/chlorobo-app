@@ -192,3 +192,12 @@ input[type=range]::-ms-thumb {
 
   cursor: pointer;
 }
+
+@keyframes castitas-fadein {
+    0% { opacity:0; }
+    100% { opacity:1; }
+}
+#castitas-holder {
+    animation-name: castitas-fadein;
+    animation-duration: 2s;
+}
