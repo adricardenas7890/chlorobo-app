@@ -2,43 +2,51 @@
 .square {
   height: 60px;
   width: 60px;
-  border: 3px solid gray;
+  /* border: 3px solid gray; */
   padding:0px!important;
   box-shadow: 3px;
   margin: auto;
+  cursor: pointer;
 }
 
 .noColor {
-    background-color:white;
+    background-image: url('./img/noColor.png');
+	background-position: center;
 }
 
 .colorRed {
-    background-color:rgb(235, 0, 39);
+    background-image: url('./img/colorRed.png');
+	background-position: center;
 }
 
 .colorOrange {
-    background-color: orange;
+    background-image: url('./img/colorOrange.png');
+	background-position: center;
 }
 
 .colorYellow {
-    background-color: yellow;
+    background-image: url('./img/colorYellow.png');
+	background-position: center;
 }
 
 .colorGreen {
-    background-color: rgb(28, 221, 28);
+    background-image: url('./img/colorGreen.png');
+	background-position: center;
 }
 
 .colorCyan {
-    background-color: aqua
-
+    background-image: url('./img/colorCyan.png');
+	background-position: center;
 }
 
 .colorBlue {
-    background-color: blue;
+    background-image: url('./img/colorBlue.png');
+	background-position: center;
 }
 
 .colorPurple {
-    background-color: rgb(136, 62, 255);
+    background-image: url('./img/colorPurple.png');
+	background-position: center;
 }
 
 .square-col {
@@ -130,7 +138,7 @@
 
 input[type=range] {
   -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-  width: 50%; /* Specific width is required for Firefox. */
+  width: 70%; /* Specific width is required for Firefox. */
   background: gray; /* Otherwise white in Chrome */
   height: 5px;
   border-radius:100%;
@@ -200,4 +208,14 @@ input[type=range]::-ms-thumb {
 #castitas-holder {
     animation-name: castitas-fadein;
     animation-duration: 2s;
+}
+.castitas-puzzle-shadow {
+  max-width: 45vw;
+  min-width: 650px;
+  margin: auto;
+  background-color: rgb(255, 255, 255);
+  filter: drop-shadow(0px 1px 5px #a1a1a1);
+  padding-top: 3em;
+  padding-bottom: 3em;
+  justify-content: center;
 }

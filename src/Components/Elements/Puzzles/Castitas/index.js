@@ -7,8 +7,8 @@ import './index.css';
 import CastitasSquareButtons  from './CastitasSquareButtons';
 import CastitasSunSlider from './CastitasSunSlider';
 import { connect } from 'react-redux';
-import Particles from 'react-particles-js';
-import LazyLoad from 'react-lazyload';
+import backgroundImg from '../bg1.png'
+// import Particles from 'react-particles-js';
 
     
 const Castitas = ({puzzle, poemMode, puzzleProgress}) => {
@@ -21,14 +21,16 @@ const Castitas = ({puzzle, poemMode, puzzleProgress}) => {
         setTimeout(() => { dispatch(GoToCompletePage()); }, 2000);
     }
     return (
-        <div className={contentClass}>           
-            <div id="castitas-holder" className="main-puzzle-holder">
-                <LazyLoad>
-                <CastitasSunSlider/>
-                <CastitasSquareButtons handleSolved={SolvedFunction} />
-                </LazyLoad>
-                {/* <Button variant="light" id="solvePuzzleButton" onClick={() => {SolvedFunction()}}> Debug: click to solve puzzle.</Button>        */}          
+        <div className={contentClass}>
+            {/* <div className="ingame-puzzle-name-div"> <div className="ingame-puzzle-name">&nbsp;</div></div> */}
+            <div className="main-puzzle-holder fg-fade-in">
+                <div className="castitas-puzzle-shadow">
+                    <CastitasSunSlider/>
+                    <CastitasSquareButtons handleSolved={SolvedFunction} />
+                    {/* <Button variant="light" id="solvePuzzleButton" onClick={() => {SolvedFunction()}}> Debug: click to solve puzzle.</Button>        */}
+                </div>
             </div>
+            <div className="puzzle-bg bg-fade-in bg-3"></div>
         </div>
     )
 }

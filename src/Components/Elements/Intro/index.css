@@ -54,3 +54,14 @@
     0% { opacity:0; }
     100% { opacity:1; }
 }
+
+.intro-button {
+    animation-name: intro-button-opacity;
+    animation-duration: 20s;
+}
+
+@keyframes intro-button-opacity {
+    0% { opacity:0; }
+    80% { opacity:0; }
+    100% { opacity:1; }
+}

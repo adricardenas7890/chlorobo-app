@@ -19,68 +19,12 @@ const Temperantia = ({ puzzle, poemMode, puzzleProgress }) => {
         setTimeout(() => { dispatch(GoToCompletePage()); }, 2000);
     }
     return (
-
         <div className={contentClass}>
-            {/* <div className="particles-puzzle"><Particles
-                    params={{
-                        "particles": {
-                            "color": {
-                                "value": "#000000"
-                            },
-                            "number": {
-                                "value": 80,
-                                "density": {
-                                    "enable": false
-                                }
-                            },
-                            "size": {
-                                "value": 1,
-                                "random": true,
-                                "anim": {
-                                    "speed": .5,
-                                    "size_min": 0.1
-                                }
-                            },
-                            "line_linked": {
-                                "enable": false
-                            },
-                            "move": {
-                                "random": true,
-                                "speed": .5,
-                                "direction": "top",
-                                "out_mode": "out"
-                            }
-                        },
-                        "interactivity": {
-                            "events": {
-                                "onhover": {
-                                    "enable": true,
-                                    "mode": "bubble"
-                                },
-                                "onclick": {
-                                    "enable": true,
-                                    "mode": "repulse"
-                                }
-                            },
-                            "modes": {
-                                "bubble": {
-                                    "distance": 250,
-                                    "duration": 2,
-                                    "size": 0,
-                                    "opacity": 1
-                                },
-                                "repulse": {
-                                    "distance": 400,
-                                    "duration": 4
-                                }
-                            }
-                        }
-                    }} /></div> */}
-            {/* <div className="ingame-puzzle-name-div"> <div className="ingame-puzzle-name">&nbsp;</div></div> */}
-            <div className="main-puzzle-holder">
+            <div className="main-puzzle-holder fg-fade-in">
                 <TemperantiaGridMain handleSolved={SolvedFunction}/>
                 {/* <Button variant="light" id="solvePuzzleButton" onClick={() => {SolvedFunction()}}> Debug: click to solve puzzle.</Button>        */}
             </div>
+            <div className="puzzle-bg bg-fade-in bg-1"></div>
         </div>
     )
 }
@@ -110,9 +54,7 @@ const TemperantiaGridMain = (props) => {
 
 const GradientDiv = () => {
     return (
-        <div className="gradient-div">
-
-        </div>
+        <div className="gradient-div"></div>
     )
 }
 

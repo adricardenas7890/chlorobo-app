@@ -6,24 +6,24 @@ import charSound from '../../Sounds/character.mp3';
 import { GoToPuzzlePage } from '../puzzlePageSlice';
 import { useDispatch } from 'react-redux';
 import { Button } from 'react-bootstrap';
-import Particles from 'react-particles-js';
-
+import ReactPlayer from 'react-player';
 
 const IndustriaPoemContent = () => {
     let dispatch = useDispatch();
     let playSound = (character, charIdx) => {
-        var audio = new Audio(charSound);
-        audio.volume = .7;
-        audio.play();
+        if (character != ' ') {
+            var audio = new Audio(charSound);
+            audio.play();
+        }
     }
     return (
         <div className="typist-container">
-            <div className="diagonal-bg-2"/>
-            <Typist className="MyTypist typist-small" cursor={{show: false}} stdTypingDelay={0} avgTypingDelay={55} onCharacterTyped={playSound}>
+            <ReactPlayer className="poem-flower-player" url="https://player.vimeo.com/video/535354290?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" height="100vh" width="100vw" controls={false} muted={true} playing={true} loop={true} playsinline/>
+            <Typist className="MyTypist typist-small" cursor={{show: false}} stdTypingDelay={0} avgTypingDelay={45} onCharacterTyped={playSound}>
                 <Typist.Delay ms={1000} />
-                <p>Tap, <Typist.Delay ms={700} />tap, <Typist.Delay ms={700} />tap. <Typist.Delay ms={2000} />Tick, <Typist.Delay ms={700} />tick,<Typist.Delay ms={700} /> tick.</p>
+                <p>Tap, <Typist.Delay ms={400} />tap, <Typist.Delay ms={400} />tap. <Typist.Delay ms={1000} />Tick, <Typist.Delay ms={400} />tick,<Typist.Delay ms={400} /> tick.</p>
                 <Typist.Delay ms={1000} />
-                <p>We work in tandem, <Typist.Delay ms={700} />we work in clicks.</p>
+                <p>We work in tandem, <Typist.Delay ms={400} />we work in clicks.</p>
                 <Typist.Delay ms={1000} />
                 <br/>
                 <p>You give me directions.<Typist.Delay ms={700} /> I’ll follow your lead.</p>
@@ -59,7 +59,7 @@ const IndustriaPoemContent = () => {
                 <br/>
                 <p>✿</p>
             </Typist>
-            <div className="ContinueButton">
+            <div className="ContinueButton continue-button-fade">
                 <Button variant="light" onClick={() => { dispatch(GoToPuzzlePage()) }} >Press here to continue</Button>
             </div>
         </div>
