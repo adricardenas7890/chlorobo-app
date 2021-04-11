@@ -7,7 +7,7 @@ import  TemperantiaGrid  from './TemperantiaGrid';
 import './index.css';
 import img1 from './temperantia-img1.jpg'
 import img2 from './temperantia-img2.jpg'
-import Particles from 'react-particles-js';
+// import Particles from 'react-particles-js';
 
 const Temperantia = ({ puzzle, poemMode, puzzleProgress }) => {
     let dispatch = useDispatch();

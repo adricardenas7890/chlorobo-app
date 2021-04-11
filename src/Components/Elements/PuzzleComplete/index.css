@@ -9,6 +9,11 @@
 
 .complete-page {
 	margin: auto;
+	height: 80vh;
+}
+
+.complete-page-inner {
+	margin-top: 15vh;
 }
 
 .complete-fade {

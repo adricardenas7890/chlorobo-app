@@ -42,7 +42,7 @@ const HumanitasPoemContent = () => {
                 <p>If the path that you take leads to kindness and trust?</p>
                 <Typist.Delay ms={1000} />
                 <br/>
-                <p>Clearly there’s a method to this chaos in sow</p>
+                <p>Clearly there’s a method to this chaos in sow.</p>
                 <Typist.Delay ms={500} />
                 <p>But before we part ways, <Typist.Delay ms={500} />what’s it like to be you?</p>
                 <Typist.Delay ms={1500} />

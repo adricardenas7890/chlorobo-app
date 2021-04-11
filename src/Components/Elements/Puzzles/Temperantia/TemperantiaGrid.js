@@ -126,7 +126,7 @@ class GridSquare extends React.Component {
 
 
     handleClick() {
-        debugger;
+        // debugger;
         let copy = this.state;
         if (String(this.state["currentNumber"]) === "1") {
             copy["currentNumber"] = "0";
