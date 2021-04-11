@@ -6,7 +6,6 @@ import  IndustriaCounters  from './IndustriaCounters';
 import IndustriaVideo from './IndustriaVideo';
 import IndustriaInputFields from './IndustriaInputFields';
 import { GoToCompletePage } from '../puzzlePageSlice';
-// import FadeIn from 'react-fade-in';
 import './index.css';
 import '../index.css';
 

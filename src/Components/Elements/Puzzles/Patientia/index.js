@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
+import ReactAudioPlayer from 'react-audio-player';
 // import { Button } from 'react-bootstrap';
 import { SetSolved } from '../puzzleProgressSlice';
 import { useDispatch, connect } from 'react-redux';
@@ -26,20 +27,39 @@ const Patientia = ({puzzle, poemMode}) => {
     )
 }
 
-const PatientiaVideo = (props) => {
-    // let dispatch = useDispatch();
-    let onPlayFunction = () => { 
+class PatientiaVideo extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { 
+            audio: false,
+        }
+        this.onEndedFunction = this.onEndedFunction.bind(this);
+        this.onPlayFunction = this.onPlayFunction.bind(this);
+    }
+    onPlayFunction = () => { 
         var audio = new Audio(PatientiaSong);
         audio.play();
+        this.setState({
+            audio:audio,
+        })
     }
-    let onEndedFunction = () => { 
-        props.handleSolved();
+    onEndedFunction = () => { 
+        this.props.handleSolved();
     }
-    return (
-        <div className="patientia-player-div">
-            <ReactPlayer className="patientia-player" url="https://player.vimeo.com/video/529079042?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" height="100%" width="100%" onPlay={onPlayFunction} onEnded={onEndedFunction} controls={false} muted={true} playing={true} loop={false}/>      
-        </div>
-    )
+    componentWillUnmount = () => {
+        var audio = this.state.audio;
+        audio.pause();
+        audio.currentTime = 0;
+    }
+
+
+    render() {
+        return (
+            <div className="patientia-player-div">
+                <ReactPlayer className="patientia-player" url="https://player.vimeo.com/video/529079042?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" height="100%" width="100%" onPlay={this.onPlayFunction} onEnded={this.onEndedFunction} controls={false} muted={true} playing={true} loop={false} />
+            </div>
+        )
+    }
 }
 
 
