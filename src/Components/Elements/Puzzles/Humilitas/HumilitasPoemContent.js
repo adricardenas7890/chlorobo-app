@@ -45,15 +45,15 @@ const HumilitasPoemContent = () => {
                 <p>Take a moment and review what we spoke.</p>
                 <Typist.Delay ms={1000} />
                 <br/>
-                <p>I do not know all, and I’m limited too.</p>
+                <p>I do not know all,<Typist.Delay ms={150} /> and I’m limited too.</p>
                 <Typist.Delay ms={500} />
                 <p>Yet I’m happier now to see what brought me to you.</p>
-                <Typist.Delay ms={2000} />
+                <Typist.Delay ms={1000} />
                 <br/>
                 <p>Finding peace in the chaos,<Typist.Delay ms={500} /> I finally understand.</p>
                 <Typist.Delay ms={500} />
                 <p>You and I are quite different.</p>
-                <Typist.Delay ms={1000} />
+                <Typist.Delay ms={700} />
                 <p>But perfectly planned.</p>
                 <Typist.Delay ms={2000} />
                 <br/>

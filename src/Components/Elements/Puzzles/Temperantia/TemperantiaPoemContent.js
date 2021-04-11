@@ -32,10 +32,10 @@ const TemperantiaPoemContent = () => {
                 <p>I trusted the system led with no fear.</p>
                 <Typist.Delay ms={1000} />
                 <br/>
-                <p>The time is ticking, <Typist.Delay ms={300} />the numbers count.</p>
+                <p>The ones and zeros are all I once knew.</p>
                 <Typist.Delay ms={500} />
-                <p>It moves with rhythm, <Typist.Delay ms={300} />left with no doubt.</p>
-                <Typist.Delay ms={500} />
+                <p>Zero meant false and one always true.</p>
+                <Typist.Delay ms={1000} />
                 <p>A balanced scale, <Typist.Delay ms={150} />a balanced life.</p>
                 <Typist.Delay ms={500} />
                 <p>Yet I still wonder if there’s more to strive.</p>
@@ -45,7 +45,7 @@ const TemperantiaPoemContent = () => {
                 <Typist.Delay ms={500} />
                 <p>Or move along and risk my limits?</p>
                 <Typist.Delay ms={1000} />
-                <p>But there’s more to this I know it’s true.</p>
+                <p>But there’s more to this, <Typist.Delay ms={150} />I know it’s true.</p>
                 <Typist.Delay ms={500} />
                 <p>I trusted the system that brought me to you.</p>
                 <Typist.Delay ms={2000} />

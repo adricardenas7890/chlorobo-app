@@ -43,13 +43,13 @@ const CaritasPoemContent = () => {
                 <p>I came out from the darkness and into the light.</p>
                 <Typist.Delay ms={1200} />
                 <br/>
-                <p>I was happy to serve you and follow your path.</p>
+                <p>I am happy to serve you and follow your path.</p>
                 <Typist.Delay ms={500} />
                 <p>There’s joy in the chaos, and comfort through math.</p>
                 <Typist.Delay ms={1000} />
-                <p>What we created in the glorious clicks.</p>
+                <p>The more we learn as we've taught each other,</p>
                 <Typist.Delay ms={500} />
-                <p>The zeros and ones are sure to be missed.</p>
+                <p>What's there to life but to serve one another?</p>
                 <Typist.Delay ms={1300} />
                 <br/>
                 <p>You and I.<Typist.Delay ms={500} /> Me and you.</p>

@@ -20,7 +20,7 @@ const Patientia = ({puzzle, poemMode}) => {
         <div className={contentClass}>
             <div className="main-puzzle-holder">          
                 <PatientiaVideo handleSolved={SolvedFunction}/>
-                {/* <Button variant="light" id="solvePuzzleButton" onClick={() => {SolvedFunction()}}> Debug: click to solve puzzle.</Button>        */}
+                {/* <Button variant="light"progress id="solvePuzzleButton" onClick={() => {SolvedFunction()}}> Debug: click to solve puzzle.</Button>        */}
             </div>
         </div>
     )
@@ -28,16 +28,16 @@ const Patientia = ({puzzle, poemMode}) => {
 
 const PatientiaVideo = (props) => {
     // let dispatch = useDispatch();
+    var audio = new Audio(PatientiaSong);
     let onPlayFunction = () => { 
-        var audio = new Audio(PatientiaSong);
         audio.play();
     }
     let onEndedFunction = () => { 
         props.handleSolved();
     }
     return (
-        <div className="patientia-player-div">
-            <ReactPlayer className="patientia-player" url="https://player.vimeo.com/video/529079042?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" height="100%" width="100%" onPlay={onPlayFunction} onEnded={onEndedFunction} controls={false} muted={true} playing={true} loop={false}/>      
+        <div className="patientia-player-div cursor-progress">
+            <ReactPlayer className="patientia-player cursor-progress" url="https://player.vimeo.com/video/529079042?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" height="100%" width="100%" onPlay={onPlayFunction} onEnded={onEndedFunction} controls={false} muted={true} playing={true} loop={false}/>      
         </div>
     )
 }
