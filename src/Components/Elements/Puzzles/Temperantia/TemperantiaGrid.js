@@ -15,8 +15,6 @@ const WinPuzzle = () => {
 
 const TemperantiaGrid = ({ incorrect, gameFinished, handleSolved }) => { 
     let activeGrid = incorrect !== 0 ? true : false;
-    //let dispatch = useDispatch();
-    //console.log(incorrect);
 
     if (!activeGrid && gameFinished === false) {
         WinPuzzle();
@@ -97,16 +95,21 @@ class GridSquare extends React.Component {
             currentColor: props.color,  // Doesn't change
             currentClass: props.color === "black" ? "temp-square black-square" : "temp-square white-square", // Doesn't change
             currentNumber: String(props.number),    //  Changes
-            solvedStatus: ((props.color === "black" && props.number === "1") || (props.color === "white" && props.number === "0")) ? true: false  // Changes
+            solvedStatus: false // ((props.color === "black" && props.number === "1") || (props.color === "white" && props.number === "0")) ? true: false  // Changes
         }
         if (this.props.active) {
             if (props.place === "34" || props.place === "13" || props.place === "18" || props.place === "158" || props.place === "279" || props.place === "135"
                 || props.place === "193" || props.place === "280" || props.place === "260") {
-                this.state.currentNumber = 1
+                this.state.currentNumber = 1;
+                this.state.solvedStatus = false;
             }
-            if (props.place === "6" ||props.place === "7" || props.place === "23" || props.place === "30" || props.place === "41" || props.place === "143"
+            else if (props.place === "6" ||props.place === "7" || props.place === "23" || props.place === "30" || props.place === "41" || props.place === "143"
                 || props.place === "167"|| props.place === "186" || props.place === "206" || props.place === "226" || props.place === "247" || props.place === "268") {
-                this.state.currentNumber = 0
+                this.state.currentNumber = 0;
+                this.state.solvedStatus = false;
+            }
+            else {
+                this.state.solvedStatus = true;
             }
         }
 
@@ -123,6 +126,7 @@ class GridSquare extends React.Component {
 
 
     handleClick() {
+        debugger;
         let copy = this.state;
         if (String(this.state["currentNumber"]) === "1") {
             copy["currentNumber"] = "0";
@@ -160,7 +164,6 @@ class GridSquare extends React.Component {
 
 // Connect to store and couple Layout component with currentViewPage store
 const getPuzzleStatus = (appState) => {
-    //console.log(appState.currentTempProgress.incorrect);
     return ({
         incorrect: appState.currentTempProgress.incorrect,
         gameFinished: appState.currentTempProgress.endGame
