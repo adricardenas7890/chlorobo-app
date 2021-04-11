@@ -201,6 +201,14 @@ input[type=range]::-ms-thumb {
   cursor: pointer;
 }
 
+@keyframes castitas-fadein {
+    0% { opacity:0; }
+    100% { opacity:1; }
+}
+#castitas-holder {
+    animation-name: castitas-fadein;
+    animation-duration: 2s;
+}
 .castitas-puzzle-shadow {
   max-width: 45vw;
   min-width: 650px;
@@ -208,6 +216,6 @@ input[type=range]::-ms-thumb {
   background-color: rgb(255, 255, 255);
   filter: drop-shadow(0px 1px 5px #a1a1a1);
   padding-top: 3em;
-  padding-bottom: 3em;
+  padding-bottom: 1em;
   justify-content: center;
 }

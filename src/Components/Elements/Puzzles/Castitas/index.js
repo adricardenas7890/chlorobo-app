@@ -10,6 +10,7 @@ import { connect } from 'react-redux';
 import backgroundImg from '../bg1.png'
 // import Particles from 'react-particles-js';
 
+    
 const Castitas = ({puzzle, poemMode, puzzleProgress}) => {
     let dispatch = useDispatch();
     let contentClass = "main-content-holder";

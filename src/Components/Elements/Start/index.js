@@ -7,6 +7,7 @@ import {helpPage} from '../../Pages/Content/contentSlice';
 import { useDispatch } from 'react-redux'
 import splashImage from './splash.png';
 import { isMobile } from 'react-device-detect';
+import LazyLoad from 'react-lazyload';
 // import { isChrome } from 'react-device-detect';
 import "./index.css"
 
@@ -14,23 +15,31 @@ const Start = () => {
         const dispatch = useDispatch();
         if (isMobile) {
             return (
-                <div className="mobile-splash-container">
-                    <img src={splashImage} className="mobile-splash" alt="Chlorobo-title" />
+                <LazyLoad>
+                    <div className="mobile-splash-container"> 
+                        
+                        <img src={splashImage} className="mobile-splash" alt="Chlorobo-title" />
+                    
                     <h1 className="mobile-text-1">The full site is not accessible on mobile.</h1>
                     <br/>
                     <h1 className="mobile-text-2"><Button id="acc-button-mobile-start" variant="light" onClick={() => dispatch(helpPage())} >SINGLE-PAGE VERSION</Button></h1>
-                </div>
+                    </div>
+                </LazyLoad>
             )
         } else {
             return (
-                <div>
+                <div className="web-splash-container">
                     <div>
-                        <img src={splashImage} className="splash-logo" alt="Chlorobo-title" />
+                        <LazyLoad>
+                            <img src={splashImage} className="splash-logo" alt="Chlorobo-title" />
+                        </LazyLoad>
                     </div>
-                    <div>
+                    <div className="enter-button-div">
                         <Button id="enter-button-start" variant="light" onClick={() => dispatch(introPage())} >ENTER</Button>
                     </div>
-                    <Button id="acc-button-start" variant="light" onClick={() => dispatch(helpPage())} >SINGLE-PAGE VERSION</Button>
+                    <div className="enter-button-div">
+                        <Button id="acc-button-start" variant="light" onClick={() => dispatch(helpPage())} >SINGLE-PAGE VERSION</Button>
+                    </div>
                 </div>
             ) 
         }

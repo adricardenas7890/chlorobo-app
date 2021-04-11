@@ -1,7 +1,4 @@
 import React from 'react';
-// import { useDispatch } from 'react-redux';
-// import { Button } from 'react-bootstrap';
-// import { GoToPuzzlePage } from '../../Elements/Puzzles/puzzlePageSlice';
 import  CastitasPoemContent  from '../../Elements/Puzzles/Castitas/CastitasPoemContent';
 import TemperantiaPoemContent from '../../Elements/Puzzles/Temperantia/TemperantiaPoemContent';
 import PatientiaPoemContent from '../../Elements/Puzzles/Patientia/PatientiaPoemContent';
