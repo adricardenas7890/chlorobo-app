@@ -34,11 +34,13 @@ const PersistConsent = ({consent, asked}) => {
         }
     ];
 
+    // Mobile doesn't require cookies
     if (isMobile) {
         return (
             <App />
         )
     }
+    // Require accept or deny cookies
     else {
         if (!asked) {
             return (

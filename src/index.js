@@ -1,10 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { PersistGate } from 'redux-persist/integration/react';
-
 import './index.css';
-import App from './Components/App';
-import { store, persistor } from './app/store';
+import { store } from './app/store';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 import './fonts/Heritage-Display.otf';
@@ -15,9 +12,6 @@ import { PersistConsentComponent } from './LocalStorage/PersistConsent';
 ReactDOM.render(
   <React.StrictMode>  
     <Provider store={store}>
-      {/* <PersistGate persistor={persistor}>
-        <App />
-      </PersistGate> */}
       <PersistConsentComponent/>
     </Provider>
   </React.StrictMode>,
