@@ -10,14 +10,15 @@ import * as serviceWorker from './serviceWorker';
 import './fonts/Heritage-Display.otf';
 import './fonts/PitoSlab-Regular.otf';
 import './fonts/Petitemort-Regular.otf';
-
+import { PersistConsentComponent } from './LocalStorage/PersistConsent';
 
 ReactDOM.render(
   <React.StrictMode>  
     <Provider store={store}>
-      <PersistGate persistor={persistor}>
+      {/* <PersistGate persistor={persistor}>
         <App />
-      </PersistGate>
+      </PersistGate> */}
+      <PersistConsentComponent/>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')

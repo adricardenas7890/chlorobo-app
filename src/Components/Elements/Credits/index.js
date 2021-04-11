@@ -1,14 +1,18 @@
 import React from 'react';
-import { Container, Row } from 'react-bootstrap';
+import { Container, Row, Button } from 'react-bootstrap';
 import './index.css';
 
 const Credits = () => {
+    const restartGame = () => { 
+        localStorage.clear();
+    }
     return (
         <div id="main-credits-container cursor-fun">
             <Container className="credits-text-temp">
                 <p class="credits-title font-heritage">Chlorobo</p>
                 <p>Thank you for playing Chlorobo.</p>
                 <p>If you are beta testing this game, please remember to send your feedback!</p>
+                <Button onClick={restartGame}>Restart Game</Button>
             </Container>
             <Container className="credits-text-rows">
                 <Row className="credits-row-justify">
