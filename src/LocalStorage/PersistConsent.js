@@ -7,6 +7,8 @@ import { PersistGate } from 'redux-persist/integration/react';
 import App from '../Components/App';
 import { persistor } from '../app/store';
 import { isMobile } from 'react-device-detect';
+import './PersistConsent.css';
+import EnterBg from './enter.png';
 
 
 const PersistConsent = ({consent, asked}) => {
@@ -44,11 +46,16 @@ const PersistConsent = ({consent, asked}) => {
     else {
         if (!asked) {
             return (
-                <ReactConfirmAlert
-                    title="Cookie Policy"
-                    message="This site uses cookies in order to save progress. By accepting, you consent to the storing of cookies on your device to save your progress."
-                    buttons={alertButtons}
-                />
+                <>
+                    <div className='enter-bg'>
+                        <img src={EnterBg}/>
+                    </div>
+                    <ReactConfirmAlert
+                        title="Cookie Policy"
+                        message="This site uses cookies in order to save progress. Without cookies, you will lose progress when you navigate away from the page."
+                        buttons={alertButtons}
+                    />
+                </>
             );
         }
         else if (consent && asked) {
@@ -60,7 +67,7 @@ const PersistConsent = ({consent, asked}) => {
         }
         else if (!consent && asked) {
             return (
-                    <App />
+                <App />
             )
         }
     }
