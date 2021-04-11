@@ -16,6 +16,7 @@ import IndustriaPoemContent from '../../Elements/Puzzles/Industria/IndustriaPoem
 const PuzzlePoemContent = (props) => {
     // let dispatch = useDispatch();
     let puzzlePoem;
+
     if (props.puzzle === "castitas") {
         puzzlePoem = <CastitasPoemContent/>
     }
@@ -41,19 +42,13 @@ const PuzzlePoemContent = (props) => {
         puzzlePoem = <div>We didn't find a match!</div>
     }
     return (
-        <div>
+        <>
             {/* You've reached the puzzle for: {puzzle} */}
             {puzzlePoem}
             {/* <Button variant="light" onClick={() => { dispatch(GoToPuzzlePage()) }} >Press here to continue</Button> */}
 
-        </div>
-    )
-    // return (
-    //     <div>
-    //         <Button variant="light" onClick={() => { dispatch(GoToPuzzlePage()) }} >Press here to continue</Button>
-
-    //     </div>
-    // )
+        </>
+    );
 }
 
 

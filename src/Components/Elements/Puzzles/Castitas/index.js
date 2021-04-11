@@ -17,7 +17,7 @@ const Castitas = ({puzzle, poemMode, puzzleProgress}) => {
     let SolvedFunction = () => { 
         contentClass = "main-content-holder fade";
         dispatch(SetSolved(1));
-        setTimeout(() => { dispatch(GoToCompletePage()); }, 2000);
+        setTimeout(() => { dispatch(GoToCompletePage()); }, 1000);
     }
     return (
         <div className={contentClass}>
