@@ -10,7 +10,7 @@ import { isMobile } from 'react-device-detect';
 
 
 const PersistConsent = ({consent, asked}) => {
-    debugger;
+ 
     let dispatch = useDispatch();
 
     const giveConsent = () => { 
