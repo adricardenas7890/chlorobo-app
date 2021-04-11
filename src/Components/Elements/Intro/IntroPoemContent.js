@@ -10,9 +10,10 @@ import { mainMenuPage, helpPage } from '../../Pages/Content/contentSlice';
 const IntroPoemContent = () => {
     let dispatch = useDispatch();
     let playSound = (character, charIdx) => {
-        var audio = new Audio(charSound);
-        audio.volume = .7;
-        audio.play();
+        if (character != ' ') {
+            var audio = new Audio(charSound);
+            audio.play();
+        }
     }
     return (
         <div className="typist-container-intro">
@@ -50,12 +51,9 @@ const IntroPoemContent = () => {
                 <br/>
                 <p>✿</p>
         	</Typist>
-            <Typist cursor={{show: false}} >
-                <Typist.Delay ms={20000} />
-                <div className="ContinueButton intro-button">
-                    <Button variant="dark" onClick={() => dispatch(mainMenuPage())} >Press here to continue</Button>
-                </div>
-            </Typist>
+            <div className="ContinueButton intro-button">
+                <Button variant="dark" onClick={() => dispatch(mainMenuPage())} >Press here to continue</Button>
+            </div>
         </div>
     )
 }

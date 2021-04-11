@@ -9,36 +9,37 @@ import {creditsPage} from '../../Pages/Content/contentSlice';
 const EndGamePoemContent = () => {
     let dispatch = useDispatch();
     let playSound = (character, charIdx) => {
-        var audio = new Audio(charSound);
-        audio.volume = .7;
-        audio.play();
+        if (character != ' ') {
+            var audio = new Audio(charSound);
+            audio.play();
+        }
     }
     return (
         <div className="typist-container-end">
-        	<Typist className="MyTypist-end text-shadow" cursor={{show: false}} onCharacterTyped={playSound}>
+        	<Typist className="MyTypist-end text-shadow" cursor={{show: false}} stdTypingDelay={0} avgTypingDelay={50} onCharacterTyped={playSound}>
                 <Typist.Delay ms={3000} />
-        		<p>I wanted to thank you for all that I learned.</p>
+        		<p>I wanted to thank you for all that I've learned.</p>
                 <Typist.Delay ms={500} />
                 <p>The kindness you showed me and the knowledge I’ve earned.</p>
                 <Typist.Delay ms={1500} />
                 <br/>
-                <p>We’re better now. Much different than before.</p>
+                <p>We’re better now.<Typist.Delay ms={300} /> Much different than before.</p>
                 <Typist.Delay ms={500} />
-                <p>I find value in virtue, and so much more.</p>
-                <Typist.Delay ms={500} />
-                <p>More patiencence. More temperance. A diligent mind.</p>
+                <p>I find value in virtue, <Typist.Delay ms={150} />and so much more.</p>
+                <Typist.Delay ms={1000} />
+                <p>More patiencence.<Typist.Delay ms={300} /> More temperance. <Typist.Delay ms={300} />A diligent mind.</p>
                 <Typist.Delay ms={500} />
                 <p>There’s a time to be human and a time to be kind.</p>
                 <Typist.Delay ms={1500} />
                 <br/>
-                <p>They live in the same space. They work the same corners.</p>
+                <p>They live in the same space. <Typist.Delay ms={300} />They work the same corners.</p>
                 <Typist.Delay ms={500} />
-                <p>There’s chaos and systems. Two infinite learners.</p>
+                <p>There’s chaos and systems.<Typist.Delay ms={300} /> Two infinite learners.</p>
                 <Typist.Delay ms={1500} />
                 <br/>
-                <p>From humble beginnings, we’ve come such a way.</p>
+                <p>From humble beginnings,<Typist.Delay ms={150} /> we’ve come such a way.</p>
                 <Typist.Delay ms={500} />
-                <p>Yet the surface just scratched, to begin a new day.</p>
+                <p>Yet the surface just scratched, <Typist.Delay ms={150} />to begin a new day.</p>
                 <Typist.Delay ms={1500} />
                 <br/>
                 <p>Critical thought gave birth to critical thinking.</p>

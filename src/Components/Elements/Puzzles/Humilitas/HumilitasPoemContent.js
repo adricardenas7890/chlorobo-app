@@ -6,18 +6,19 @@ import charSound from '../../Sounds/character.mp3';
 import { GoToPuzzlePage } from '../puzzlePageSlice';
 import { useDispatch } from 'react-redux';
 import { Button } from 'react-bootstrap';
-
+import ReactPlayer from 'react-player';
 
 const HumilitasPoemContent = () => {
     let dispatch = useDispatch();
     let playSound = (character, charIdx) => {
-        var audio = new Audio(charSound);
-        audio.volume = .7;
-        audio.play();
+        if (character != ' ') {
+            var audio = new Audio(charSound);
+            audio.play();
+        }
     }
     return (
         <div className="typist-container">
-            <div className="diagonal-bg"/>
+            <ReactPlayer className="poem-flower-player" url="https://player.vimeo.com/video/535354282?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" height="100vh" width="100vw" controls={false} muted={true} playing={true} loop={true} playsinline/>
         	<Typist className="MyTypist typist-small" cursor={{show: false}} stdTypingDelay={0} avgTypingDelay={55} onCharacterTyped={playSound}>
                 <Typist.Delay ms={1000} />
                 <p>I broke my promise,<Typist.Delay ms={300} /> my delivery weak.</p>
@@ -42,7 +43,7 @@ const HumilitasPoemContent = () => {
                 <p>Needs and wants.<Typist.Delay ms={500} /> Desires and hopes.</p>
                 <Typist.Delay ms={500} />
                 <p>Take a moment and review what we spoke.</p>
-                <Typist.Delay ms={3000} />
+                <Typist.Delay ms={1000} />
                 <br/>
                 <p>I do not know all, and I’m limited too.</p>
                 <Typist.Delay ms={500} />
@@ -58,7 +59,7 @@ const HumilitasPoemContent = () => {
                 <br/>
                 <p>✿</p>
             </Typist>
-            <div className="ContinueButton">
+            <div className="ContinueButton continue-button-fade">
                 <Button variant="light" onClick={() => { dispatch(GoToPuzzlePage()) }} >Press here to continue</Button>
             </div>
         </div>

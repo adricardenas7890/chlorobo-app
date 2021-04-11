@@ -3,6 +3,7 @@
 	text-align: left;
 	word-spacing: .8vmin;
 	font-size: calc(1px + 2vmin);
+	text-shadow: 1px 1px 1px white;
 }
 
 .typist-small {
@@ -44,3 +45,35 @@
 	0% { opacity:0; }
 	100% { opacity:1; }
   }
+
+  
+.poem-flower-player {
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* width: 100vw;
+    height: 100vh; */
+	filter: saturate(1.5);
+    z-index: -1;
+    opacity: 1;
+    animation-name: opacity-flower;
+    animation-duration: 35s;
+    object-fit: cover;
+}
+
+@keyframes opacity-flower {
+    0% { opacity:0; }
+	20% { opacity:0; }
+    100% { opacity:1; }
+}
+
+.continue-button-fade {
+    animation-name: intro-button-opacity;
+    animation-duration: 15s;
+}
+
+@keyframes continue-button-fade {
+    0% { opacity:0; }
+    80% { opacity:0; }
+    100% { opacity:1; }
+}

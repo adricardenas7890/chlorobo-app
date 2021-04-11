@@ -23,9 +23,8 @@ const Industria = ({puzzle, poemMode, puzzleProgress}) => {
     }
     return (
         <div className={contentClass}>
-            <div className="diagonal-bg-2"/>
             {/* <div className="ingame-puzzle-name-div"> <div className="ingame-puzzle-name">&nbsp;</div></div> */}
-            <div className="main-puzzle-holder">
+            <div className="main-puzzle-holder fg-fade-in">
                 <Container className="industria-container">
                     <Row className="industria-row h-100" >
                         <Col className="industria-video-col">
@@ -45,13 +44,11 @@ const Industria = ({puzzle, poemMode, puzzleProgress}) => {
                                     <IndustriaCounters counterName="not"></IndustriaCounters>
                                 </Col>  
                             </Row>
-
                             <IndustriaInputFields onSolved={SolvedFunction} disabled={solved}/>
-                        
                         </Col>
                     </Row>
                 </Container>
-            
+                <div className="puzzle-bg bg-fade-in bg-5"></div>
             </div>
         </div>
     )
