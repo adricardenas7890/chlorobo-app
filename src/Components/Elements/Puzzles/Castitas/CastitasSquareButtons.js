@@ -1,8 +1,6 @@
 import React from 'react';
 import { Row, Col, Container } from 'react-bootstrap';
 
-//const store = configureStore({ reducer: viewPageReducer });
-
 class CastitasSquareButtons extends React.Component {
     constructor(props) {
         super(props);
