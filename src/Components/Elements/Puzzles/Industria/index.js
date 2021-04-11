@@ -19,7 +19,7 @@ const Industria = ({puzzle, poemMode, puzzleProgress}) => {
         solved = true;
         contentClass = "main-content-holder fade";
         dispatch(SetSolved(3));
-        setTimeout(() => { dispatch(GoToCompletePage()); }, 2000);
+        setTimeout(() => { dispatch(GoToCompletePage()); }, 1000);
     }
     return (
         <div className={contentClass}>

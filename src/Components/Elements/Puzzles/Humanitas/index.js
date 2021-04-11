@@ -12,7 +12,7 @@ const Humanitas = ({puzzle, poemMode, puzzleProgress}) => {
     let SolvedFunction = (e) => { 
         contentClass = "main-content-holder fade";
         dispatch(SetSolved(7));
-        setTimeout(() => { dispatch(GoToFinalCompletePage()); }, 2000);
+        setTimeout(() => { dispatch(GoToFinalCompletePage()); }, 1000);
     }
     return (
         <div className={contentClass}>

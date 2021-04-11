@@ -14,7 +14,7 @@ const Patientia = ({puzzle, poemMode}) => {
     let SolvedFunction = () => { 
         // contentClass = "main-content-holder fade";
         dispatch(SetSolved(4));
-        setTimeout(() => { dispatch(GoToCompletePage()); }, 2000);
+        setTimeout(() => { dispatch(GoToCompletePage()); }, 1000);
     }
     return (
         <div className={contentClass}>

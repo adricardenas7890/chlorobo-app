@@ -52,7 +52,7 @@
 
 .bg-1 {
     background-image: url("./bg1.png");
-    opacity: .7;
+    opacity: .8;
 }
 
 .bg-2 {
@@ -62,12 +62,12 @@
 
 .bg-3 {
     background-image: url("./bg3.png");
-    opacity: .5;
+    opacity: .8;
 }
 
 .bg-4 {
     background-image: url("./bg4.png");
-    opacity: .6;
+    opacity: .8;
 }
 
 .bg-5 {
@@ -82,7 +82,7 @@
 
 
 .bg-fade-in {
-    animation-name: puzzle-fade;
+    animation-name: bg-fade;
     animation-duration: 4s;
 }
 
@@ -95,4 +95,10 @@
     0% { opacity:0; }
     20% { opacity:0; }
     100% { opacity:1; }
+}
+
+@keyframes bg-fade {
+    0% { opacity:0; }
+    20% { opacity:0; }
+    100% { opacity:.9; }
 }

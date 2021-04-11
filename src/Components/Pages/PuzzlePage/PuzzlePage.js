@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect }  from 'react';
 import { connect } from 'react-redux';
 import PuzzleContent from '../PuzzleContentPage/index';
 import PuzzlePoemContent from '../PuzzlePoemPage/index';
@@ -12,7 +12,16 @@ import PuzzleSong from '../PuzzleSong/index';
 const PuzzlePage = ({ puzzle, poemMode }) => {
     let puzzleComponent;
     let puzzleSong = <PuzzleSong puzzle={puzzle}/>;
-
+    const [show, setShow] = useState(false);
+    useEffect(
+        () => {
+            let timer1 = setTimeout(() => setShow(true), 1000);
+            return () => {
+                clearTimeout(timer1);
+            };
+        },
+        []
+    );
     if (poemMode === 1) {
         puzzleComponent = <PuzzlePoemContent puzzle={puzzle} />
     }
@@ -27,12 +36,14 @@ const PuzzlePage = ({ puzzle, poemMode }) => {
         puzzleComponent = <PuzzleCompletePage puzzle={puzzle} end={true}/>
         puzzleSong = <div/>
     }
-    return (
-        <div>
+    return show ? (
+        <>
             {puzzleSong}
             {puzzleComponent}
-        </div>
-    )   
+        </>
+    ) : (
+        <div/>
+    );
 }
 
 // Connect to store and couple Puzzle component with currentPuzzle store

@@ -11,6 +11,7 @@ import patientiaButton from './buttonIcon-patientia.png';
 import humilitasbutton from './buttonIcon-humilitas.png';
 import { puzzleProgressPage } from '../../Pages/Content/contentSlice';
 import { Castitas, Temperantia, Industria, Patientia, Humilitas, Caritas, Humanitas } from '../Puzzles/puzzlePageSlice';
+import buttonSound from '../Sounds/Shimmer1new.mp3';
 import './index.css'
 
 // This returns the final button ready for MainMenuPage
@@ -25,52 +26,66 @@ const WrapPuzzleDesignInButton = (props) => {
     let puzzleDesign = <PuzzleDesign puzzle={props.puzzle} state={props.state} />;
     let puzzleButtonID = "button-" + String(props.puzzle);
     let dispatch = useDispatch();
+
+    let playAudio = () => {
+        var press = new Audio(buttonSound);
+        press.play();
+    }
+
+    let hoverButton = () => {
+        // var press = new Audio(buttonSound);
+        // press.play();
+        // TODO : different audio for each hover
+        // TODO : sparkle on hover
+    }
+        
     if (props.state !== "hidden") {
         switch (props.puzzle) {
             case "castitas":
                 return (
-                    <Button id={puzzleButtonID} variant="light" onClick={() => { dispatch(puzzleProgressPage()); dispatch(Castitas()); }}>
-                        {puzzleDesign}
-                    </Button>);
+                    <Button id={puzzleButtonID} variant="light" onClick={() => { playAudio(); dispatch(puzzleProgressPage()); dispatch(Castitas()); }} onMouseEnter={() => { hoverButton();}}>
+                        {puzzleDesign} 
+                    </Button>
+                );
             case "temperantia":
                 return (
-                    <Button id={puzzleButtonID} variant="light" onClick={() => { dispatch(puzzleProgressPage()); dispatch(Temperantia()); }}>
+                    <Button id={puzzleButtonID} variant="light" onClick={() => { playAudio(); dispatch(puzzleProgressPage()); dispatch(Temperantia()); }}>
                         {puzzleDesign}
                     </Button>
-                )
+                );
             case "industria":
                 return (
-                    <Button id={puzzleButtonID} variant="light" onClick={() => { dispatch(puzzleProgressPage()); dispatch(Industria()); }}>
+                    <Button id={puzzleButtonID} variant="light" onClick={() => { playAudio(); dispatch(puzzleProgressPage()); dispatch(Industria()); }}>
                         {puzzleDesign}
                     </Button>
                 );
             case "patientia":
                 return (
-                    <Button id={puzzleButtonID} variant="light" onClick={() => { dispatch(puzzleProgressPage()); dispatch(Patientia()); }}>
+                    <Button id={puzzleButtonID} variant="light" onClick={() => { playAudio(); dispatch(puzzleProgressPage()); dispatch(Patientia()); }}>
                         {puzzleDesign}
                     </Button>
                 );
             case "humilitas":
                 return (
-                    <Button id={puzzleButtonID} variant="light" onClick={() => { dispatch(puzzleProgressPage()); dispatch(Humilitas()); }}>
+                    <Button id={puzzleButtonID} variant="light" onClick={() => { playAudio(); dispatch(puzzleProgressPage()); dispatch(Humilitas()); }}>
                         {puzzleDesign}
                     </Button>
                 );
             case "caritas":
                 return (
-                    <Button id={puzzleButtonID} variant="light" onClick={() => { dispatch(puzzleProgressPage()); dispatch(Caritas()); }}>
+                    <Button id={puzzleButtonID} variant="light" onClick={() => { playAudio(); dispatch(puzzleProgressPage()); dispatch(Caritas()); }}>
                         {puzzleDesign}
                     </Button>
                 );
             case "humanitas":
                 return (
-                    <Button id={puzzleButtonID} variant="light" onClick={() => { dispatch(puzzleProgressPage()); dispatch(Humanitas()); }}>
+                    <Button id={puzzleButtonID} variant="light" onClick={() => { playAudio(); dispatch(puzzleProgressPage()); dispatch(Humanitas()); }}>
                         {puzzleDesign}
                     </Button>
                 );
             default:
                 return (
-                    <Button id={puzzleButtonID} variant="light" onClick={() => { dispatch(puzzleProgressPage()); dispatch(Castitas()); }}>
+                    <Button id={puzzleButtonID} variant="light" onClick={() => { playAudio(); dispatch(puzzleProgressPage()); dispatch(Castitas()); }}>
                         {puzzleDesign}
                     </Button>
                 );
