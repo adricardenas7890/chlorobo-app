@@ -21,13 +21,13 @@ const Humilitas = ({puzzle, poemMode, puzzleProgress}) => {
     }
     return (
         <div className={contentClass}>
-            <div className="diagonal-bg"/>
             {/* <div className="ingame-puzzle-name-div"> <div className="ingame-puzzle-name">{title}</div></div> */}
-            <div className="main-puzzle-holder humilitas-holder">
+            <div className="main-puzzle-holder humilitas-holder fg-fade-in">
                 <div className="humanitas-prompt-div"></div>
                 <NumInputComponent solvePuzzle={SolvedFunction} />
                 {/* <Button variant="light" id="solvePuzzleButton" onClick={() => {SolvedFunction()}}> Debug: click to solve puzzle.</Button>             */}
             </div>
+            <div className="puzzle-bg bg-fade-in bg-4"></div>
         </div>
     )
 }
@@ -194,7 +194,7 @@ const NumberWrong = (props) => {
     else if (props.incorrect == 4) {
         stringsX = "XXXX"
     }
-    else if (props.incorrect == 5) {
+    else if (props.incorrect >= 5) {
         stringsX = "XXXXX"
     }
     return (
