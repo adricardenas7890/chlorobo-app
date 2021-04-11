@@ -19,7 +19,7 @@ const IndustriaPoemContent = () => {
     return (
         <div className="typist-container">
             <ReactPlayer className="poem-flower-player" url="https://player.vimeo.com/video/535354290?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" height="100vh" width="100vw" controls={false} muted={true} playing={true} loop={true} playsinline/>
-            <Typist className="MyTypist typist-small" cursor={{show: false}} stdTypingDelay={0} avgTypingDelay={50} onCharacterTyped={playSound}>
+            <Typist className="MyTypist typist-small" cursor={{show: false}} stdTypingDelay={0} avgTypingDelay={45} onCharacterTyped={playSound}>
                 <Typist.Delay ms={1000} />
                 <p>Tap, <Typist.Delay ms={400} />tap, <Typist.Delay ms={400} />tap. <Typist.Delay ms={1000} />Tick, <Typist.Delay ms={400} />tick,<Typist.Delay ms={400} /> tick.</p>
                 <Typist.Delay ms={1000} />

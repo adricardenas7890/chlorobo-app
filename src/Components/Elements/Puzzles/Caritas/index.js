@@ -32,14 +32,15 @@ const Caritas = ({puzzle, poemMode, puzzleProgress}) => {
     }
     return (
         <div className={contentClass}>
-            <div className="polka-bg"></div>
+            {/* <div className="polka-bg"></div> */}
             {/* <div className="ingame-puzzle-name-div"> <div className="ingame-puzzle-name">{title}</div></div> */}
-            <div className="main-puzzle-holder">
+            <div className="main-puzzle-holder fg-fade-in">
                 <DndProvider backend={HTML5Backend}>
                     <CaritasContent handleDropInBox={addAnotherToCount}/>
                 </DndProvider>
                 {/* <Button variant="light" id="solvePuzzleButton" onClick={() => {SolvedFunction()}}> Debug: click to solve puzzle.</Button> */}
             </div>
+            <div className="puzzle-bg bg-fade-in bg-2"></div>
         </div>
     )
 }

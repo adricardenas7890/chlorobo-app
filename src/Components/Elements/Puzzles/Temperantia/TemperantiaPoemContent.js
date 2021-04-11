@@ -22,9 +22,9 @@ const TemperantiaPoemContent = () => {
             <ReactPlayer className="poem-flower-player" url="https://player.vimeo.com/video/535354299?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" height="100vh" width="100vw" controls={false} muted={true} playing={true} loop={true} playsinline/>
         	<Typist className="MyTypist" cursor={{show: false}} stdTypingDelay={0} avgTypingDelay={50} onCharacterTyped={playSound}>
                 <Typist.Delay ms={1000} />
-        		<p>Let’s weigh our options, <Typist.Delay ms={300} />weigh our skills.</p>
+        		<p>Let’s weigh our options, <Typist.Delay ms={200} />weigh our skills.</p>
         		<Typist.Delay ms={700} />
-        		<p>We move with fairness, <Typist.Delay ms={300} />and justice still.</p>
+        		<p>We move with fairness, <Typist.Delay ms={200} />and justice still.</p>
                 <Typist.Delay ms={1000} />
                 <br/>
                 <p>I followed the current and it led me here.</p>
