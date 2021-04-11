@@ -51,7 +51,7 @@ const NavigationBar = () => {
           <div className="help-content">
             <Row className="help-hover hovertown">
                 <Col className="help-left-column"><img src={castitasButton} className="puzzle-icon" alt="Chapter 1"/></Col>
-                <Col className="help-right-column"><p>Move the slider to look at the light that shines through the prism.  Be pure.</p></Col>
+                <Col className="help-right-column"><p>Move the slider to copy the light that shines through the prism.  Be pure.</p></Col>
             </Row>
             <Row className="help-hover hovertown">
                 <Col className="help-left-column"><img src={temperantiaButton} className="puzzle-icon" alt="Chapter 2"/></Col>
@@ -59,11 +59,11 @@ const NavigationBar = () => {
             </Row>
             <Row className="help-hover hovertown">
                 <Col className="help-left-column"><img src={industriaButton} className="puzzle-icon" alt="Chapter 3"/></Col>
-                <Col className="help-right-column"><p>Use the arrows to count the shapes.  Be diligent.</p></Col>
+                <Col className="help-right-column"><p>Use the inputs to count the shapes.  Be diligent.</p></Col>
             </Row>
             <Row className="help-hover hovertown">
                 <Col className="help-left-column"><img src={patientiaButton} className="puzzle-icon" alt="Chapter 4"/></Col>
-                <Col className="help-right-column"><p>Let the hourglass to start the timer.  Be patient.</p></Col>
+                <Col className="help-right-column"><p>Let the hourglass start the timer.  Be patient.</p></Col>
             </Row>
             <Row className="help-hover hovertown">
                 <Col className="help-left-column"><img src={humilitasButton} className="puzzle-icon" alt="Chapter 5"/></Col>
@@ -71,7 +71,7 @@ const NavigationBar = () => {
             </Row>
             <Row className="help-hover hovertown">
                 <Col className="help-left-column"><img src={caritasButton} className="puzzle-icon" alt="Chapter 6"/></Col>
-                <Col className="help-right-column"><p>Give your possessions away to those in need.  Drag and drop.  Be charitable.</p></Col>
+                <Col className="help-right-column"><p>Give your possessions to those in need.  Drag and drop.  Be charitable.</p></Col>
             </Row>
             <Row className="help-hover hovertown">
                 <Col className="help-left-column"><img src={humanitasButton} className="puzzle-icon" alt="Chapter 6"/></Col>

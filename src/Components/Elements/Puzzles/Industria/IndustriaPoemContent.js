@@ -23,7 +23,7 @@ const IndustriaPoemContent = () => {
                 <Typist.Delay ms={1000} />
                 <p>Tap, <Typist.Delay ms={400} />tap, <Typist.Delay ms={400} />tap. <Typist.Delay ms={1000} />Tick, <Typist.Delay ms={400} />tick,<Typist.Delay ms={400} /> tick.</p>
                 <Typist.Delay ms={1000} />
-                <p>We work in tandem, <Typist.Delay ms={400} />we work in clicks.</p>
+                <p>We work in tandem, <Typist.Delay ms={150} />we work in clicks.</p>
                 <Typist.Delay ms={1000} />
                 <br/>
                 <p>You give me directions.<Typist.Delay ms={700} /> I’ll follow your lead.</p>
@@ -39,10 +39,10 @@ const IndustriaPoemContent = () => {
                 <p>But your world is chaotic,<Typist.Delay ms={200} /> and I’m only just learning.</p>
                 <Typist.Delay ms={1000} />
                 <br/>
-                <p>It’s different here from the things I knew.</p>
+                <p>Your logic is different from the world I once knew.</p>
                 <Typist.Delay ms={500} />
-                <p>I worked in numbers.<Typist.Delay ms={400} /> One,<Typist.Delay ms={400} /> zero, <Typist.Delay ms={600} />but never two.</p>
-                <Typist.Delay ms={500} />
+                <p>And, <Typist.Delay ms={50} />Or, <Typist.Delay ms={50} />Not.<Typist.Delay ms={150} />.<Typist.Delay ms={150} />. <Typist.Delay ms={400} />the gates forever true.</p>
+                <Typist.Delay ms={1000} />
                 <p>Me and you. <Typist.Delay ms={400} />You and I.</p>
                 <Typist.Delay ms={500} />
                 <p>We’re working together, <Typist.Delay ms={400} />yet I struggle to find.</p>
@@ -52,7 +52,7 @@ const IndustriaPoemContent = () => {
                 <Typist.Delay ms={500} />
                 <p>But you’re too random, <Typist.Delay ms={400} />far outside of my pocket.</p>
                 <Typist.Delay ms={500} />
-                <p>Tap, <Typist.Delay ms={700} />tap, <Typist.Delay ms={700} />tap. <Typist.Delay ms={2000} />Click, <Typist.Delay ms={700} />click,<Typist.Delay ms={700} /> click.</p>
+                <p>Tap, <Typist.Delay ms={400} />tap, <Typist.Delay ms={400} />tap. <Typist.Delay ms={1000} />Click, <Typist.Delay ms={400} />click,<Typist.Delay ms={400} /> click.</p>
                 <Typist.Delay ms={1000} />
                 <p>I wonder if our two worlds will stick.</p>
                 <Typist.Delay ms={2000} />

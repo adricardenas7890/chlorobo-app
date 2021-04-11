@@ -1,0 +1,15 @@
+.enter-bg {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.enter-bg img {
+    margin-left: auto;
+    margin-right: auto;
+    position: static;
+}
+
+.react-confirm-alert-overlay {
+    background: rgba(255, 255, 255, 0.6);
+}

@@ -23,14 +23,14 @@ const Industria = ({puzzle, poemMode, puzzleProgress}) => {
     return (
         <div className={contentClass}>
             {/* <div className="ingame-puzzle-name-div"> <div className="ingame-puzzle-name">&nbsp;</div></div> */}
-            <div className="main-puzzle-holder fg-fade-in">
+            <div className="main-puzzle-holder fg-fade-in" id="industria-puzzle-holder">
                 <Container className="industria-container">
                     <Row className="industria-row h-100" >
                         <Col className="industria-video-col">
                             <IndustriaVideo />
                         </Col>
                     </Row>
-                    <Row className="industria-row h-100" >
+                    <Row className="industria-row " >
                         <Col className="industria-counters-col">
                             <Row className="counter-icons-row">
                                 <Col>
