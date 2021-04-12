@@ -21,7 +21,7 @@ const Credits = () => {
     return (
         <div id="main-credits-container cursor-fun">
             <Container className="credits-text-temp">
-                <p class="credits-title font-heritage">Chlorobo</p>
+                <p className="credits-title font-heritage">Chlorobo</p>
                 <p>Thank you for playing Chlorobo.</p>
                 <Button variant="light"  id="linearLink" onClick={() => dispatch(helpPage())} >Click here to view the single-page version.</Button>
                 <br/>
@@ -49,6 +49,7 @@ const Credits = () => {
                     <p className="credits-name">Xinran Liu</p>
                 </Row>
             </Container>
+            <p id="mailLink">Send your thoughts to <a href="mailto:chlorobo.nwf@gmail.com">chlorobo.nwf@gmail.com</a></p>
             <p>✿</p>
         </div>
     )
