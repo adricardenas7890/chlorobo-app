@@ -35,12 +35,12 @@ const VolumeAdjust = () => {
     const volumeOff = <FontAwesomeIcon icon={faVolumeMute} />
     if (volumeSetting) {
         return (
-            <Nav.Link onClick={volumeMute}>{volumeOff}</Nav.Link>
+            <Nav.Link onClick={volumeMute}>{volumeOn}</Nav.Link>
         )
     }
     else {
         return (
-            <Nav.Link onClick={volumeUnMute}>{volumeOn}</Nav.Link>
+            <Nav.Link onClick={volumeUnMute}>{volumeOff}</Nav.Link>
 
         )
     }
