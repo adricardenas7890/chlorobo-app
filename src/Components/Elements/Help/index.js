@@ -297,6 +297,8 @@ const EndAcc = () => {
 			<br/>
 			<p>Critical thought gave birth to critical thinking.</p>
 			<p>Create your own current to keep from sinking.</p>
+			<br/>
+			<p>✿</p>
 		</div>
 	)
 }

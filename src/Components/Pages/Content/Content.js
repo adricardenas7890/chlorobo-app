@@ -8,7 +8,7 @@ import EndGamePage from '../EndGamePage/EndGamePage';
 import PuzzleCompletePage from '../PuzzleCompletePage/PuzzleCompletePage';
 import IntroPage from '../IntroPage/IntroPage';
 import CreditsPage from '../CreditsPage/CreditsPage';
-import { introPage } from './contentSlice';
+// import { introPage } from './contentSlice';
 // This Component will redirect to the main component for each view.
 // Connected to contentSlice, will update when state.currentViewPage.viewPage updates
 
