@@ -15,7 +15,7 @@ const Humilitas = ({puzzle, poemMode, puzzleProgress}) => {
     let contentClass = "main-content-holder";
 
     let SolvedFunction = () => { 
-        contentClass = "main-content-holder fade";
+        contentClass = "main-content-holder";
         dispatch(SetSolved(5));
         setTimeout(() => { dispatch(GoToCompletePage()); }, 1000);
     }
