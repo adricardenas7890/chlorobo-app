@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, connect } from 'react-redux';
-import flower1 from './flower2.png';
+import flower from './flowerWithGlow.png';
 import './index.css'
 import PuzzleButton from './PuzzleButton';
 
@@ -26,18 +26,14 @@ const MainMenu = () => {
 
     return (
         <div className="main-content-holder mainmenu-fade">
-            <div className="mainmenu-gradient"/>
             <div className="main-menu-holder">
-                
                 <div>
-                    <img src={flower1} className="main-flower-img" alt="flower" />
+                    <img src={flower} className="main-flower-img" alt="flower" />
                 </div>
-
-                {puzzles.map((value, index) => {   
-                                
+                {puzzles.map((value, index) => { 
                     return (<CreateMenuButton key={index} puzzle={value} order={index}/>)
                 })}
-            
+            <div className="mainmenu-dither-bg"/>
             </div>
         </div>
     )

@@ -15,6 +15,10 @@
 
 .main-menu-holder {
     height:90%;
+    /* position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
 }
 
 .layoutComponent-2 {
@@ -91,8 +95,8 @@ button:disabled {
 
 #button-castitas {
     position: relative;
-    left: 313px;
-    bottom: 588px;
+    left: 308px;
+    bottom: 600px;
     padding: 0px!important;
     border-radius: 100%;
 }
@@ -108,8 +112,8 @@ button:disabled {
 
 #button-temperantia {
     position: relative;
-    left: 374px;
-    bottom: 425px;
+    left: 361px;
+    bottom: 447px;
     padding: 0px!important;
     border-radius: 100%;
 }
@@ -125,8 +129,8 @@ button:disabled {
 
 #button-industria {
     position: relative;
-    left: 257px;
-    bottom: 222px;
+    left: 248px;
+    bottom: 254px;
     padding: 0px!important;
     border-radius: 100%;
 }
@@ -142,8 +146,8 @@ button:disabled {
 
 #button-patientia {
     position: relative;
-    left: -1px;
-    bottom: 132px;
+    left: -2px;
+    bottom: 170px;
     padding: 0px!important;
     border-radius: 100%;
 }
@@ -159,8 +163,8 @@ button:disabled {
 
 #button-humilitas {
     position: relative;
-    left: -260px;
-    bottom: 222px;
+    left: -251px;
+    bottom: 254px;
     padding: 0px!important;
     border-radius: 100%;
 }
@@ -176,8 +180,8 @@ button:disabled {
 
 #button-caritas {
     position: relative;
-    left: -375px;
-    bottom: 425px;
+    left: -363px;
+    bottom: 448px;
     padding: 0px!important;
     border-radius: 100%;
 }
@@ -193,14 +197,14 @@ button:disabled {
 
 #button-humanitas {
     position: relative;
-    left: -313px;
-    bottom: 588px;
+    left: -308px;
+    bottom: 600px;
     padding: 0px!important;
     border-radius: 100%;
 }
 
 .main-flower-img {
-    height: 674px;
+    height: 750px;
     pointer-events: none;
     position: relative;
     min-height:620px;
@@ -228,4 +232,25 @@ button:disabled {
     background-image: radial-gradient(circle at center center, #d6d6d6, #ffffff), repeating-radial-gradient(circle at center center, #d6d6d6, #d6d6d6, 40px, transparent 80px, transparent 40px);
     background-blend-mode: multiply;
     z-index: -1;
+}
+
+.mainmenu-dither-bg {
+    background-color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100vw;
+    height: 100vh;
+    opacity: 0.3;
+    background-image: url('./background2.png');
+    background-size: 100% 100%;
+    z-index: -1;
+    animation-name: dither-fade;
+    animation-duration: 5s;
+}
+
+@keyframes dither-fade {
+    0% { opacity:0; }
+    20% { opacity:0; }
+    100% { opacity:0.3; }
 }
