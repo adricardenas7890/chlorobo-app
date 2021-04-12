@@ -3,7 +3,7 @@ import { useDrop } from 'react-dnd';
 import { Row } from 'react-bootstrap';
 
 export const Slot = memo(function Slot({ accept, lastDroppedItem, onDrop, }) {
-    const [{ }, drop] = useDrop({
+    const [{ isOver, canDrop }, drop] = useDrop({
         accept,
         drop: onDrop,
         collect: (monitor) => ({

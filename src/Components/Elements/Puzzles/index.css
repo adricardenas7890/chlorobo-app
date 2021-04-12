@@ -6,13 +6,18 @@
     overflow: hidden;
 }
 
-.main-content-holder.fade {
-    transition: opacity 3s ease-out;
-    opacity: 1;
+/* DO NOT UNCOMMENT THIS */
+/* .main-content-holder.fade {
+    animation-name: main-fade-out;
+    animation-duration: 2s;
     height: 0;
     overflow: hidden;
-
 }
+
+@keyframes main-fade-out {
+    0% { opacity:1; }
+    100% { opacity:0; }
+} */
 
 .main-puzzle-holder {
     margin-top: 2vh;
