@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactAudioPlayer from 'react-audio-player';
 import CastitasSong  from '../../Elements/Sounds/Castitas.mp3';
 import TemperantiaSong from '../../Elements/Sounds/Temperantia.mp3';
 import HumilitasSong from '../../Elements/Sounds/Humilitas.mp3';

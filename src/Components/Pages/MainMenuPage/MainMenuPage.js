@@ -1,6 +1,5 @@
 import React from 'react';
 import MainMenu from '../../Elements/MainMenu/index'
-import ReactAudioPlayer from 'react-audio-player';
 import MainMenuSong from '../../Elements/Sounds/MainMenu.mp3';
 import GlobalAudioPlayer from '../../Elements/AudioPlayer/AudioPlayer';
 

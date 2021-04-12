@@ -11,7 +11,7 @@ import ReactPlayer from 'react-player';
 const CaritasPoemContent = () => {
 	let dispatch = useDispatch();
 	let playSound = (character, charIdx) => {
-        if (character != ' ') {
+        if (character !== ' ') {
             var audio = new Audio(charSound);
             audio.play();
         }

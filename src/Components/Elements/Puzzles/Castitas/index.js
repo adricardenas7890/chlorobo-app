@@ -7,7 +7,7 @@ import './index.css';
 import CastitasSquareButtons  from './CastitasSquareButtons';
 import CastitasSunSlider from './CastitasSunSlider';
 import { connect } from 'react-redux';
-import backgroundImg from '../bg1.png'
+//import backgroundImg from '../bg1.png'
 // import Particles from 'react-particles-js';
 
     

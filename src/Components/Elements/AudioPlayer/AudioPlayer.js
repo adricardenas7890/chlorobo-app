@@ -4,7 +4,6 @@ import ReactAudioPlayer from 'react-audio-player';
 
 
 const GlobalAudioPlayer = (props) => {
-    debugger;
     return (
         <ReactAudioPlayer src={props.songName} autoPlay loop volume={props.volume} muted={props.mutedSound}  />
     )

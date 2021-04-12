@@ -182,16 +182,16 @@ class NumInputComponent extends React.Component {
 
 const NumberWrong = (props) => { 
     let stringsX = "."
-    if (props.incorrect == 1) {
+    if (props.incorrect === 1) {
         stringsX = "X"
     }
-    else if (props.incorrect == 2) {
+    else if (props.incorrect === 2) {
         stringsX = "XX"
     }
-    else if (props.incorrect == 3) {
+    else if (props.incorrect === 3) {
         stringsX = "XXX"
     }
-    else if (props.incorrect == 4) {
+    else if (props.incorrect === 4) {
         stringsX = "XXXX"
     }
     else if (props.incorrect >= 5) {

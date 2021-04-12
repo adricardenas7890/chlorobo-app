@@ -10,7 +10,7 @@ import {creditsPage} from '../../Pages/Content/contentSlice';
 const EndGamePoemContent = () => {
     let dispatch = useDispatch();
     let playSound = (character, charIdx) => {
-        if (character != ' ') {
+        if (character !== ' ') {
             var audio = new Audio(charSound);
             audio.play();
         }
@@ -55,7 +55,7 @@ const EndGamePoemContent = () => {
                 <p>✿</p>
                 <Typist.Delay ms={5000} />
                 <div className="ContinueButton">
-                    <Button variant="light" onClick={() => playShimmer(), dispatch(creditsPage())} >Press here to continue</Button>
+                    <Button variant="light" onClick={() => { playShimmer(); dispatch(creditsPage()); }} >Press here to continue</Button>
                 </div>
         	</Typist>
         </div>

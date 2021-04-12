@@ -5,21 +5,25 @@ import correctSound from '../Sounds/correctSound.mp3';
 import confetti from 'canvas-confetti';
 
 const Credits = () => {
+    
     const playFunfetti = () => {
         var audioCorrect = new Audio(correctSound);
         audioCorrect.play();
         confetti(); 
     }
     const restartGame = () => {
+        playFunfetti();
+        confetti(); 
         localStorage.clear();
-        window.location.reload();
+
+        setTimeout(window.location.reload(), 2000);
     }
     return (
         <div id="main-credits-container cursor-fun">
             <Container className="credits-text-temp">
                 <p class="credits-title font-heritage">Chlorobo</p>
                 <p>Thank you for playing Chlorobo.</p>
-                <Button variant="light" id="resetCookies" onClick={restartGame, playFunfetti}>Click here to clear this website's cookies.</Button>
+                <Button variant="light" id="resetCookies" onClick={restartGame}>Click here to clear this website's cookies.</Button>
             </Container>
             <Container className="credits-text-rows">
                 <Row className="credits-row-justify">

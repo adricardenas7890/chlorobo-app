@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactAudioPlayer from 'react-audio-player';
 import GlobalAudioPlayer from '../AudioPlayer/AudioPlayer';
 import Particles from 'react-particles-js';
 import './index.css';

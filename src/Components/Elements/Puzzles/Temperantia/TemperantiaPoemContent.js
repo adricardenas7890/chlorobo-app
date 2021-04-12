@@ -12,7 +12,7 @@ import ReactPlayer from 'react-player';
 const TemperantiaPoemContent = () => {
     let dispatch = useDispatch();
     let playSound = (character, charIdx) => {
-        if (character != ' ') {
+        if (character !== ' ') {
             var audio = new Audio(charSound);
             audio.play();
         }

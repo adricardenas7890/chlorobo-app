@@ -4,13 +4,13 @@ import "./index.css";
 import charSound from '../Sounds/character.mp3';
 import { useDispatch } from 'react-redux';
 import { Button } from 'react-bootstrap';
-import { mainMenuPage, helpPage } from '../../Pages/Content/contentSlice';
+import { mainMenuPage } from '../../Pages/Content/contentSlice';
 
 
 const IntroPoemContent = () => {
     let dispatch = useDispatch();
     let playSound = (character, charIdx) => {
-        if (character != ' ') {
+        if (character !== ' ') {
             var audio = new Audio(charSound);
             audio.play();
         }

@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
-import ReactAudioPlayer from 'react-audio-player';
 // import { Button } from 'react-bootstrap';
 import { SetSolved } from '../puzzleProgressSlice';
 import { useDispatch, connect } from 'react-redux';

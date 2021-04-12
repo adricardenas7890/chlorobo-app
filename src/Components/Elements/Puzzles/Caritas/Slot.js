@@ -12,13 +12,13 @@ export const Slot = memo(function Slot({ accept, lastDroppedItem, onDrop, }) {
         }),
     });
 
-    let className = "dustbin";
+    let classNameString = "dustbin";
     if (lastDroppedItem) {
-        className = JSON.stringify(lastDroppedItem.name).replace(/\"/g, "") + "-icon dustbin";
+        classNameString = JSON.stringify(lastDroppedItem.name).replace(/"/g, "") + "-icon dustbin";
     }
     return (
         <Row>
-        <div ref={drop} role="Dustbin" className={className}>
+        <div ref={drop} aria-label="Dustbin" className={classNameString}>
 
             </div>
         </Row>);
