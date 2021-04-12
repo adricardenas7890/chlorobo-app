@@ -19,6 +19,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faVolumeUp, faVolumeMute } from '@fortawesome/free-solid-svg-icons'
 
 const VolumeAdjust = () => {
+    debugger;
     const dispatch = useDispatch();
     const [volumeSetting, setVolume] = useState(true);
     const volumeMute = () => {

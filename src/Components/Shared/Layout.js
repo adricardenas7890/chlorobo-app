@@ -9,7 +9,7 @@ import viewPages  from './ViewPages';
 
 
 // Return the Layout Component
-const Layout = ({ page }) => {
+const Layout = ({ page}) => {
     return (
         <div className="layoutComponent">
             <LayoutContent value={viewPages[page]} />
@@ -33,7 +33,7 @@ var LayoutContent = (props) =>
     return (
         <>
             {header}
-            <Content page={viewPage} title={titleValue}/>
+            <Content page={viewPage} title={titleValue} />
         </>
     )
 }

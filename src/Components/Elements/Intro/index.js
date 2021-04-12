@@ -79,7 +79,7 @@ const IntroSequence = () => {
                     }} />
             </div>
             <IntroPoemContent/>
-            <GlobalAudioPlayer src={IntroSong} autoPlay loop />
+            <GlobalAudioPlayer songName={IntroSong}/>
         </div>
     );
 

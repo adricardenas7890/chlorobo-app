@@ -4,8 +4,9 @@ import ReactAudioPlayer from 'react-audio-player';
 
 
 const GlobalAudioPlayer = (props) => {
+    debugger;
     return (
-        <ReactAudioPlayer src={props.songName} autoPlay loop volume={props.volume} muted={props.music}  />
+        <ReactAudioPlayer src={props.songName} autoPlay loop volume={props.volume} muted={props.mutedSound}  />
     )
 }
 
@@ -13,8 +14,8 @@ const GlobalAudioPlayer = (props) => {
 // Connect to store and couple Layout component with currentViewPage store
 const getAudioSettings = (appState) => {
     return ({
-        music: appState.currentAudioSettings.music,
-        sounds: appState.currentAudioSettings.sounds,
+        mutedMusic: !(appState.currentAudioSettings.music),
+        mutedSound: !(appState.currentAudioSettings.sounds),
         volume: appState.currentAudioSettings.volume
     })
 
