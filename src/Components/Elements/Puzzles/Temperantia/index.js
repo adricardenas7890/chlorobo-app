@@ -34,6 +34,7 @@ const TemperantiaGridMain = (props) => {
         <Container className ="temp-grid-div">
             <Row className="h-100">
                 <Col id="temp-image-holder-1">
+                    <p className="temp-heritage">1</p>
                     <img src={img1} alt=""/>
                 </Col>
                 <Col className="temp-grid-col">
@@ -45,6 +46,7 @@ const TemperantiaGridMain = (props) => {
                     </div>
                 </Col>
                 <Col id="temp-image-holder-2">
+                    <p className="temp-heritage">0</p>
                     <img src={img2} alt=""/>
                 </Col>
             </Row>

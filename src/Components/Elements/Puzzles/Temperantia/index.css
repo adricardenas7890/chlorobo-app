@@ -9,14 +9,10 @@
     flex: 0 0 700px;
 }
 
-.temp-grid-col {
-
-}
 .complete-grid-div {
     cursor:pointer!important;
     z-index:3;
 }
-
 
 .temp-square { 
     z-index:1;
@@ -51,9 +47,9 @@
 }
 
 .gradient-div {
-    width: 100%;
+    width: 660px;
     height:20px;
-    margin-top:10px;
+    margin-top:15px;
     border: 1px solid black;
     background-image: linear-gradient(to right, black , white);
     border-radius: 10px;
@@ -65,16 +61,24 @@
 
 #temp-image-holder-1 img {
     max-width:100%;
+    padding-bottom: 36px;
 }
 
 #temp-image-holder-2 {
     margin: auto 0;
+    left: -40px;
 }
 
 #temp-image-holder-2 img {
     max-width:100%;
+    padding-bottom: 36px;
 }
 
 .complete-grid-div {
     min-width:700px;
+    justify-content: center;
+}
+
+.temp-heritage {
+    font-family: Petitemort;
 }
