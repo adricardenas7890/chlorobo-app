@@ -49,7 +49,7 @@ const Credits = () => {
                     <p className="credits-name">Xinran Liu</p>
                 </Row>
             </Container>
-            <p id="mailLink">Send your thoughts to <a href="mailto:chlorobo.nwf@gmail.com" target="_blank">chlorobo.nwf@gmail.com</a></p>
+            <p id="mailLink">Send your thoughts to <a href="mailto:chlorobo.nwf@gmail.com" target="_blank" rel="noopener noreferrer">chlorobo.nwf@gmail.com</a></p>
             <p>✿</p>
         </div>
     )
