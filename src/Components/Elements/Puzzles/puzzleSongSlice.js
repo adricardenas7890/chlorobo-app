@@ -7,6 +7,7 @@ export const audioSettingSlice = createSlice({
         sounds: true,
         music: true,
         volume: 1,
+        currentView: "intro",
     },
     reducers: {
         MuteAll: (state, action) => {           
@@ -19,8 +20,13 @@ export const audioSettingSlice = createSlice({
         UnMuteSongs: (state) => {
             state.music = true;
             state.sounds = true;
+        },
+        MuteSounds: (state) => {
+            state.sounds = false;
+        },
+        UnMuteSounds: (state) => {
+            state.sounds = true;
         }
-
   }
 })
 

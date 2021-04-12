@@ -8,6 +8,7 @@ import EndGamePage from '../EndGamePage/EndGamePage';
 import PuzzleCompletePage from '../PuzzleCompletePage/PuzzleCompletePage';
 import IntroPage from '../IntroPage/IntroPage';
 import CreditsPage from '../CreditsPage/CreditsPage';
+import { introPage } from './contentSlice';
 // This Component will redirect to the main component for each view.
 // Connected to contentSlice, will update when state.currentViewPage.viewPage updates
 
@@ -15,31 +16,31 @@ var Content = (props) => {
     let pageView = props.page;
     let content;
     if (pageView === "startPage") {
-        content = <StartPage />
+        content = <StartPage  />
     }
     else if (pageView === "helpPage") {
-        content = <HelpPage/>
+        content = <HelpPage />
     }
     else if (pageView === "puzzleProgressPage") {
-        content = <PuzzlePage/>
+        content = <PuzzlePage  />
     }
     else if (pageView === "mainMenuPage") {
-        content = <MainMenuPage/>
+        content = <MainMenuPage  />
     }
     else if (pageView === "endSequencePage") {
-        content = <EndGamePage/>
+        content = <EndGamePage  />
     }
     else if (pageView === "puzzleCompletePage") {
-        content = <PuzzleCompletePage end={false}/>
+        content = <PuzzleCompletePage end={false}  />
     }
     else if (pageView === "introPage") {
-        content = <IntroPage/>
+        content = <introPage />
     }
     else if (pageView === "creditsPage") {
-        content = <CreditsPage/>
+        content = <CreditsPage />
     }
     else if (pageView === "lastPuzzleCompletePage") {
-        content = <PuzzleCompletePage end={true}/>
+        content = <PuzzleCompletePage end={true}  />
     }
     else {
         content = (

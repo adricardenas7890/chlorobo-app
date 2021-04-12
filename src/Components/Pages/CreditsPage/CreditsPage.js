@@ -2,9 +2,9 @@ import React from 'react';
 import Credits from '../../Elements/Credits/index'
 
 // This will contain the main component for the Start Page
-function CreditsPage() {  
+function CreditsPage(props) {  
     return (
-            <Credits/>
+        <Credits />
         )
 }
 
