@@ -34,7 +34,7 @@ var Content = (props) => {
         content = <PuzzleCompletePage end={false}  />
     }
     else if (pageView === "introPage") {
-        content = <introPage />
+        content = <IntroPage />
     }
     else if (pageView === "creditsPage") {
         content = <CreditsPage />
