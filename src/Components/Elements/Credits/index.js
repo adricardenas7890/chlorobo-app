@@ -3,9 +3,11 @@ import { Container, Row, Button } from 'react-bootstrap';
 import './index.css';
 import correctSound from '../Sounds/correctSound.mp3';
 import confetti from 'canvas-confetti';
+import {helpPage} from '../../Pages/Content/contentSlice';
+import { useDispatch } from 'react-redux';
 
 const Credits = () => {
-    
+    const dispatch = useDispatch();
     const playFunfetti = () => {
         var audioCorrect = new Audio(correctSound);
         audioCorrect.play();
@@ -21,7 +23,9 @@ const Credits = () => {
             <Container className="credits-text-temp">
                 <p class="credits-title font-heritage">Chlorobo</p>
                 <p>Thank you for playing Chlorobo.</p>
-                <Button variant="light" id="resetCookies" onClick={restartGame}>Click here to clear this website's cookies.</Button>
+                <Button variant="light"  id="linearLink" onClick={() => dispatch(helpPage())} >Click here to view the single-page version.</Button>
+                <br/>
+                <Button variant="light" id="resetCookies" onClick={restartGame} >Click here to clear this website's cookies.</Button>
             </Container>
             <Container className="credits-text-rows">
                 <Row className="credits-row-justify">

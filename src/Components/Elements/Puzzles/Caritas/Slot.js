@@ -3,6 +3,7 @@ import { useDrop } from 'react-dnd';
 import { Row } from 'react-bootstrap';
 
 export const Slot = memo(function Slot({ accept, lastDroppedItem, onDrop, }) {
+    //eslint-disable-next-line
     const [{ isOver, canDrop }, drop] = useDrop({
         accept,
         drop: onDrop,
