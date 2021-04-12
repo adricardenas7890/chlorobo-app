@@ -7,10 +7,10 @@ export const puzzleProgressSlice = createSlice({
     name: 'currentPuzzleProgress',
     initialState: {
         1: "available",
-        2: "hidden",
+        2: "available",
         3: "hidden",
-        4: "hidden",
-        5: "hidden",
+        4: "solved",
+        5: "available",
         6: "hidden",
         7: "hidden",
         "endGame": false

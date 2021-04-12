@@ -21,7 +21,7 @@ const Castitas = ({puzzle, poemMode, puzzleProgress}) => {
         setTimeout(() => { dispatch(GoToCompletePage()); }, 1000);
     }
     return (
-        <div className={contentClass}>
+        <div className={contentClass} >
             {/* <div className="ingame-puzzle-name-div"> <div className="ingame-puzzle-name">&nbsp;</div></div> */}
             <div className="main-puzzle-holder fg-fade-in">
                 <div className="castitas-puzzle-shadow">
