@@ -13,10 +13,8 @@ const Credits = () => {
     }
     const restartGame = () => {
         playFunfetti();
-        confetti(); 
         localStorage.clear();
-
-        setTimeout(window.location.reload(), 2000);
+        // setTimeout(window.location.reload(), 2000);
     }
     return (
         <div id="main-credits-container cursor-fun">
