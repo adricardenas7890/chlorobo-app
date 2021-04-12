@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactAudioPlayer from 'react-audio-player';
+import GlobalAudioPlayer from '../AudioPlayer/AudioPlayer';
 import Particles from 'react-particles-js';
 import './index.css';
 import IntroPoemContent from './IntroPoemContent';
@@ -78,7 +79,7 @@ const IntroSequence = () => {
                     }} />
             </div>
             <IntroPoemContent/>
-            <ReactAudioPlayer src={IntroSong} autoPlay loop />
+            <GlobalAudioPlayer src={IntroSong} autoPlay loop />
         </div>
     );
 

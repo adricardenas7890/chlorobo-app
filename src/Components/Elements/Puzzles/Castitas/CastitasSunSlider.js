@@ -76,17 +76,17 @@ const BeamImage = (props) => {
     return (
         <div className="image-holders">
             <div className="prism-holder">
-                <img src={prism} className="prism-image" alt="prism"></img>
+                <img draggable="false" src={prism} className="prism-image" alt="prism"></img>
             </div>
             <div className="beams-holder">
-                <img src={beams} className="beams-image" alt="beams"></img>
-                <img src={beam1} className="beam-image1" style={{opacity: props.one}} alt="red beam"></img>
-                <img src={beam2} className="beam-image2" style={{opacity: props.two}} alt="orange beam"></img>
-                <img src={beam3} className="beam-image3" style={{opacity: props.three}} alt="yellow beam"></img>
-                <img src={beam4} className="beam-image4" style={{opacity: props.four}} alt="green beam"></img>
-                <img src={beam5} className="beam-image5" style={{opacity: props.five}} alt="cyan beam"></img>
-                <img src={beam6} className="beam-image6" style={{opacity: props.six}} alt="blue beam"></img>
-                <img src={beam7} className="beam-image7" style={{opacity: props.seven}} alt="purple beam"></img>
+                <img draggable="false" src={beams} className="beams-image" alt="beams"></img>
+                <img draggable="false" src={beam1} className="beam-image1" style={{opacity: props.one}} alt="red beam"></img>
+                <img draggable="false" src={beam2} className="beam-image2" style={{opacity: props.two}} alt="orange beam"></img>
+                <img draggable="false" src={beam3} className="beam-image3" style={{opacity: props.three}} alt="yellow beam"></img>
+                <img draggable="false" src={beam4} className="beam-image4" style={{opacity: props.four}} alt="green beam"></img>
+                <img draggable="false" src={beam5} className="beam-image5" style={{opacity: props.five}} alt="cyan beam"></img>
+                <img draggable="false" src={beam6} className="beam-image6" style={{opacity: props.six}} alt="blue beam"></img>
+                <img draggable="false" src={beam7} className="beam-image7" style={{opacity: props.seven}} alt="purple beam"></img>
             </div>
         </div>
     )

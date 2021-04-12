@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import ReactAudioPlayer from 'react-audio-player';
 
 
@@ -18,3 +19,5 @@ const getAudioSettings = (appState) => {
     })
 
 }
+
+export default connect(getAudioSettings)(GlobalAudioPlayer)

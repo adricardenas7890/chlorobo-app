@@ -1,6 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { useDispatch } from 'react-redux';
-import { puzzleCompletePage } from '../../Pages/Content/contentSlice';
 
 // Three modes, available, solved, hidden
 export const audioSettingSlice = createSlice({
@@ -16,11 +14,16 @@ export const audioSettingSlice = createSlice({
         },
         MuteSongs: (state) => {
             state.music = false;
+            state.sounds = false;
+        },
+        UnMuteSongs: (state) => {
+            state.music = true;
+            state.sounds = true;
         }
 
   }
 })
 
-export const { MuteAll, MuteSongs } = audioSettingSlice.actions
+export const { MuteAll, MuteSongs, UnMuteSongs } = audioSettingSlice.actions
 
 export default audioSettingSlice.reducer

@@ -12,6 +12,7 @@ const Credits = () => {
     }
     const restartGame = () => {
         localStorage.clear();
+        window.location.reload();
     }
     return (
         <div id="main-credits-container cursor-fun">

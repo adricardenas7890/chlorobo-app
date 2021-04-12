@@ -6,29 +6,29 @@ import HumilitasSong from '../../Elements/Sounds/Humilitas.mp3';
 import CaritasSong from '../../Elements/Sounds/Caritas.mp3';
 import HumanitasSong from '../../Elements/Sounds/Outro.mp3';
 import IndustriaSong from '../../Elements/Sounds/Industria.mp3';
-
+import GlobalAudioPlayer from '../../Elements/AudioPlayer/AudioPlayer';
 const PuzzleSong = (props) => {
     let puzzleSong;
     if (props.puzzle === "castitas") {
-        puzzleSong = <ReactAudioPlayer src={CastitasSong} autoPlay loop />
+        puzzleSong = <GlobalAudioPlayer songName={CastitasSong}  />
     }
     else if (props.puzzle === "temperantia") {
-        puzzleSong = <ReactAudioPlayer src={TemperantiaSong} autoPlay loop />
+        puzzleSong = <GlobalAudioPlayer songName={TemperantiaSong} />
     }
     else if (props.puzzle === "industria") {
-        puzzleSong = <ReactAudioPlayer src={IndustriaSong} autoPlay loop />
+        puzzleSong = <GlobalAudioPlayer songName={IndustriaSong} />
     }
     else if (props.puzzle === "patientia") {
         puzzleSong = <div id="empty-patientia-song-div"/>
     }
     else if (props.puzzle === "humilitas") {
-        puzzleSong = <ReactAudioPlayer src={HumilitasSong} autoPlay loop />
+        puzzleSong = <GlobalAudioPlayer songName={HumilitasSong} />
     }
     else if (props.puzzle === "caritas") {
-        puzzleSong = <ReactAudioPlayer src={CaritasSong} autoPlay loop />
+        puzzleSong = <GlobalAudioPlayer songName={CaritasSong} />
     }
     else if (props.puzzle === "humanitas") {
-        puzzleSong = <ReactAudioPlayer src={HumanitasSong} autoPlay loop />
+        puzzleSong = <GlobalAudioPlayer songName={HumanitasSong} />
     }
     return (
         <div>
